@@ -14,7 +14,7 @@ const PopularMenu = () => {
 				<FoodFilterMenu />
 			</div>
 			<MenuShowcase />
-			<TextBTN>{menu.btn}</TextBTN>
+			<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
 		</Wrapper>
 	);
 };
@@ -28,6 +28,10 @@ const Wrapper = styled.div`
 		@media screen and (${devices.md}) {
 			margin-block-end: 2em;
 		}
+	}
+
+	.Show_full_menu--BTN {
+		margin-inline: auto;
 	}
 `;
 

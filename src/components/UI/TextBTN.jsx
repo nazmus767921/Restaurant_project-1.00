@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import Hr from "./Hr";
+import { ease } from "../../utils/animation";
 
-const TextBTN = () => {
+const TextBTN = ({ className }) => {
 	return (
-		<Wrapper>
-			<Button>Show full menu</Button>
-			<Hr />
-		</Wrapper>
+		<Button type="button" className={className}>
+			<Wrapper>Show full menu</Wrapper>
+			<Hr className="underline" />
+		</Button>
 	);
 };
 
-const Button = styled.button`
+const Wrapper = styled.div`
 	font-family: Cabin Condensed;
 	font-size: 1rem;
 	font-style: normal;
@@ -19,11 +20,23 @@ const Button = styled.button`
 	text-transform: capitalize;
 `;
 
-const Wrapper = styled.div`
-width: fit-content;
+const Button = styled.button`
+	width: fit-content;
 	display: flex;
 	flex-direction: column;
-	gap: .65em;
+	gap: 0.65em;
+	.underline {
+		transition: all 0.35s ${ease["out-expo"]};
+	}
+	&:hover,
+	:focus {
+		.underline {
+			transform: translateY(-120%);
+		}
+		${Wrapper} {
+			opacity: 0.6;
+		}
+	}
 `;
 
 export default TextBTN;
