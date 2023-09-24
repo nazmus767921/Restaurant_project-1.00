@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+#root {
+	width: 100%;
+}
+
+:root {
+	font-family: Libre Franklin, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgb(255, 255, 255);
+	background-color: #191919;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+button {
+	width: fit-content;
+	cursor: pointer;
+	background-color: inherit;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+}
+
+button.icon {
+	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
+	tap-highlight-color: transparent; /* For other browsers */
+}

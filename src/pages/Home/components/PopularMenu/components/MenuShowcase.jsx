@@ -1,0 +1,48 @@
+import styled from "styled-components";
+import MenuItem from "../../../../../components/UI/MenuItem/MenuItem";
+import { devices } from "../../../../../utils/breakpoints";
+
+const MenuShowcase = () => {
+	return (
+		<Wrapper>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+		</Wrapper>
+	);
+};
+
+const Wrapper = styled.div`
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 1em;
+
+	.menu_item--wrapper {
+		width: 47%;
+		@media screen and (${devices.md}) {
+			width: 30%;
+		}
+		@media screen and (${devices.xl}) {
+			width: 18%;
+		}
+	}
+`;
+
+export default MenuShowcase;

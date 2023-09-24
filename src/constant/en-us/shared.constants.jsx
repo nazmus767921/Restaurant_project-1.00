@@ -1,0 +1,117 @@
+import { GiForkKnifeSpoon, GiKnifeFork } from "react-icons/gi";
+import { LuSearch } from "react-icons/lu";
+import BGImage from "./assets/Blue_bowl_chicken.png";
+
+export const sharedImages = {
+	bg: BGImage,
+};
+
+export const nav = {
+	links: [
+		{
+			id: 1,
+			title: "Home Page",
+			link: "/",
+		},
+		{
+			id: 2,
+			title: "About us",
+			link: "/about",
+		},
+		{
+			id: 3,
+			title: "Our menus",
+			link: "/menus",
+		},
+		{
+			id: 4,
+			title: "Contact us",
+			link: "/contact",
+		},
+	],
+
+	btn: "Make Reservation",
+
+	icons: {
+		search: <LuSearch />,
+		hamburger: {
+			open: <GiForkKnifeSpoon />,
+			close: <GiKnifeFork />,
+		},
+	},
+};
+
+export const reservation = {
+	title: "Make an online Reservation",
+	tagline: "we saved you a seat",
+	description:
+		"When the going gets tough, the tough get grilling. Bringing heat to your meat. No one can compete with our meat.",
+	btn: "Make Reservation",
+};
+
+export const footer = {
+	address: {
+		street: "13/7, Abdus Sattar Road",
+		city: "Gazipur",
+		district: "Dhaka",
+	},
+	"nav-links": [
+		{
+			id: 1,
+			title: "Our menus",
+			link: "/menu",
+		},
+		{
+			id: 2,
+			title: "Reservation",
+			link: "/reservation",
+		},
+		{
+			id: 3,
+			title: "About",
+			link: "/about",
+		},
+		{
+			id: 4,
+			title: "Contact us",
+			link: "/contact",
+		},
+	],
+
+	socials: [
+		{
+			id: 1,
+			title: "Facebook",
+			link: "https://www.facebook.com/",
+			icon: "",
+		},
+		{
+			id: 1,
+			title: "Instagram",
+			link: "https://www.instagram.com/",
+			icon: "",
+		},
+	],
+	footeritems: [
+		{
+			id: 1,
+			title: "© Copyright Nazmus767921",
+			link: null,
+		},
+		{
+			id: 2,
+			title: "All Right Reserved.",
+			link: null,
+		},
+		{
+			id: 3,
+			title: "Privacy policy",
+			link: null,
+		},
+		{
+			id: 4,
+			title: "Terms of use",
+			link: null,
+		},
+	],
+};
