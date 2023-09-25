@@ -101,7 +101,11 @@ export const Wrapper = styled.div`
 	}
 
 	h3 {
-		font-size: 1.35rem;
+		font-size: 1.325em;
+	}
+
+	h5 {
+		font-size: 0.65775em;
 	}
 
 	p {
@@ -110,6 +114,7 @@ export const Wrapper = styled.div`
 		line-height: 1.375;
 		font-weight: 400;
 		font-style: normal;
+		opacity: 0.7;
 	}
 	p.small {
 		font-size: 0.65rem;

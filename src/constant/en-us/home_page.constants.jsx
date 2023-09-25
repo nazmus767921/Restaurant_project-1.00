@@ -17,7 +17,7 @@ export const restaurantGallery = {
 		"The premium taste that yearns to be savored, ground beef between your teeth",
 };
 
-export const meetChefs = {
+export const chefsDetails = {
 	title: "Meet Our Excellent Chefs",
 	tagline: "The Artists of cooking",
 	chefs: [...chefs],
