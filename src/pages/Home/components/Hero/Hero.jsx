@@ -5,23 +5,13 @@ import { sharedImages } from "../../../../constant/en-us/shared.constants";
 import getCursiveStyle from "../../../../utils/helpers/getCursiveStyle";
 import { Wrapper } from "./styles/Hero.styles";
 
-// const heroTitle = () => {
+// const BGImage = () => {
 // 	return (
-// 		<>
-// 			{`${hero.title.split(" ")[0]} ${hero.title.split(" ")[1]}`}
-// 			<br />
-// 			<span className="cursive">{hero.title.split(" ")[2]}</span>
-// 		</>
+// 		<div className="bg-image">
+// 			<img src={sharedImages.bg} alt="hero" />
+// 		</div>
 // 	);
 // };
-
-const BGImage = () => {
-	return (
-		<div className="bg-image">
-			<img src={sharedImages.bg} alt="hero" />
-		</div>
-	);
-};
 
 const Hero = () => {
 	return (
@@ -30,7 +20,7 @@ const Hero = () => {
 				<Heading tag={hero.tagline} title={getCursiveStyle(hero.title)} />
 				<Description>{hero.description}</Description>
 			</div>
-			<BGImage></BGImage>
+			{/* <BGImage></BGImage> */}
 		</Wrapper>
 	);
 };

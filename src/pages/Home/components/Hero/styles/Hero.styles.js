@@ -56,5 +56,12 @@ export const Wrapper = styled.div`
 			drop-shadow(-63px 18px 39px rgba(0, 0, 0, 0.23))
 			drop-shadow(-111px 31px 46px rgba(0, 0, 0, 0.07))
 			drop-shadow(-174px 49px 51px rgba(0, 0, 0, 0.01)) blur(2px);
+
+		@media screen and (${devices.md}) {
+			filter: drop-shadow(-7px 2px 16px rgba(0, 0, 0, 0.44))
+				drop-shadow(-28px 8px 29px rgba(0, 0, 0, 0.38))
+				drop-shadow(-63px 18px 39px rgba(0, 0, 0, 0.23))
+				drop-shadow(-111px 31px 46px rgba(0, 0, 0, 0.07));
+		}
 	}
 `;

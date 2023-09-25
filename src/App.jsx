@@ -6,7 +6,7 @@ const App = () => {
 		<>
 			<NavBar />
 			<Outlet />
-		</>
+		</> 
 	);
 };
 
