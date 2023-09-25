@@ -13,13 +13,21 @@ const ChefImage = () => {
 	);
 };
 
+const ChefInfo = () => {
+	return (
+		<>
+			<p className="chef_pitch small">Finest Chef you’ll get in the city.</p>
+			<h3 className="chef_name cursive">Mohammad Ali</h3>
+			<h5 className="chef_post">Master Chef</h5>
+		</>
+	);
+};
+
 const ChefCard = () => {
 	return (
 		<Wrapper>
 			<ChefImage />
-			<p className="chef_pitch small">Finest Chef you’ll get in the city.</p>
-			<h3 className="chef_name cursive">Mohammad Ali</h3>
-			<h5 className="chef_post">Master Chef</h5>
+			<ChefInfo />
 		</Wrapper>
 	);
 };
