@@ -13,13 +13,13 @@ const ChefImage = () => {
 	);
 };
 
-const ChefInfo = () => {
+const ChefInfo = ({ description, name, post }) => {
 	return (
-		<>
-			<p className="chef_pitch small">Finest Chef you’ll get in the city.</p>
-			<h3 className="chef_name cursive">Mohammad Ali</h3>
-			<h5 className="chef_post">Master Chef</h5>
-		</>
+		<div className="chefInfo--wrapper">
+			<p className="chef_pitch small">{description}</p>
+			<h3 className="chef_name cursive">{name}</h3>
+			<h5 className="chef_post">{post}</h5>
+		</div>
 	);
 };
 
@@ -27,11 +27,16 @@ const ChefCard = () => {
 	return (
 		<Wrapper>
 			<ChefImage />
-			<ChefInfo />
+			<ChefInfo
+				name="Mohammad Ali"
+				description="Finest Chef you’ll get in the city."
+				post="Master Chef"
+			/>
 		</Wrapper>
 	);
 };
 
+// chefImage Styles
 const ChefProfileImageWrapper = styled.div`
 	width: 90%;
 	aspect-ratio: 1/1;
@@ -59,6 +64,7 @@ const ChefProfileImageWrapper = styled.div`
 	}
 `;
 
+// chefImage Styles
 const OverFlowHidden = styled.div`
 	aspect-ratio: 1/1;
 	display: flex;
@@ -68,6 +74,7 @@ const OverFlowHidden = styled.div`
 	overflow: hidden;
 `;
 
+// chefCard styles
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -83,6 +90,17 @@ const Wrapper = styled.div`
 		color: ${colors["text-white"]};
 	}
 	.chef_post {
+		color: ${colors.brand};
+		opacity: 0.7;
+		margin-top: -0.35em;
+	}
+
+	.chefInfo--wrapper {
+		margin-inline: 0.75em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.38em;
 	}
 `;
 
