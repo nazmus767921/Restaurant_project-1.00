@@ -32,6 +32,8 @@ const Title = ({ children }) => {
 const Decorator_wrapper = styled.div`
 	width: 4em;
 	max-width: 7.875em;
+	flex-grow: 0;
+	flex-shrink: 0;
 `;
 
 const Wrapper = styled.div`
@@ -39,6 +41,11 @@ const Wrapper = styled.div`
 	gap: 0.5em;
 	justify-content: center;
 	align-items: center;
+
+	h2 {
+		width: fit-content;
+		text-align: center;
+	}
 `;
 
 export default Title;

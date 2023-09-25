@@ -12,7 +12,7 @@ export const menu = {
 };
 
 export const restaurantGallery = {
-	title: "Good food and Great vibes",
+	title: "Good food** and Great** vibes",
 	description:
 		"The premium taste that yearns to be savored, ground beef between your teeth",
 };
