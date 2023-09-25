@@ -15,6 +15,8 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	gap: 0.65em;
 	width: 100%;
+
+  margin-top: 3.75em;
 `;
 
 export default RestaurantGallery;
