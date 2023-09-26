@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { colors } from "../../../../../utils/colors";
 import { devices } from "../../../../../utils/breakpoints";
 
-const ChefImage = ({image, alt}) => {
+const ChefImage = ({ image, alt }) => {
 	return (
 		<OverFlowHidden>
 			<ChefProfileImageWrapper>
 				<img src={image} alt={alt} />
-				<div className="gradientOverlay" />
 			</ChefProfileImageWrapper>
+			<div className="gradientOverlay" />
 		</OverFlowHidden>
 	);
 };
@@ -36,10 +36,22 @@ const ChefCard = ({ name, post, subtitle, image }) => {
 const ChefProfileImageWrapper = styled.div`
 	width: 90%;
 	aspect-ratio: 1/1;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	border-radius: 999px;
+`;
+
+// chefImage Styles
+const OverFlowHidden = styled.div`
+	width: 100%;
+	aspect-ratio: 1/1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 999px;
+	overflow: hidden;
 	position: relative;
 
 	.gradientOverlay {
@@ -58,16 +70,6 @@ const ChefProfileImageWrapper = styled.div`
 			rgba(25, 25, 25, 0) 55.81%
 		);
 	}
-`;
-
-// chefImage Styles
-const OverFlowHidden = styled.div`
-	aspect-ratio: 1/1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 999px;
-	overflow: hidden;
 `;
 
 // chefCard styles
