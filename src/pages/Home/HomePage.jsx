@@ -10,7 +10,7 @@ const HomePage = () => {
 		<Wrapper className="page-container">
 			<Hero />
 			<PopularMenu />
-			<RestaurantGallery />
+			{/* <RestaurantGallery /> */}
 			<Chefs />
 		</Wrapper>
 	);

@@ -31,6 +31,13 @@ const Wrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	padding-block: 6.825em;
+	border: 1px solid;
+	/* for making the container 100vw */
+	width: 100vw;
+	margin: 0 calc(-50vw + 50%);
+	/* for making the container 100vw */
+  background-image: url();
 
 	.header {
 		display: flex;
