@@ -9,7 +9,7 @@ export const chefs = [
 		image: ProfileID1,
 	},
 	{
-		id: 1,
+		id: 2,
 		name: "Krisna Roy",
 		post: "junior Chef",
 		subtitle: "Our second best. He has magical hands.",
