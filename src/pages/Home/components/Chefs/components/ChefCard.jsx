@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { chefsDetails } from "../../../../../constant/en-us/home_page.constants";
 import { colors } from "../../../../../utils/colors";
 import { devices } from "../../../../../utils/breakpoints";
 

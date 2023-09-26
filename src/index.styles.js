@@ -76,6 +76,8 @@ export const Wrapper = styled.div`
 	.cursive {
 		font-family: "Zeyada", cursive;
 		font-weight: normal;
+	}
+	.cursive.colored {
 		color: ${colors.brand};
 	}
 
@@ -105,13 +107,12 @@ export const Wrapper = styled.div`
 		@media screen and (${devices.md}) {
 			font-size: 1.75em;
 		}
-		
 	}
 
 	h5 {
 		font-size: 0.65775em;
 		@media screen and (${devices.md}) {
-			font-size: .85em;
+			font-size: 0.85em;
 		}
 		@media screen and (${devices.xl}) {
 			font-size: 1.25rem;
@@ -130,7 +131,7 @@ export const Wrapper = styled.div`
 		font-size: 0.65rem;
 		line-height: normal;
 		@media screen and (${devices.xl}) {
-			font-size: .85em;
+			font-size: 0.85em;
 		}
 	}
 

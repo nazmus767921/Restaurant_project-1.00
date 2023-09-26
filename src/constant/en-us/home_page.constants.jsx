@@ -1,13 +1,13 @@
 import { chefs } from "./chefs";
 
 export const hero = {
-	title: "taste the difference**", //** for cursive styling
+	title: "taste the difference**#", //** for cursive styling
 	tagline: "more flavor for less",
 	description: "Bringing heat to your meat. No one can compete with our meat",
 };
 
 export const menu = {
-	title: "Popular Menus**", //** for cursive styling used by getCursiveStyling.jsx
+	title: "Popular Menus**#", //** for cursive styling used by getCursiveStyling.jsx ** for cursive and **# for colored cursive
 	btn: "See full Menu",
 };
 

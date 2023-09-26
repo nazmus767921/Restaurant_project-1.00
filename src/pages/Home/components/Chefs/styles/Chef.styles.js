@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 	align-items: center;
 	flex-wrap: wrap;
 	padding-block: 6.825em;
-	border: 1px solid;
 	position: relative;
 	/* for making the container 100vw */
 	width: 100vw;
@@ -35,12 +34,14 @@ export const Wrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 0.625em;
+		z-index: 10;
 	}
 
 	.cards_container {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		z-index: 10;
 	}
 
 	.chefCard--wrapper {
