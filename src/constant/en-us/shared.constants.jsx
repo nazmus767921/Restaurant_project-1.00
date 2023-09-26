@@ -42,7 +42,7 @@ export const nav = {
 };
 
 export const reservation = {
-	title: "Make an online Reservation",
+	title: "*** Make an online**# Reservation",
 	tagline: "we saved you a seat",
 	description:
 		"When the going gets tough, the tough get grilling. Bringing heat to your meat. No one can compete with our meat.",

@@ -1,12 +1,17 @@
-import { Wrapper } from "./styles/Reservation.styles"
+import { reservation } from "../../../constant/en-us/shared.constants";
+import Tag from "../Tag";
+import Title from "../Title";
+import { Wrapper } from "./styles/Reservation.styles";
 
 const Reservation = () => {
-  return (
-    <Wrapper>
-      
+	return (
+		<Wrapper>
+			<div className="Reservation_content--wrapper">
+				<Tag>{reservation.tagline}</Tag>
+				<Title>{reservation.title}</Title>
+			</div>
+		</Wrapper>
+	);
+};
 
-    </Wrapper>
-  )
-}
-
-export default Reservation
+export default Reservation;
