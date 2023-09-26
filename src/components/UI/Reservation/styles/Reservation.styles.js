@@ -23,6 +23,7 @@ export const Wrapper = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 1.88em;
+			align-items: center;
 			p {
 				text-align: center;
 			}

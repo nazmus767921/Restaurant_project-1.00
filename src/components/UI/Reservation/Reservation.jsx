@@ -1,5 +1,6 @@
 import { reservation } from "../../../constant/en-us/shared.constants";
 import Tag from "../Tag";
+import TextBTNDoubleLines from "../TextBTNDoubleLines";
 import Title from "../Title";
 import { Wrapper } from "./styles/Reservation.styles";
 
@@ -13,6 +14,7 @@ const Reservation = () => {
 				</div>
 				<div className="content">
 					<p>{reservation.description}</p>
+					<TextBTNDoubleLines>{reservation.btn}</TextBTNDoubleLines>
 				</div>
 			</div>
 		</Wrapper>
