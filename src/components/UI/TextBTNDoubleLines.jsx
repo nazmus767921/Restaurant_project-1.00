@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import Hr from "./Hr";
+import { devices } from "../../utils/breakpoints";
 
 const TextBTNDoubleLines = ({ children }) => {
 	return (
@@ -21,11 +22,16 @@ const BTN = styled.button`
 	font-family: "Lora", serif;
 	color: ${colors["text-white"]};
 	text-align: center;
-	font-size: 1.25rem;
+	font-size: 1.25em;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
 	text-transform: uppercase;
+
+	/* media queries */
+	@media screen and (${devices["2xl"]}) {
+		font-size: 1.75rem;
+	}
 
 	/* events */
 	&:hover,
