@@ -5,11 +5,11 @@ import { colors } from "./utils/colors";
 export const Wrapper = styled.div`
 	a {
 		font-weight: 500;
-		color: #646cff;
+		color: inherit;
 		text-decoration: inherit;
 	}
 	a:hover {
-		color: #535bf2;
+		color: inherit;
 	}
 
 	body {
@@ -102,10 +102,20 @@ export const Wrapper = styled.div`
 
 	h3 {
 		font-size: 1.325em;
+		@media screen and (${devices.md}) {
+			font-size: 1.75em;
+		}
+		
 	}
 
 	h5 {
 		font-size: 0.65775em;
+		@media screen and (${devices.md}) {
+			font-size: .85em;
+		}
+		@media screen and (${devices.xl}) {
+			font-size: 1.25rem;
+		}
 	}
 
 	p {
@@ -119,6 +129,9 @@ export const Wrapper = styled.div`
 	p.small {
 		font-size: 0.65rem;
 		line-height: normal;
+		@media screen and (${devices.xl}) {
+			font-size: .85em;
+		}
 	}
 
 	img {

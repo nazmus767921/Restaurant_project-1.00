@@ -14,7 +14,7 @@ const TagWrapper = styled.div`
 	line-height: normal;
 	font-weight: 400;
 	text-transform: uppercase;
-	@media screen and (${devices["md"]}) {
+	@media screen and (${devices["xl"]}) {
 		font-size: 1.25em;
 	}
 `;
