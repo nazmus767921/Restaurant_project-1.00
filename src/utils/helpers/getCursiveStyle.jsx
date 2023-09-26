@@ -5,13 +5,13 @@ const getCursiveStyle = (data) => {
 				if (index === data.split(" ").length - 1) {
 					return (
 						<span key={index} className="cursive colored">
-							{word.replace(/\*\*\#/g, "")}
+							{word.replace(/\**#/g, "")}
 						</span>
 					);
 				}
 				return (
 					<span key={index} className="cursive colored">
-						{word.replace(/\*\*\#/g, "")}&nbsp;
+						{word.replace(/\**#/g, "")}&nbsp;
 					</span>
 				);
 			}
