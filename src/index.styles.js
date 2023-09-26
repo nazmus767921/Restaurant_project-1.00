@@ -110,7 +110,7 @@ export const Wrapper = styled.div`
 	}
 
 	h5 {
-		font-size: 0.65775em;
+		font-size: 0.75em;
 		@media screen and (${devices.md}) {
 			font-size: 0.85em;
 		}
