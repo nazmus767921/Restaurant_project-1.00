@@ -6,7 +6,9 @@ export const Wrapper = styled.div`
 	position: fixed;
 	z-index: 999;
 	width: 100vw;
+	margin: 0 calc(-50vw + 50%);
 	padding: 0 1.25em;
+	background: ${colors["bg-primary-dark"]};
 
 	@media screen and (${devices.xl}) {
 		padding: 0 12em;
@@ -19,7 +21,6 @@ export const Wrapper = styled.div`
 		width: 100%;
 		overflow: hidden;
 		padding: 0.75rem 0;
-		background: #191919;
 
 		.menu_controls {
 			display: flex;

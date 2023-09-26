@@ -20,9 +20,7 @@ const NavBar = () => {
 					))}
 				</div>
 				<div className="menu_controls">
-					<button className="icon control_btn">
-						{nav.icons.search}
-					</button>
+					<button className="icon control_btn">{nav.icons.search}</button>
 					<button className="icon control_btn hamburger">
 						{nav.icons.hamburger.open}
 					</button>
