@@ -5,13 +5,7 @@ import { sharedImages } from "../../../../constant/en-us/shared.constants";
 import getCursiveStyle from "../../../../utils/helpers/getCursiveStyle";
 import { Wrapper } from "./styles/Hero.styles";
 
-// const BGImage = () => {
-// 	return (
-// 		<div className="bg-image">
-// 			<img src={sharedImages.bg} alt="hero" />
-// 		</div>
-// 	);
-// };
+
 
 const Hero = () => {
 	return (
