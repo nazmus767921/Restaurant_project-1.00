@@ -19,12 +19,12 @@ const TextContent = ({ children }) => {
 	);
 };
 
-const Title = ({ children }) => {
+const Title = ({ children, deco = false }) => {
 	return (
 		<Wrapper>
-			<Decorators />
+			{deco ? <Decorators /> : null}
 			<TextContent>{children}</TextContent>
-			<Decorators />
+			{deco ? <Decorators /> : null}
 		</Wrapper>
 	);
 };
