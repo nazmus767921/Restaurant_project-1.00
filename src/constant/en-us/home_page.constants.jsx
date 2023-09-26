@@ -18,7 +18,7 @@ export const restaurantGallery = {
 };
 
 export const chefsDetails = {
-	title: "Meet Our Excellent** Chefs",
+	title: "Meet Our Excellent**# Chefs",
 	tagline: "The Artists of cooking",
 	chefs: [...chefs],
 };
