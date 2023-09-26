@@ -7,8 +7,13 @@ const Reservation = () => {
 	return (
 		<Wrapper>
 			<div className="Reservation_content--wrapper">
-				<Tag>{reservation.tagline}</Tag>
-				<Title>{reservation.title}</Title>
+				<div className="header">
+					<Tag>{reservation.tagline}</Tag>
+					<Title>{reservation.title}</Title>
+				</div>
+				<div className="content">
+					<p>{reservation.description}</p>
+				</div>
 			</div>
 		</Wrapper>
 	);
