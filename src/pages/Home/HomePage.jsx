@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import RestaurantGallery from "./components/RestaurantGallery/RestaurantGallery";
 import Chefs from "./components/Chefs/Chefs";
 import { PopularMenu } from "./components/PopularMenu";
+import Reservation from "../../components/UI/Reservation";
 
 const HomePage = () => {
 	return (
@@ -12,6 +13,7 @@ const HomePage = () => {
 			<PopularMenu />
 			{/* <RestaurantGallery /> */}
 			<Chefs />
+			<Reservation />
 		</Wrapper>
 	);
 };
