@@ -1,9 +1,9 @@
 // --------------------------------->
 // Usage: *** at the beginning of the sentence makes the whole sentence or line cursive.
 
-// ** at the end of any word makes that word only cursive .
+// ** at the end of any word makes that word only cursive.
 
-// **# at the end of any word makes that word only colored cursive .
+// **# at the end of any word makes that word only colored cursive.
 // ---------------------------------->
 
 const getCursiveStyle = (data) => {
