@@ -2,11 +2,12 @@ import styled from "styled-components";
 import Hr from "./Hr";
 import { ease } from "../../utils/animation";
 import { colors } from "../../utils/colors";
+import { devices } from "../../utils/breakpoints";
 
-const TextBTN = ({ className }) => {
+const TextBTN = ({ children, className }) => {
 	return (
 		<Button type="button" className={className}>
-			<Wrapper>Show full menu</Wrapper>
+			<Wrapper>{children}</Wrapper>
 			<Hr className="underline" />
 		</Button>
 	);
@@ -14,11 +15,15 @@ const TextBTN = ({ className }) => {
 
 const Wrapper = styled.div`
 	font-family: Cabin Condensed;
-	font-size: 1rem;
+	font-size: 1em;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
 	text-transform: capitalize;
+	/* media queries */
+	@media screen and (${devices["2xl"]}) {
+		font-size: 1.5em;
+	}
 `;
 
 const Button = styled.button`
