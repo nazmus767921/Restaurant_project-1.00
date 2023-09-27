@@ -1,5 +1,6 @@
 import { GiForkKnifeSpoon, GiKnifeFork } from "react-icons/gi";
 import { LuSearch } from "react-icons/lu";
+import { SiFacebook, SiInstagram } from "react-icons/si";
 import BGImage from "./assets/Blue_bowl_chicken.png";
 
 export const sharedImages = {
@@ -83,13 +84,13 @@ export const footer = {
 			id: 1,
 			title: "Facebook",
 			link: "https://www.facebook.com/",
-			icon: "",
+			icon: <SiFacebook />,
 		},
 		{
 			id: 1,
 			title: "Instagram",
 			link: "https://www.instagram.com/",
-			icon: "",
+			icon: <SiInstagram />,
 		},
 	],
 	footeritems: [
