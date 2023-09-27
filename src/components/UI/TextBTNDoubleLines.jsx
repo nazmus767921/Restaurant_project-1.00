@@ -18,6 +18,7 @@ const BTN = styled.button`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 0.25em;
 	/* text styles */
 	font-family: "Lora", serif;
 	color: ${colors["text-white"]};
