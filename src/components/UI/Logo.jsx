@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { devices } from "../../utils/breakpoints";
 
-const Logo = () => {
+const Logo = ({ className }) => {
 	return (
-		<LogoWrapper>
+		<LogoWrapper className={className}>
 			Res<span>2Rant</span>
 		</LogoWrapper>
 	);
