@@ -16,5 +16,6 @@ export const Wrapper = styled.div`
 		flex-direction: row;
 		justify-content: center;
 		gap: 15em;
+		padding: 6em 0 4em 0;
 	}
 `;
