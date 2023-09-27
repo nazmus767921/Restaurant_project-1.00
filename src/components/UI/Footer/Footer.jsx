@@ -1,4 +1,4 @@
-import FooterExtras from "./components/FooterExtras/";
+import FooterExtras from "./components/FooterExtras";
 import FooterHeader from "./components/FooterHeader";
 import FooterLinks from "./components/FooterLinks/FooterLinks";
 import { Wrapper } from "./styles/Footer.styles";

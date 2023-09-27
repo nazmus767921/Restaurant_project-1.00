@@ -1,9 +1,12 @@
+import SocialIcon from "../../../../SocialIcon";
 import { Wrapper } from "./style/FooterSocialSection.styles";
 
-
-
 const FooterSocialSection = () => {
-    return <Wrapper>FooterSocialSection</Wrapper>;
+	return (
+		<Wrapper>
+			<SocialIcon />
+		</Wrapper>
+	);
 };
 
-export default FooterSocialSection
+export default FooterSocialSection;

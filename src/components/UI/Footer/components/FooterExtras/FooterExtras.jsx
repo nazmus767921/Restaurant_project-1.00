@@ -1,4 +1,4 @@
-import FooterSocialSection from "./FooterSocialSection/";
+import FooterSocialSection from "./FooterSocialSection";
 import { Wrapper } from "./style/FooterExtras.styles";
 
 const FooterExtras = () => {
