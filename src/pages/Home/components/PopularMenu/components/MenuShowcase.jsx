@@ -1,11 +1,72 @@
 import styled from "styled-components";
-import MenuItem from "../../../../../components/UI/MenuItem/MenuItem";
+// import MenuItem from "../../../../../components/UI/MenuItem/MenuItem";
 import { devices } from "../../../../../utils/breakpoints";
+import { Suspense, lazy } from "react";
+import MenuItemFallback from "../../../../../components/UI/MenuItem/Fallback/MenuItemFallback";
+const MenuItem = lazy(() =>
+	import("../../../../../components/UI/MenuItem/MenuItem")
+);
 
 const MenuShowcase = () => {
 	return (
 		<Wrapper>
-			<div className="menu_item--wrapper">
+			<Suspense
+				fallback={
+					<div className="menu_item--wrapper">
+						<MenuItemFallback />
+					</div>
+				}
+			>
+				<div className="menu_item--wrapper">
+					<MenuItem />
+				</div>
+			</Suspense>
+			<Suspense
+				fallback={
+					<div className="menu_item--wrapper">
+						<MenuItemFallback />
+					</div>
+				}
+			>
+				<div className="menu_item--wrapper">
+					<MenuItem />
+				</div>
+			</Suspense>
+			<Suspense
+				fallback={
+					<div className="menu_item--wrapper">
+						<MenuItemFallback />
+					</div>
+				}
+			>
+				<div className="menu_item--wrapper">
+					<MenuItem />
+				</div>
+			</Suspense>
+			<Suspense
+				fallback={
+					<div className="menu_item--wrapper">
+						<MenuItemFallback />
+					</div>
+				}
+			>
+				<div className="menu_item--wrapper">
+					<MenuItem />
+				</div>
+			</Suspense>
+			<Suspense
+				fallback={
+					<div className="menu_item--wrapper">
+						<MenuItemFallback />
+					</div>
+				}
+			>
+				<div className="menu_item--wrapper">
+					<MenuItem />
+				</div>
+			</Suspense>
+
+			{/* <div className="menu_item--wrapper">
 				<MenuItem />
 			</div>
 			<div className="menu_item--wrapper">
@@ -22,7 +83,7 @@ const MenuShowcase = () => {
 			</div>
 			<div className="menu_item--wrapper">
 				<MenuItem />
-			</div>
+			</div> */}
 		</Wrapper>
 	);
 };
@@ -33,9 +94,11 @@ const Wrapper = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	row-gap: 1em;
+	gap: 1em;
 
 	.menu_item--wrapper {
 		width: 47%;
+
 		@media screen and (${devices.md}) {
 			width: 30%;
 		}
