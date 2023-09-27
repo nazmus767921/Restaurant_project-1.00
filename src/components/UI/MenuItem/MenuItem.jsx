@@ -5,7 +5,7 @@ const MenuItem = () => {
 	return (
 		<Wrapper>
 			<div className="item_image">
-				<img src={Shahi_kebab} alt="ItemName" />
+				<img loading="lazy" src={Shahi_kebab} alt="ItemName" />
 			</div>
 			<h3>Shahi Kebab</h3>
 			<p className="small description">
