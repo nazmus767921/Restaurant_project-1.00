@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding-block: 6.825em;
+	padding-block-end: 3.825em;
 	position: relative;
 	/* for making the container 100vw */
 	width: 100vw;
