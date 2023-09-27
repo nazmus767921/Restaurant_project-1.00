@@ -1,7 +1,12 @@
+import FooterSocialSection from "./FooterSocialSection/FooterSocialSection";
 import { Wrapper } from "./style/FooterExtras.styles";
 
 const FooterExtras = () => {
-	return <Wrapper>helllo</Wrapper>;
+	return (
+		<Wrapper>
+			<FooterSocialSection />
+		</Wrapper>
+	);
 };
 
 export default FooterExtras;
