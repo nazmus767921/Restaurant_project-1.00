@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../../../../../../utils/colors";
-import { devices } from "../../../../../../utils/breakpoints";
 import { ease } from "../../../../../../utils/animation";
 
 const FooterLinkBTN = ({ children }) => {
