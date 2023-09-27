@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { colors } from "../../../../../../utils/colors";
 import { ease } from "../../../../../../utils/animation";
 
-const FooterLinkBTN = ({ children }) => {
-	return <BTN>{children}</BTN>;
+const FooterLinkBTN = ({ children, className = null }) => {
+	return (
+		<BTN type="button" className={className}>
+			{children}
+		</BTN>
+	);
 };
 
 const BTN = styled.button`
