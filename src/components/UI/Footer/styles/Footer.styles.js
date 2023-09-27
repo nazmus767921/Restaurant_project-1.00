@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
 	/* layout */
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	padding-block: 1.25em;
 	gap: 1.25em;
+	padding-block: 1.25em;
+	width: max-content;
+	margin: 0 auto;
 `;

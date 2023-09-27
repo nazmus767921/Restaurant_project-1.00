@@ -33,7 +33,6 @@ const Wrapper = styled.div`
 		height: 1px;
 		background-color: ${colors["text-white"]};
 		opacity: 0.3;
-		width: 40%;
 	}
 `;
 
