@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { devices } from "../../utils/breakpoints";
+import { createRef } from "react";
+
+export const logoContainerRef = createRef();
 
 const Logo = ({ className }) => {
 	return (
-		<LogoWrapper className={className}>
+		<LogoWrapper ref={logoContainerRef} className={className}>
 			Res<span>2Rant</span>
 		</LogoWrapper>
 	);
