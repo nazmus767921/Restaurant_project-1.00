@@ -1,17 +1,10 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { devices } from "../../utils/breakpoints";
-import { createRef } from "react";
-
-export const logoContainerRef = createRef();
-
-export const logoContainerWidth = () => {
-	return logoContainerRef?.current?.clientWidth;
-};
 
 const Logo = ({ className }) => {
 	return (
-		<LogoWrapper ref={logoContainerRef} className={className}>
+		<LogoWrapper className={className}>
 			Res<span>2Rant</span>
 		</LogoWrapper>
 	);
