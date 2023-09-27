@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
 		flex-direction: column;
 		gap: 1.88em;
 		margin-block: 3em;
+		padding: 6.25em 2.25em;
 
 		/* media queries */
 		@media screen and (${devices["2xl"]}) {
