@@ -5,6 +5,7 @@ import RestaurantGallery from "./components/RestaurantGallery/RestaurantGallery"
 import Chefs from "./components/Chefs/Chefs";
 import { PopularMenu } from "./components/PopularMenu";
 import Reservation from "../../components/UI/Reservation";
+import Footer from "../../components/UI/Footer/Footer";
 
 const HomePage = () => {
 	return (
@@ -14,6 +15,7 @@ const HomePage = () => {
 			{/* <RestaurantGallery /> */}
 			<Chefs />
 			<Reservation />
+			<Footer />
 		</Wrapper>
 	);
 };
