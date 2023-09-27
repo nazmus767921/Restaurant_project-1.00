@@ -55,20 +55,28 @@ const OverFlowHidden = styled.div`
 	position: relative;
 
 	.gradientOverlay {
+		/* layout */
+		width: 110%;
+		height: 110%;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		right: 0;
 		left: 0;
-		width: 110%;
-		height: 110%;
-		pointer-events: none;
 		z-index: 10;
+		/* for touch devices */
+		pointer-events: none;
+		/* makeup */
 		background: linear-gradient(
 			0deg,
 			#191919 18.39%,
 			rgba(25, 25, 25, 0) 55.81%
 		);
+
+		/* media queries */
+		@media screen and (${devices["2xl"]}) {
+			display: none;
+		}
 	}
 `;
 
