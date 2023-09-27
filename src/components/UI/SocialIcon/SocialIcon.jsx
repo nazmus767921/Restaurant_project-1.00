@@ -1,7 +1,7 @@
 import { Wrapper } from "./style/SocialIcon.styles";
 
-const SocialIcon = () => {
-	return <Wrapper>SocialIcon</Wrapper>;
+const SocialIcon = ({ children, className = null }) => {
+	return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 export default SocialIcon;
