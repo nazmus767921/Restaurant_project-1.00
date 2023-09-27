@@ -10,7 +10,14 @@ export const Wrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 0.625rem;
+	border-radius: 0.625rem;
 
+	/* event */
+	&:hover,
+	:focus {
+		/* makeup */
+		box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.09);
+	}
 	/* typo */
 	text-align: center;
 
