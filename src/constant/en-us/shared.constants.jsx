@@ -93,7 +93,7 @@ export const footer = {
 			icon: <SiInstagram />,
 		},
 	],
-	footeritems: [
+	"footer-extras": [
 		{
 			id: 1,
 			title: "© Copyright Nazmus767921",
