@@ -5,7 +5,14 @@ import { Wrapper } from "./style/FooterSocialSection.styles";
 const FooterSocialSection = () => {
 	return (
 		<Wrapper>
-			<SocialIcon>{footer.socials[0].icon}</SocialIcon>
+			{footer.socials.map((social) => {
+				const { id, icon, link } = social;
+				return (
+					<SocialIcon key={id} link={link}>
+						{icon}
+					</SocialIcon>
+				);
+			})}
 		</Wrapper>
 	);
 };
