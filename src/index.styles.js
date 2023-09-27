@@ -3,6 +3,9 @@ import { devices } from "./utils/breakpoints";
 import { colors } from "./utils/colors";
 
 export const Wrapper = styled.div`
+	/* layout */
+	overflow-x: hidden;
+
 	a {
 		font-weight: 500;
 		color: inherit;
