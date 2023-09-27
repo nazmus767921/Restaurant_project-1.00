@@ -5,6 +5,10 @@ import { createRef } from "react";
 
 export const logoContainerRef = createRef();
 
+export const logoContainerWidth = () => {
+	return logoContainerRef?.current?.clientWidth;
+};
+
 const Logo = ({ className }) => {
 	return (
 		<LogoWrapper ref={logoContainerRef} className={className}>
