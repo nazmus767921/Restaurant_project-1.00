@@ -7,83 +7,29 @@ const MenuItem = lazy(() =>
 	import("../../../../../components/UI/MenuItem/MenuItem")
 );
 
+const MenuCard = () => {
+	return (
+		<Suspense
+			fallback={
+				<div className="menu_item--wrapper">
+					<MenuItemFallback />
+				</div>
+			}
+		>
+			<div className="menu_item--wrapper">
+				<MenuItem />
+			</div>
+		</Suspense>
+	);
+};
 const MenuShowcase = () => {
 	return (
 		<Wrapper>
-			<Suspense
-				fallback={
-					<div className="menu_item--wrapper">
-						<MenuItemFallback />
-					</div>
-				}
-			>
-				<div className="menu_item--wrapper">
-					<MenuItem />
-				</div>
-			</Suspense>
-			<Suspense
-				fallback={
-					<div className="menu_item--wrapper">
-						<MenuItemFallback />
-					</div>
-				}
-			>
-				<div className="menu_item--wrapper">
-					<MenuItem />
-				</div>
-			</Suspense>
-			<Suspense
-				fallback={
-					<div className="menu_item--wrapper">
-						<MenuItemFallback />
-					</div>
-				}
-			>
-				<div className="menu_item--wrapper">
-					<MenuItem />
-				</div>
-			</Suspense>
-			<Suspense
-				fallback={
-					<div className="menu_item--wrapper">
-						<MenuItemFallback />
-					</div>
-				}
-			>
-				<div className="menu_item--wrapper">
-					<MenuItem />
-				</div>
-			</Suspense>
-			<Suspense
-				fallback={
-					<div className="menu_item--wrapper">
-						<MenuItemFallback />
-					</div>
-				}
-			>
-				<div className="menu_item--wrapper">
-					<MenuItem />
-				</div>
-			</Suspense>
-
-			{/* <div className="menu_item--wrapper">
-				<MenuItem />
-			</div>
-			<div className="menu_item--wrapper">
-				<MenuItem />
-			</div>
-			<div className="menu_item--wrapper">
-				<MenuItem />
-			</div>
-			<div className="menu_item--wrapper">
-				<MenuItem />
-			</div>
-			<div className="menu_item--wrapper">
-				<MenuItem />
-			</div>
-			<div className="menu_item--wrapper">
-				<MenuItem />
-			</div> */}
+			<MenuCard />
+			<MenuCard />
+			<MenuCard />
+			<MenuCard />
+			<MenuCard />
 		</Wrapper>
 	);
 };
