@@ -83,13 +83,13 @@ export const footer = {
 		{
 			id: 1,
 			title: "Facebook",
-			link: "https://www.facebook.com/",
+			link: "https://www.facebook.com/nazmus767921",
 			icon: <SiFacebook />,
 		},
 		{
 			id: 1,
 			title: "Instagram",
-			link: "https://www.instagram.com/",
+			link: "https://www.instagram.com/nazmus767921",
 			icon: <SiInstagram />,
 		},
 	],
