@@ -10,20 +10,20 @@ const Decorators = () => {
 	);
 };
 
-const TextContent = ({ children }) => {
+const TextContent = ({ children, className }) => {
 	const content = getCursiveStyle(children);
 	return (
 		<>
-			<h2>{content}</h2>
+			<h2 className={className}>{content}</h2>
 		</>
 	);
 };
 
-const Title = ({ children, deco = false }) => {
+const Title = ({ children, deco = false, className }) => {
 	return (
 		<Wrapper>
 			{deco ? <Decorators /> : null}
-			<TextContent>{children}</TextContent>
+			<TextContent className={className}>{children}</TextContent>
 			{deco ? <Decorators /> : null}
 		</Wrapper>
 	);
