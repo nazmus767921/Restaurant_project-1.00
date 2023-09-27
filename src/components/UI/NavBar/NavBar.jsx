@@ -1,18 +1,11 @@
-import Logo, { logoContainerRef, logoContainerWidth } from "../Logo";
+import Logo from "../Logo";
 import { nav } from "../../../constant/en-us/shared.constants";
 import { Wrapper } from "./styles/NavBar.styles";
-import { createRef, useEffect, useState } from "react";
+import { createRef } from "react";
 import NavLink from "./NavLink";
 
 export const navRef = createRef();
 const NavBar = () => {
-	const [menu_controlStyle, setMenu_controlStyle] = useState({
-		width: "fit-content",
-	});
-	useEffect(() => {
-		const width = `"${logoContainerWidth()}px"`;
-		setMenu_controlStyle({ width });
-	}, [logoContainerRef]);
 	return (
 		<Wrapper>
 			<nav ref={navRef} className="container">
@@ -26,7 +19,7 @@ const NavBar = () => {
 						</NavLink>
 					))}
 				</div>
-				<div className="menu_controls" style={menu_controlStyle}>
+				<div className="menu_controls">
 					<button className="icon control_btn">{nav.icons.search}</button>
 					<button className="icon control_btn hamburger">
 						{nav.icons.hamburger.open}

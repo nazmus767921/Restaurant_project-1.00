@@ -17,26 +17,30 @@ export const Wrapper = styled.div`
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 
 		width: 100%;
 		overflow: hidden;
 		padding: 0.75rem 0;
 
+		/* elements inside */
 		.menu_controls {
+			/* layout */
 			display: flex;
 			gap: 1.25em;
-			justify-content: space-between;
+			justify-content: flex-end;
 
+			/* elements inside */
 			.control_btn {
 				width: 2em;
 				color: ${colors.brand};
 				opacity: 0.3;
+				/* events */
 				&:hover,
 				:focus {
 					opacity: 1;
 				}
 			}
-
 			.hamburger {
 				transform: rotate(-90deg);
 				@media screen and (${devices.lg}) {
@@ -50,6 +54,9 @@ export const Wrapper = styled.div`
 				display: flex;
 				flex-direction: row;
 				gap: 1.25em;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 		}
 	}
