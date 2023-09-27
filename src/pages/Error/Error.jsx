@@ -10,7 +10,7 @@ const Error = () => {
 		<>
 			<NavBar />
 			<Wrapper>
-				<div>
+				<div className="header">
 					<Tag>{errorhero.tagline}</Tag>
 					<Title className="error_title">{errorhero.title}</Title>
 				</div>

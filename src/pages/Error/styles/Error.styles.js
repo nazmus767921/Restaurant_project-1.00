@@ -11,8 +11,18 @@ export const Wrapper = styled.div`
 	min-height: 100vh;
 	min-height: 100dvh;
 	/* elements inside */
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
 	h2.error_title {
 		font-size: 2.5em;
 		line-height: 1.4em;
+	}
+	h2.error_title > span {
+		font-size: 180%;
+		line-height: 0;
 	}
 `;
