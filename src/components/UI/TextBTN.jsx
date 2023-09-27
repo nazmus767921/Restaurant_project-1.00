@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Hr from "./Hr";
 import { ease } from "../../utils/animation";
+import { colors } from "../../utils/colors";
 
 const TextBTN = ({ className }) => {
 	return (
@@ -25,6 +26,8 @@ const Button = styled.button`
 	display: flex;
 	flex-direction: column;
 	gap: 0.65em;
+	color: ${colors["text-white"]};
+
 	.underline {
 		transition: all 0.35s ${ease["out-expo"]};
 	}
