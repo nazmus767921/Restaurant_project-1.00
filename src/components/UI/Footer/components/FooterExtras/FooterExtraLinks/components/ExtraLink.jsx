@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { colors } from "../../../../../../../utils/colors";
 import { ease } from "../../../../../../../utils/animation";
 
-const ExtraLink = ({ children }) => {
-	return <A>{children}</A>;
+const ExtraLink = ({ children, link = null }) => {
+	return <A href={link}>{children}</A>;
 };
 
 const A = styled.a`
