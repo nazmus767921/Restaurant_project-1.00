@@ -20,10 +20,13 @@ const PopularMenu = () => {
 };
 
 const Wrapper = styled.div`
+	/* layout */
 	display: flex;
 	gap: 2.75em;
 	flex-direction: column;
+	padding-block-end: 6em;
 
+	/* elements inside */
 	.foodFilterMenu--wrapper {
 		@media screen and (${devices.md}) {
 			margin-block-end: 2em;
