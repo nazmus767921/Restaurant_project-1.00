@@ -3,13 +3,17 @@ import { nav } from "../../../constant/en-us/shared.constants";
 import { Wrapper } from "./styles/NavBar.styles";
 import { createRef } from "react";
 import NavLink from "./NavLink";
+import { Link } from "react-router-dom";
+import { paths } from "../../../Root.paths";
 
 export const navRef = createRef();
 const NavBar = () => {
 	return (
 		<Wrapper>
 			<nav ref={navRef} className="container">
-				<Logo />
+				<Link to={paths.home}>
+					<Logo />
+				</Link>
 				<div className="nav_links">
 					{nav.links.map((link) => (
 						<NavLink key={link.id}>

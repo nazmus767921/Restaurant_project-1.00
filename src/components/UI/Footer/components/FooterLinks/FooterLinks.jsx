@@ -4,6 +4,7 @@ import { footer } from "../../../../../constant/en-us/shared.constants";
 import Hr from "../../../Hr";
 import { colors } from "../../../../../utils/colors";
 import { devices } from "../../../../../utils/breakpoints";
+import { Link } from "react-router-dom";
 
 const FooterLinks = () => {
 	return (
@@ -13,9 +14,9 @@ const FooterLinks = () => {
 				{footer["nav-links"].map((link_obj) => {
 					const { id, link, title } = link_obj;
 					return (
-						<FooterLinkBTN key={id} link={link} className="link_btn">
-							{title}
-						</FooterLinkBTN>
+						<Link to={link} key={id}>
+							<FooterLinkBTN className="link_btn">{title}</FooterLinkBTN>
+						</Link>
 					);
 				})}
 			</div>
