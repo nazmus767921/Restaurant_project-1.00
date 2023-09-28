@@ -1,7 +1,7 @@
 import { Main } from "./styles/AboutPage.styles";
 
 const AboutPage = () => {
-	return <Main>AboutPage</Main>;
+	return <Main className="page-container">AboutPage</Main>;
 };
 
 export default AboutPage;

@@ -1,24 +1,35 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { devices } from "./utils/breakpoints";
 import { colors } from "./utils/colors";
 
-export const Wrapper = styled.div`
+export const GlobalStyles = createGlobalStyle`
 	/* layout */
 	overflow-x: hidden;
 
+	a:-webkit-any-link {
+		color: inherit; /* Use the default text color */
+		cursor: auto; /* Remove pointer cursor */
+		text-decoration: none; /* Remove underline */
+}
 	a {
 		font-weight: 500;
 		color: inherit;
-		text-decoration: inherit;
+		text-decoration: none;
+	
 	}
+
+
 	a:hover {
 		color: inherit;
 	}
 
+
+
 	body {
 		margin: 0;
 
-		font-size: 0.8333333333333334vw;
+		/* font-size: 0.8333333333333334vw; */
+		/* font-size: 4.266666666666667vw; */
 
 		color: ${colors["text-white"]};
 
@@ -28,15 +39,16 @@ export const Wrapper = styled.div`
 		width: 100%;
 	}
 
-	@media screen and (${devices["4xl"]}) {
+	@media screen and (${devices["md"]}) {
 		body {
-			font-size: 16px;
+			/* font-size: 16px; */
+			/* font-size: 31.488px; */
 		}
 	}
 
 	/* Container Max Width */
 	.page-container {
-		margin: 0 auto;
+		margin: auto auto;
 		max-width: 1536px;
 		width: calc(100vw - 1.875rem);
 
@@ -55,11 +67,6 @@ export const Wrapper = styled.div`
 	}
 
 	/* Min Font Size */
-	@media screen and (${devices["2xl"]}) {
-		body {
-			font-size: 10.666666666666668px;
-		}
-	}
 
 	h1,
 	h2,
@@ -86,9 +93,6 @@ export const Wrapper = styled.div`
 
 	h1 {
 		font-size: 3em;
-		@media screen and (${devices["md"]}) {
-			font-size: 5em;
-		}
 	}
 	h1 > span.cursive {
 		line-height: 0.82;
