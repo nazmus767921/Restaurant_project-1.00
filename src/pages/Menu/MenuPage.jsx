@@ -1,8 +1,5 @@
-
 const MenuPage = () => {
-  return (
-    <div>MenuPage</div>
-  )
-}
+	return <div>MenuPage</div>;
+};
 
-export default MenuPage
+export default MenuPage;
