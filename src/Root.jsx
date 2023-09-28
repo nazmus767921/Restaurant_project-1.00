@@ -6,7 +6,7 @@ import { paths } from "./Root.paths";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import MenuPage from "./pages/Menu/MenuPage";
-import MobileSideBar from "./components/UI/NavBar/components/MobileSideBar/MobileSideBar";
+import ReservationPage from "./pages/Reservation/ReservationPage";
 
 const router = createBrowserRouter([
 	{
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
 				element: <MenuPage />,
 			},
 			{
-				path: "/sidebar",
-				element: <MobileSideBar />,
+				path: paths.reservation,
+				element: <ReservationPage />,
 			},
 		],
 	},
