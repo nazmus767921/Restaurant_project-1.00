@@ -5,6 +5,8 @@ import { styled } from "styled-components";
 import MenuShowcase from "./components/MenuShowcase";
 import { devices } from "../../../../utils/breakpoints";
 import TextBTN from "../../../../components/UI/TextBTN";
+import { Link } from "react-router-dom";
+import { paths } from "../../../../Root.paths";
 
 const PopularMenu = () => {
 	return (
@@ -14,7 +16,9 @@ const PopularMenu = () => {
 				<FoodFilterMenu />
 			</div>
 			<MenuShowcase />
-			<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
+			<Link to={paths.menu}>
+				<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
+			</Link>
 		</Wrapper>
 	);
 };
