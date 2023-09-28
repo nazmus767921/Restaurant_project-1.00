@@ -23,6 +23,10 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+main {
+	margin-top: 4em;
+}
+
 button {
 	width: fit-content;
 	cursor: pointer;

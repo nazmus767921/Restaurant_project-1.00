@@ -6,10 +6,6 @@ export const Wrapper = styled.div`
 	/* layout */
 	overflow-x: hidden;
 
-	main {
-		margin-top: 4em;
-	}
-
 	a {
 		font-weight: 500;
 		color: inherit;
