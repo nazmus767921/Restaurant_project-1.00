@@ -16,7 +16,7 @@ const MobileSideBar = ({ toggleShowSidebar }) => {
 				{links.map((linkobj) => {
 					const { id, link, title } = linkobj;
 					return (
-						<Link to={link} key={id}>
+						<Link to={link} key={id} onClick={toggleShowSidebar}>
 							<SideBarLink>{getCursiveStyle(title)}</SideBarLink>
 						</Link>
 					);
