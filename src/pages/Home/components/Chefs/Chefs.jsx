@@ -1,8 +1,9 @@
-import ChefCard from "./components/ChefCard";
+import { lazy, Suspense } from "react";
 import { chefsDetails } from "../../../../constant/en-us/home_page.constants";
 import Title from "../../../../components/UI/Title";
 import Tag from "../../../../components/UI/Tag";
 import { Wrapper } from "./styles/Chef.styles";
+const ChefCard = lazy(() => import("./components/ChefCard"));
 
 const Chefs = () => {
 	return (
@@ -15,9 +16,11 @@ const Chefs = () => {
 			<div className="cards_container">
 				{chefsDetails.chefs.map((chef) => {
 					return (
-						<div key={chef.id} className="chefCard--wrapper">
-							<ChefCard {...chef} />
-						</div>
+						<Suspense key={chef.id} fallback={<div>Loading...</div>}>
+							<div className="chefCard--wrapper">
+								<ChefCard {...chef} />
+							</div>
+						</Suspense>
 					);
 				})}
 			</div>
