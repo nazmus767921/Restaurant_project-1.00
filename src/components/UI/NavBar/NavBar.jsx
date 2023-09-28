@@ -15,7 +15,6 @@ const NavBar = () => {
 	// actions
 	const toggleShowSidebar = () => {
 		setShowSideBar((prev) => !prev);
-		console.log(showSideBar);
 	};
 
 	return (
@@ -31,7 +30,7 @@ const NavBar = () => {
 					{nav.links.map((link) => (
 						<NavLink key={link.id}>
 							{link.title.includes("menu")
-								? link.title.split(" ")[1]
+								? link.title.split(" ")[1].replace(/\**#/g, "")
 								: link.title.split(" ")[0]}
 						</NavLink>
 					))}
