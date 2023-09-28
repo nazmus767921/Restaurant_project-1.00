@@ -1,5 +1,7 @@
+import { Main } from "./styles/ReservationPage.styles";
+
 const ReservationPage = () => {
-	return <div>ReservationPage</div>;
+	return <Main>ReservationPage</Main>;
 };
 
 export default ReservationPage;
