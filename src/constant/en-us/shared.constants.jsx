@@ -1,5 +1,5 @@
 import { GiForkKnifeSpoon, GiKnifeFork } from "react-icons/gi";
-import { LuSearch } from "react-icons/lu";
+import { LuSearch, LuUtensilsCrossed } from "react-icons/lu";
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import BGImage from "./assets/Blue_bowl_chicken.png";
 import { paths } from "../../Root.paths";
@@ -12,22 +12,22 @@ export const nav = {
 	links: [
 		{
 			id: 1,
-			title: "Home Page",
+			title: "Home Page**#",
 			link: "/",
 		},
 		{
 			id: 2,
-			title: "About us",
+			title: "About us**#",
 			link: "/about",
 		},
 		{
 			id: 3,
-			title: "Our menus",
+			title: "Our menus**#",
 			link: "/menus",
 		},
 		{
 			id: 4,
-			title: "Contact us",
+			title: "Contact us**#",
 			link: "/contact",
 		},
 	],
@@ -40,6 +40,7 @@ export const nav = {
 			open: <GiForkKnifeSpoon />,
 			close: <GiKnifeFork />,
 		},
+		cross: <LuUtensilsCrossed />,
 	},
 };
 
