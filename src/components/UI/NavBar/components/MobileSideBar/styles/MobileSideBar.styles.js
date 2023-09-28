@@ -9,6 +9,8 @@ export const Main = styled.main`
 	align-items: flex-start;
 	flex-shrink: 0;
 	width: 16.875rem;
+	min-height: 100vh;
+	min-height: 100dvh;
 	/* height: 36.125rem; */
 	padding: 1.25rem;
 	gap: 0.625rem;
