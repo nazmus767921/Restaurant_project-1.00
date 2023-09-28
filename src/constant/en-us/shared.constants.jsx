@@ -13,26 +13,26 @@ export const nav = {
 		{
 			id: crypto.randomUUID(),
 			title: "Home Page**#",
-			link: "/",
+			link: paths.home,
 		},
 		{
 			id: crypto.randomUUID(),
 			title: "About us**#",
-			link: "/about",
+			link: paths.about,
 		},
 		{
 			id: crypto.randomUUID(),
 			title: "Our menus**#",
-			link: "/menus",
+			link: paths.menu,
 		},
 		{
 			id: crypto.randomUUID(),
 			title: "Contact us**#",
-			link: "/contact",
+			link: paths.contact,
 		},
 	],
 
-	btn: "Make Reservation",
+	btn: { link: paths.reservation, title: "Make Reservation" },
 
 	icons: {
 		search: <LuSearch />,
