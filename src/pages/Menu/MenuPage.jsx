@@ -1,5 +1,7 @@
+import { Main } from "./styles/MenuPage.styles";
+
 const MenuPage = () => {
-	return <main>MenuPage</main>;
+	return <Main>MenuPage</Main>;
 };
 
 export default MenuPage;

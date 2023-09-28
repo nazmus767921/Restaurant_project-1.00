@@ -1,5 +1,7 @@
+import { Main } from "./styles/ContactPage.styles";
+
 const ContactPage = () => {
-	return <div>ContactPage</div>;
+	return <Main>ContactPage</Main>;
 };
 
 export default ContactPage;
