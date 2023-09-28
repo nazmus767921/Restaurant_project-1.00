@@ -11,22 +11,22 @@ export const sharedImages = {
 export const nav = {
 	links: [
 		{
-			id: 1,
+			id: crypto.randomUUID(),
 			title: "Home Page**#",
 			link: "/",
 		},
 		{
-			id: 2,
+			id: crypto.randomUUID(),
 			title: "About us**#",
 			link: "/about",
 		},
 		{
-			id: 3,
+			id: crypto.randomUUID(),
 			title: "Our menus**#",
 			link: "/menus",
 		},
 		{
-			id: 4,
+			id: crypto.randomUUID(),
 			title: "Contact us**#",
 			link: "/contact",
 		},
@@ -60,22 +60,22 @@ export const footer = {
 	},
 	"nav-links": [
 		{
-			id: 1,
+			id: crypto.randomUUID(),
 			title: "Our menus",
 			link: paths.menu,
 		},
 		{
-			id: 2,
+			id: crypto.randomUUID(),
 			title: "Reservation",
 			link: paths.reservation,
 		},
 		{
-			id: 3,
+			id: crypto.randomUUID(),
 			title: "About",
 			link: paths.about,
 		},
 		{
-			id: 4,
+			id: crypto.randomUUID(),
 			title: "Contact us",
 			link: paths.contact,
 		},
@@ -83,13 +83,13 @@ export const footer = {
 
 	socials: [
 		{
-			id: 1,
+			id: crypto.randomUUID(),
 			title: "Facebook",
 			link: "https://www.facebook.com/nazmus767921",
 			icon: <SiFacebook />,
 		},
 		{
-			id: 1,
+			id: crypto.randomUUID(),
 			title: "Instagram",
 			link: "https://www.instagram.com/nazmus767921",
 			icon: <SiInstagram />,
@@ -97,22 +97,22 @@ export const footer = {
 	],
 	"footer-extras": [
 		{
-			id: 1,
+			id: crypto.randomUUID(),
 			title: "© Copyright Nazmus767921",
 			link: null,
 		},
 		{
-			id: 2,
+			id: crypto.randomUUID(),
 			title: "All Right Reserved.",
 			link: null,
 		},
 		{
-			id: 3,
+			id: crypto.randomUUID(),
 			title: "Privacy policy",
 			link: null,
 		},
 		{
-			id: 4,
+			id: crypto.randomUUID(),
 			title: "Terms of use",
 			link: null,
 		},

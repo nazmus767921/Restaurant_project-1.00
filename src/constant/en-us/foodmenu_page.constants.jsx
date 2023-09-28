@@ -5,11 +5,11 @@ export const title = "Our Menu";
 
 export const view = [
 	{
-		id: 1,
+		id: crypto.randomUUID(),
 		icon: <TfiLayoutGrid2Alt />,
 	},
 	{
-		id: 2,
+		id: crypto.randomUUID(),
 		icon: <PiListBold />,
 	},
 ];

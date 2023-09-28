@@ -6,19 +6,19 @@ export const hero = {
 
 export const form = [
 	{
-		id: 1,
+		id: crypto.randomUUID(),
 		name: "name",
 		type: "text",
 		placeholder: "Your name, Sir/ Madam?",
 	},
 	{
-		id: 2,
+		id: crypto.randomUUID(),
 		name: "email",
 		type: "text",
 		placeholder: "Your Phone Number, Sir/ Madam?",
 	},
 	{
-		id: 3,
+		id: crypto.randomUUID(),
 		name: "message",
 		type: "textarea",
 		placeholder: "",

@@ -13,19 +13,19 @@ export const hero = {
 
 export const offerings = [
 	{
-		id: 1,
+		id: crypto.randomUUID(),
 		title: "Fresh Products",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId1,
 	},
 	{
-		id: 2,
+		id: crypto.randomUUID(),
 		title: "Skilled Chefs",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId2,
 	},
 	{
-		id: 3,
+		id: crypto.randomUUID(),
 		title: "Vegan Cuisine",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId3,
