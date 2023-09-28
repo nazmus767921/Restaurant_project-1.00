@@ -22,10 +22,11 @@ const MobileSideBar = ({ toggleShowSidebar }) => {
 					);
 				})}
 			</div>
-			
-			<TextBTNDoubleLines className="reservation--button">
-				{nav.btn.title}
-			</TextBTNDoubleLines>
+			<Link to={nav.btn.link}>
+				<TextBTNDoubleLines className="reservation--button">
+					{nav.btn.title}
+				</TextBTNDoubleLines>
+			</Link>
 		</Main>
 	);
 };
