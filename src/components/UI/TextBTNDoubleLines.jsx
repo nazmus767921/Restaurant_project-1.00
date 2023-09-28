@@ -3,9 +3,9 @@ import { colors } from "../../utils/colors";
 import Hr from "./Hr";
 import { devices } from "../../utils/breakpoints";
 
-const TextBTNDoubleLines = ({ children }) => {
+const TextBTNDoubleLines = ({ children, className }) => {
 	return (
-		<BTN type="button">
+		<BTN type="button" className={className}>
 			<Hr className="BTN_Line" />
 			{children}
 			<Hr className="BTN_Line" />
