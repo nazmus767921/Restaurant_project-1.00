@@ -9,6 +9,22 @@ import MobileSideBar from "./components/MobileSideBar/MobileSideBar";
 
 export const navRef = createRef();
 
+const NavLinks = () => {
+	return (
+		<>
+			{nav.links.map((linkobj) => (
+				<Link to={linkobj.link} key={linkobj.id}>
+					<NavLink>
+						{linkobj.title.includes("menu")
+							? linkobj.title.split(" ")[1].replace(/\**#/g, "")
+							: linkobj.title.split(" ")[0]}
+					</NavLink>
+				</Link>
+			))}
+		</>
+	);
+};
+
 const NavBar = () => {
 	const [showSideBar, setShowSideBar] = useState(false);
 
@@ -27,13 +43,7 @@ const NavBar = () => {
 					<Logo />
 				</Link>
 				<div className="nav_links">
-					{nav.links.map((link) => (
-						<NavLink key={link.id}>
-							{link.title.includes("menu")
-								? link.title.split(" ")[1].replace(/\**#/g, "")
-								: link.title.split(" ")[0]}
-						</NavLink>
-					))}
+					<NavLinks />
 				</div>
 				<div className="menu_controls">
 					<button className="icon control_btn">{nav.icons.search}</button>
