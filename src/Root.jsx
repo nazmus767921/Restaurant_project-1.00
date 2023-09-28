@@ -6,6 +6,7 @@ import { paths } from "./Root.paths";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import MenuPage from "./pages/Menu/MenuPage";
+import MobileSideBar from "./components/UI/NavBar/components/MobileSideBar/MobileSideBar";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: paths.menu,
 				element: <MenuPage />,
+			},
+			{
+				path: "/sidebar",
+				element: <MobileSideBar />,
 			},
 		],
 	},
