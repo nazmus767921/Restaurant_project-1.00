@@ -5,11 +5,11 @@ import SideBarLink from "./components/SideBarLink";
 import { Main } from "./styles/MobileSideBar.styles";
 import TextBTNDoubleLines from "../../../TextBTNDoubleLines";
 
-const MobileSideBar = () => {
+const MobileSideBar = ({ toggleShowSidebar }) => {
 	const links = nav.links;
 	return (
 		<Main>
-			<button type="button" className="icon">
+			<button type="button" className="icon" onClick={toggleShowSidebar}>
 				{nav.icons.cross}
 			</button>
 			<div className="links">
