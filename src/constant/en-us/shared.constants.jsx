@@ -2,6 +2,7 @@ import { GiForkKnifeSpoon, GiKnifeFork } from "react-icons/gi";
 import { LuSearch } from "react-icons/lu";
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import BGImage from "./assets/Blue_bowl_chicken.png";
+import { paths } from "../../Root.paths";
 
 export const sharedImages = {
 	bg: BGImage,
@@ -60,22 +61,22 @@ export const footer = {
 		{
 			id: 1,
 			title: "Our menus",
-			link: "/menu",
+			link: paths.menu,
 		},
 		{
 			id: 2,
 			title: "Reservation",
-			link: "/reservation",
+			link: paths.reservation,
 		},
 		{
 			id: 3,
 			title: "About",
-			link: "/about",
+			link: paths.about,
 		},
 		{
 			id: 4,
 			title: "Contact us",
-			link: "/contact",
+			link: paths.contact,
 		},
 	],
 
