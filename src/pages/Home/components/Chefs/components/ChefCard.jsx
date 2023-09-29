@@ -90,12 +90,20 @@ const Wrapper = styled.div`
 	padding: 0.62em;
 	text-align: center;
 
-	.chef_pitch {
-	}
-	h3.chef_name {
+	h3 {
 		color: ${colors["text-white"]};
+
+		@media screen and (${devices.md}) {
+			font-size: 1.925em;
+		}
 		@media screen and (${devices.xl}) {
-			font-size: 3.375em;
+			font-size: 2.75em;
+		}
+	}
+
+	h5 {
+		@media screen and (${devices.md}) {
+			font-size: 1em;
 		}
 	}
 	.chef_post {

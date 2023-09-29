@@ -152,9 +152,6 @@ button.icon {
 	p.small {
 		font-size: 0.75rem;
 		line-height: normal;
-		@media screen and (${devices.xl}) {
-			font-size: 0.85em;
-		}
 	}
 
 	img {
