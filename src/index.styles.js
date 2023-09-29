@@ -6,6 +6,8 @@ export const GlobalStyles = createGlobalStyle`
 	/* layout */
 	overflow-x: hidden;
 
+	
+
 	a:-webkit-any-link {
 		color: inherit; /* Use the default text color */
 		cursor: auto; /* Remove pointer cursor */
@@ -28,23 +30,13 @@ export const GlobalStyles = createGlobalStyle`
 	body {
 		margin: 0;
 
-		/* font-size: 0.8333333333333334vw; */
-		/* font-size: 4.266666666666667vw; */
-
 		color: ${colors["text-white"]};
-
 		display: flex;
 		min-width: 320px;
 		min-height: 100vh;
 		width: 100%;
 	}
 
-	@media screen and (${devices["md"]}) {
-		body {
-			/* font-size: 16px; */
-			/* font-size: 31.488px; */
-		}
-	}
 
 	/* Container Max Width */
 	.page-container {
