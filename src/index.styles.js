@@ -3,10 +3,42 @@ import { devices } from "./utils/breakpoints";
 import { colors } from "./utils/colors";
 
 export const GlobalStyles = createGlobalStyle`
-	/* layout */
-	overflow-x: hidden;
-
 	
+	body {
+		margin: 0;
+	
+		color: ${colors["text-white"]};
+		display: flex;
+		min-width: 320px;
+		min-height: 100vh;
+		width: 100%;
+
+		/* overflow-x: hidden; */
+	}
+
+	main {
+	margin-top: 4em;
+}
+
+button {
+	width: fit-content;
+	cursor: pointer;
+	background-color: inherit;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+
+	/* for touch screens only. */
+	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
+	tap-highlight-color: transparent; /* For other browsers */
+}
+
+button.icon {
+	/* for touch screens only. */
+	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
+	tap-highlight-color: transparent; /* For other browsers */
+}
 
 	a:-webkit-any-link {
 		color: inherit; /* Use the default text color */
@@ -27,15 +59,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
 
-	body {
-		margin: 0;
-
-		color: ${colors["text-white"]};
-		display: flex;
-		min-width: 320px;
-		min-height: 100vh;
-		width: 100%;
-	}
 
 
 	/* Container Max Width */

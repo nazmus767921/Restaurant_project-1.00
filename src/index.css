@@ -31,26 +31,3 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-main {
-	margin-top: 4em;
-}
-
-button {
-	width: fit-content;
-	cursor: pointer;
-	background-color: inherit;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	text-transform: capitalize;
-
-	/* for touch screens only. */
-	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
-	tap-highlight-color: transparent; /* For other browsers */
-}
-
-button.icon {
-	/* for touch screens only. */
-	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
-	tap-highlight-color: transparent; /* For other browsers */
-}
