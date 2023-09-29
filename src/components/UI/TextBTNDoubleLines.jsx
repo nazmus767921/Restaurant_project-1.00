@@ -31,7 +31,7 @@ const BTN = styled.button`
 
 	/* media queries */
 	@media screen and (${devices["2xl"]}) {
-		font-size: 1.75rem;
+		font-size: 1.35rem;
 	}
 
 	/* events */
