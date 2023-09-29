@@ -31,7 +31,7 @@ const Menu_BTN = styled.button`
 	border-radius: 999px;
 
 	@media screen and (${devices.md}) {
-		font-size: .9em;
+		font-size: .825em;
 	}
 `;
 

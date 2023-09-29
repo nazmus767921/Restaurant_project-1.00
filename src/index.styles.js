@@ -107,7 +107,7 @@ button.icon {
 	}
 
 	h1 {
-		font-size: 3em;
+		font-size: 3.75em;
 	}
 	h1 > span.cursive {
 		line-height: 0.82;
