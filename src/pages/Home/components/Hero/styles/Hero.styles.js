@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../../../../utils/breakpoints";
 
-
 export const Wrapper = styled.div`
 	/* i want this div to be 100% to screen even though it container has paddings using calc() */
 	width: 100%;
