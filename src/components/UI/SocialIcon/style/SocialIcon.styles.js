@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { devices } from "../../../../utils/breakpoints";
 import { ease } from "../../../../utils/animation";
 
 export const Wrapper = styled.a`
