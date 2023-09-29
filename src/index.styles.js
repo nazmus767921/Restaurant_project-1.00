@@ -88,6 +88,11 @@ button.icon {
 		text-transform: capitalize;
 		line-height: 0.9;
 		font-style: normal;
+	
+	}
+
+	span {
+		display: inline-block;
 	}
 
 	.cursive {
