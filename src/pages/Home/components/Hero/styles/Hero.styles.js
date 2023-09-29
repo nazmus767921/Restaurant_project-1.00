@@ -1,19 +1,6 @@
 import styled from "styled-components";
-// import { navRef } from "../../../../../components/UI/NavBar/NavBar";
-// import { useEffect, useState } from "react";
 import { devices } from "../../../../../utils/breakpoints";
 
-// const Getnavheight = () => {
-// 	const [NavHeight, setNavHeight] = useState(0);
-
-// 	useEffect(() => {
-// 		if (!navRef.current) return;
-// 		setNavHeight(navRef.current.clientHeight);
-// 	}, [navRef]);
-
-// 	if (!navRef.current) return 0;
-// 	return NavHeight;
-// };
 
 export const Wrapper = styled.div`
 	/* i want this div to be 100% to screen even though it cotainer has paddings using calc() */
@@ -23,8 +10,6 @@ export const Wrapper = styled.div`
 
 	display: grid;
 	min-height: 100vh;
-	/* min-height: calc(100dvh - 0); */
-	/* min-height: calc(100vh - 0); */
 	grid-template-columns: 1fr;
 	align-content: center;
 	position: relative;
