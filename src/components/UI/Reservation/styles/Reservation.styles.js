@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 		h2 {
 			font-size: 3em;
 			@media screen and (${devices["2xl"]}) {
-				font-size: 7.5em;
+				font-size: 4.4em;
 			}
 		}
 		h2 > span.cursive {
