@@ -20,6 +20,9 @@ const Wrapper = styled.div`
 	align-items: center;
 
 	/* elements inside */
+	p {
+		padding-left: 0.6em;
+	}
 	.footer_logo {
 		font-size: 3rem;
 		@media screen and (${devices["2xl"]}) {
