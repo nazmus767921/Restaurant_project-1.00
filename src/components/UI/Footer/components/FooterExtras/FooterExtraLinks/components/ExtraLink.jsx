@@ -7,6 +7,9 @@ const ExtraLink = ({ children, link = null }) => {
 };
 
 const A = styled.a`
+	/* layout */
+	min-width: max-content;
+
 	/* makeup */
 	color: ${colors["text-white"]};
 	opacity: 0.7;
