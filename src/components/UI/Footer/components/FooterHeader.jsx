@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 	.footer_logo {
 		font-size: 3rem;
 		@media screen and (${devices["2xl"]}) {
-			font-size: 4rem;
+			font-size: 2.9em;
 		}
 	}
 `;

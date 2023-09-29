@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1.25em;
+		gap: 1em;
 	}
 
 	/* media queries */
@@ -58,7 +58,7 @@ const Wrapper = styled.div`
 			height: 100%;
 		}
 		.link_btn {
-			font-size: 1.25em;
+			font-size: 0.9em;
 		}
 	}
 `;

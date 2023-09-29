@@ -13,7 +13,7 @@ const FooterLinkBTN = ({ children, className = null }) => {
 const BTN = styled.button`
 	/* makeup */
 	color: ${colors["text-white"]};
-	opacity: 1;
+	opacity: .5;
 	/* animation */
 	transition: all 0.35s ${ease["out-expo"]};
 	/* typo */
@@ -28,7 +28,7 @@ const BTN = styled.button`
 	&:hover,
 	:focus {
 		/* makeup */
-		opacity: 0.7;
+		opacity: 1;
 	}
 `;
 
