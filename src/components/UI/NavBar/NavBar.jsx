@@ -1,13 +1,11 @@
 import Logo from "../Logo";
 import { nav } from "../../../constant/en-us/shared.constants";
 import { Wrapper } from "./styles/NavBar.styles";
-import { createRef, useState } from "react";
+import { useState } from "react";
 import NavLink from "./NavLink";
 import { Link } from "react-router-dom";
 import { paths } from "../../../Root.paths";
 import MobileSideBar from "./components/MobileSideBar/MobileSideBar";
-
-export const navRef = createRef();
 
 const NavLinks = () => {
 	return (
@@ -38,7 +36,7 @@ const NavBar = () => {
 			{showSideBar ? (
 				<MobileSideBar toggleShowSidebar={toggleShowSidebar} />
 			) : null}
-			<nav ref={navRef} className="container">
+			<nav className="container">
 				<Link to={paths.home}>
 					<Logo />
 				</Link>

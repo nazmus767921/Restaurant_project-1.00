@@ -8,8 +8,11 @@ const AboutPage = () => {
 	return (
 		<Main className="page-container">
 			<div className="hero_wrapper">
-				<Tag>{hero.tagline}</Tag>
-				<HeroTitle>{getCursiveStyle(hero.title)}</HeroTitle>
+				<div className="header">
+					<Tag>{hero.tagline}</Tag>
+					<HeroTitle>{getCursiveStyle(hero.title)}</HeroTitle>
+				</div>
+				<p className="description">{hero.description}</p>
 			</div>
 		</Main>
 	);
