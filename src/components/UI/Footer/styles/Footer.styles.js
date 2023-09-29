@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
 	width: max-content;
 	margin: 0 auto;
 	/* media queries */
-	@media screen and (${devices["2xl"]}) {
+	@media screen and (${devices["md"]}) {
 		/* layout */
 		width: 100%;
 		flex-direction: row;
-		justify-content: center;
-		gap: 15em;
+		justify-content: space-between;
+		gap: 15%;
 		padding: 12em 0 4em 0;
 	}
 `;

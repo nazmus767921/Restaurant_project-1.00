@@ -48,10 +48,10 @@ const Wrapper = styled.div`
 	}
 
 	/* media queries */
-	@media screen and (${devices["2xl"]}) {
+	@media screen and (${devices["md"]}) {
 		/* layout */
 		flex-direction: row;
-		gap: 5em;
+		gap: 2em;
 		/* elements inside */
 		.divider {
 			width: 1px;
@@ -60,6 +60,10 @@ const Wrapper = styled.div`
 		.link_btn {
 			font-size: 0.9em;
 		}
+	}
+	@media screen and (${devices["2xl"]}) {
+		/* layout */
+		gap: 5em;
 	}
 `;
 

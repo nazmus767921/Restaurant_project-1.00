@@ -24,10 +24,16 @@ const Wrapper = styled.div`
 	.footer_logo {
 		font-size: 3rem;
 	}
-	@media screen and (${devices["2xl"]}) {
-		p {
-			padding-left: 0.6em;
+	@media screen and (${devices["md"]}) {
+		/* layout */
+		align-items: flex-start;
+		/* elements inside */
+		.footer_logo {
+			font-size: 2.5em;
 		}
+	}
+	@media screen and (${devices["2xl"]}) {
+		/* elements inside */
 		.footer_logo {
 			font-size: 2.9em;
 		}
