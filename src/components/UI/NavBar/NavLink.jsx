@@ -19,7 +19,7 @@ const NavLinkWrapper = styled.div`
 	position: relative;
 	overflow: hidden;
 	.nav_link {
-		font-size: 1.15em;
+		font-size: 1em;
 		padding: 0.5em 0;
 		color: ${colors["text-white"]};
 		transition: all 0.35s ${ease["out-expo"]};
