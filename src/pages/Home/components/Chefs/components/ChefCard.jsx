@@ -92,6 +92,7 @@ const Wrapper = styled.div`
 
 	h3 {
 		color: ${colors["text-white"]};
+		font-size: 1.525em;
 
 		@media screen and (${devices.md}) {
 			font-size: 1.925em;
@@ -102,6 +103,7 @@ const Wrapper = styled.div`
 	}
 
 	h5 {
+		font-size: .9em;
 		@media screen and (${devices.md}) {
 			font-size: 1em;
 		}
@@ -117,9 +119,9 @@ const Wrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.38em;
+		gap: 0.525em;
 		@media screen and (${devices.xl}) {
-			gap: 0.825em;
+			gap: 0.5em;
 		}
 	}
 `;

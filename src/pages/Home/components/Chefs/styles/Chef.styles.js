@@ -46,7 +46,10 @@ export const Wrapper = styled.div`
 
 	.chefCard--wrapper {
 		width: 47%;
-		@media screen and (${devices.xl}) {
+	}
+	@media screen and (${devices.xl}) {
+		padding-block: 3.825em;
+		.chefCard--wrapper {
 			width: 30%;
 		}
 	}
