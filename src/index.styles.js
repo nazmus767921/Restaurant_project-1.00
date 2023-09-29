@@ -116,7 +116,7 @@ button.icon {
 	h2 {
 		font-size: 1.75em;
 		@media screen and (${devices["2xl"]}) {
-			font-size: 3.375em;
+			font-size: 2.25em;
 		}
 	}
 	h2 > span.cursive {
@@ -126,8 +126,8 @@ button.icon {
 
 	h3 {
 		font-size: 1.325em;
-		@media screen and (${devices.md}) {
-			font-size: 1.75em;
+		@media screen and (${devices["2xl"]}) {
+			font-size: 1.5em;
 		}
 	}
 
