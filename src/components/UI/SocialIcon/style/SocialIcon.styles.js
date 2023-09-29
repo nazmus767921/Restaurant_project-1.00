@@ -17,9 +17,4 @@ export const Wrapper = styled.a`
 	:focus {
 		opacity: 1;
 	}
-
-	/* media queries */
-	@media screen and (${devices["2xl"]}) {
-		width: 2.85em;
-	}
 `;
