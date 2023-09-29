@@ -20,13 +20,15 @@ export const Wrapper = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 1.88em;
-		margin-block: 3em;
+		margin: 3em auto;
 		padding: 6.25em 2.25em;
 
 		/* media queries */
+		@media screen and (${devices["md"]}) {
+			max-width: calc(100% - 8em);
+		}
 		@media screen and (${devices["2xl"]}) {
-			max-width: 54.625em;
-			margin: 0 auto;
+			max-width: calc(100% - 40em);
 			padding: 14.38em 1.25em;
 		}
 		/* elements inside */
@@ -45,6 +47,9 @@ export const Wrapper = styled.div`
 		}
 
 		.header {
+			/* layout */
+			max-width: 40ch;
+			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
 			gap: 1.125em;
