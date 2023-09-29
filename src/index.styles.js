@@ -57,7 +57,7 @@ button.icon {
 	.page-container {
 		margin: 4em auto;
 		max-width: 1536px;
-		width: calc(100vw - 1.875rem);
+		width: calc(100vw - 1.19rem);
 
 		@media screen and (${devices["sm"]}) {
 			width: calc(100vw - 6rem);
