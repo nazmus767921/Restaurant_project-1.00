@@ -16,10 +16,6 @@ export const GlobalStyles = createGlobalStyle`
 		/* overflow-x: hidden; */
 	}
 
-	main {
-	margin-top: 4em;
-}
-
 button {
 	width: fit-content;
 	cursor: pointer;
@@ -57,13 +53,9 @@ button.icon {
 		color: inherit;
 	}
 
-
-
-
-
 	/* Container Max Width */
 	.page-container {
-		margin: auto auto;
+		margin: 4em auto;
 		max-width: 1536px;
 		width: calc(100vw - 1.875rem);
 
