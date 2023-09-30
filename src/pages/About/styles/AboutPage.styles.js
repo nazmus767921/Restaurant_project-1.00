@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../../utils/breakpoints";
 
 export const Main = styled.main`
 	/* elements inside */
@@ -25,8 +26,19 @@ export const Main = styled.main`
 		text-align: center;
 	}
 	.featured_section {
+		/* layout */
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 1.25em;
+		margin: 0 auto;
+		/* media queries */
+		@media screen and (${devices.md}) {
+			width: 70%;
+		}
+		@media screen and (${devices["2xl"]}) {
+			flex-direction: row;
+			width: 100%;
+		}
 	}
 `;
