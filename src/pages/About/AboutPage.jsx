@@ -1,4 +1,6 @@
+import Footer from "../../components/UI/Footer/Footer";
 import HeroTitle from "../../components/UI/HeroTitle";
+import Reservation from "../../components/UI/Reservation/Reservation";
 import Tag from "../../components/UI/Tag";
 import { featured, hero } from "../../constant/en-us/about_page.constants";
 import getCursiveStyle from "../../utils/helpers/getCursiveStyle";
@@ -24,6 +26,8 @@ const AboutPage = () => {
 					);
 				})}
 			</div>
+			<Reservation />
+			<Footer />
 		</Main>
 	);
 };
