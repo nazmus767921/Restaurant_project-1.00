@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Main = styled.main`
 	/* elements inside */
 	.hero_wrapper {
@@ -24,5 +23,10 @@ export const Main = styled.main`
 	}
 	.description {
 		text-align: center;
+	}
+	.featured_section {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25em;
 	}
 `;
