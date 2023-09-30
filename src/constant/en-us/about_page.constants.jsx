@@ -14,20 +14,23 @@ export const hero = {
 export const featured = [
 	{
 		id: crypto.randomUUID(),
-		title: "Fresh Products",
+		title: "*** Fresh Products",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId1,
+		color: "#8EAF0B;",
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "Skilled Chefs",
+		title: "*** Skilled Chefs",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId2,
+		color: "#B06915",
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "Vegan Cuisine",
+		title: "*** Vegan Cuisine",
 		description: "Lorem Ipsum is simply dummy text of the printing",
 		image: OfferingImageId3,
+		color: "#A04007",
 	},
 ];
