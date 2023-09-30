@@ -11,7 +11,7 @@ export const hero = {
 		"At Res2Rant, we're not just a restaurant. we're a culinary journey. Our team of expert chefs, led by Executive Chef Mohammad Ali, blends traditional flavors with avant-garde creativity to craft dishes that are as visually stunning as they are delectable.",
 };
 
-export const offerings = [
+export const featured = [
 	{
 		id: crypto.randomUUID(),
 		title: "Fresh Products",
