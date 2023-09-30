@@ -21,12 +21,12 @@ export const Products_contextProvider = ({ children }) => {
 	};
 
 	//all actions
-	const dispatches = {
+	const Actions = {
 		selectCategory,
 	};
 
 	return (
-		<products_context.Provider value={{ ...state, ...dispatches }}>
+		<products_context.Provider value={{ ...state, ...Actions }}>
 			{children}
 		</products_context.Provider>
 	);
