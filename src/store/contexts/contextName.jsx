@@ -1,19 +1,21 @@
 import { createContext, useContext, useReducer } from "react";
 import { ReducerName as reducer } from "../reducers/reducer";
 
-const contextName = createContext(null);
+const context_name = createContext(null);
 
 const initialState = {
 	name: "Res2Rant",
 };
 
-export const ContextProvider = ({ children }) => {
+export const Context_providerName = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	return (
-		<contextName.Provider value={{ ...state }}>{children}</contextName.Provider>
+		<context_name.Provider value={{ ...state }}>
+			{children}
+		</context_name.Provider>
 	);
 };
 
 export const useContextName = () => {
-	return useContext(contextName);
+	return useContext(context_name);
 };

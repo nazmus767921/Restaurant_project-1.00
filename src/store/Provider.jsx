@@ -1,7 +1,7 @@
-import { ContextProvider } from "./contexts/context";
+import { Products_contextProvider } from "./contexts/products_context";
 
 const GlobalContextProvider = ({ children }) => {
-	return <ContextProvider>{children}</ContextProvider>;
+	return <Products_contextProvider>{children}</Products_contextProvider>;
 };
 
 export default GlobalContextProvider;

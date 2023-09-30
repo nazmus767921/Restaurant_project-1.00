@@ -1,3 +1,3 @@
-export const ReducerName = (state, action) => {
+export const products_reducer = (state, action) => {
 	return { ...state };
 };

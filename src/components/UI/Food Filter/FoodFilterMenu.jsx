@@ -1,20 +1,47 @@
 import styled from "styled-components";
 import { colors } from "../../../utils/colors";
 import { devices } from "../../../utils/breakpoints";
+import { useProductsContext } from "../../../store/contexts/products_context";
 
-const MenuBTN = ({ children }) => {
-	return <Menu_BTN>{children}</Menu_BTN>;
+const MenuBTN = ({ children, onClick, selectedCategory }) => {
+	return (
+		<Menu_BTN
+			type="button"
+			onClick={onClick}
+			className={selectedCategory === children.toLowerCase() ? "active" : null}
+		>
+			{children}
+		</Menu_BTN>
+	);
 };
 
 const FoodFilterMenu = () => {
+	const { categories, selectCategory, selectedCategory } = useProductsContext();
+
+	const handleCategorySelect = (e) => {
+		const textContent = e.target.textContent.toLowerCase();
+		selectCategory(textContent);
+	};
 	return (
 		<Wrapper>
 			<div className="filter_menu">
-				<MenuBTN>all</MenuBTN>
-				<MenuBTN>breakfast</MenuBTN>
-				<MenuBTN>lunch</MenuBTN>
-				<MenuBTN>dinner</MenuBTN>
-				<MenuBTN>deserts</MenuBTN>
+				<MenuBTN
+					onClick={(e) => handleCategorySelect(e)}
+					selectedCategory={selectedCategory}
+				>
+					All
+				</MenuBTN>
+				{categories.map((c) => {
+					return (
+						<MenuBTN
+							key={crypto.randomUUID()}
+							onClick={(e) => handleCategorySelect(e)}
+							selectedCategory={selectedCategory}
+						>
+							{c}
+						</MenuBTN>
+					);
+				})}
 			</div>
 		</Wrapper>
 	);
@@ -31,7 +58,7 @@ const Menu_BTN = styled.button`
 	border-radius: 999px;
 
 	@media screen and (${devices.md}) {
-		font-size: .825em;
+		font-size: 0.825em;
 	}
 `;
 
@@ -47,8 +74,14 @@ const Wrapper = styled.div`
 		justify-content: space-between;
 		width: 100%;
 
+		/* elements inside */
+		.active {
+			background-color: ${colors.brand};
+		}
+
 		@media screen and (${devices.md}) {
 			max-width: fit-content;
+			gap: 0.625em;
 		}
 
 		overflow: hidden;

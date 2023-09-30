@@ -16,7 +16,7 @@ html {
 }
 
 :root {
-	font-family: Libre Franklin, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: "Libre Franklin", system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -30,4 +30,3 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
-

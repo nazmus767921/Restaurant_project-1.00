@@ -24,6 +24,7 @@ button {
 	margin: 0;
 	padding: 0;
 	text-transform: capitalize;
+	font-family: "Libre Franklin", sans-serif;
 
 	/* for touch screens only. */
 	-webkit-tap-highlight-color: transparent; /* For Webkit-based browsers like Safari */
