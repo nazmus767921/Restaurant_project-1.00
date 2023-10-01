@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { devices } from "./utils/breakpoints";
 import { colors } from "./utils/colors";
+import { ease } from "./utils/animation";
 
 export const GlobalStyles = createGlobalStyle`
 	
@@ -50,6 +51,17 @@ button.icon {
 	}
 	a:hover {
 		color: inherit;
+	}
+
+	input, textarea {
+		&::placeholder {
+			transition: all 0.35s ${ease["out-expo"]};
+		}
+		&:focus {
+			&::placeholder {
+				font-size: 105%;
+			}
+		}
 	}
 
 	input,select,textarea {
