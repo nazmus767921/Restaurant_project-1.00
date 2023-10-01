@@ -4,7 +4,7 @@ import { colors } from "../../utils/colors";
 const TextInput = ({
 	type = "text",
 	name = null,
-	value = null,
+	value = "",
 	placeholder = "type here",
 	label,
 	onChange,
