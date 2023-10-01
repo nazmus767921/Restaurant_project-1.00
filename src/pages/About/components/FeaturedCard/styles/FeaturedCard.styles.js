@@ -36,7 +36,7 @@ export const Card = styled.div`
 			color: ${(props) => props.$color || colors["text-white"]};
 		}
 		p {
-			max-width: 75%;
+			max-width: 20ch;
 		}
 	}
 `;
