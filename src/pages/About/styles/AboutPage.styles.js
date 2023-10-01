@@ -11,6 +11,7 @@ export const Main = styled.main`
 		flex-direction: column;
 		gap: 1.825em;
 		justify-content: center;
+		align-items: center;
 	}
 	.header {
 		display: flex;
@@ -24,6 +25,7 @@ export const Main = styled.main`
 	}
 	.description {
 		text-align: center;
+		max-width: 65ch;
 	}
 	.featured_section {
 		/* layout */
