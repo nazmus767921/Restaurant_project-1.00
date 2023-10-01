@@ -2,9 +2,17 @@ import styled from "styled-components";
 import { colors } from "../../utils/colors";
 import { ease } from "../../utils/animation";
 
-const BTNSolid = ({ children, className = null }) => {
+const BTNSolid = ({
+	children,
+	className = null,
+	onClick = () => console.log("hey! you poked me"),
+}) => {
+	const handleClick = (e) => {
+		e.preventDefault();
+		onClick();
+	};
 	return (
-		<Button type="button" className={className}>
+		<Button type="button" className={className} onClick={handleClick}>
 			{children}
 		</Button>
 	);
