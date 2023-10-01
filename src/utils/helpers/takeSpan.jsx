@@ -1,7 +1,7 @@
 import React from "react";
 
-export const takeSpan = (dataString, desiredCutPart, spanClassName) => {
-	const regex = new RegExp(`\\b${desiredCutPart}\\b`, "i");
+export const takeSpan = (dataString, spanPart, spanClassName) => {
+	const regex = new RegExp(`\\b${spanPart}\\b`, "i");
 	const cutPart = dataString.match(regex)[0];
 	const CutPartJsxElement = React.createElement(
 		"span",
