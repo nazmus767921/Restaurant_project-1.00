@@ -48,10 +48,12 @@ button.icon {
 		text-decoration: none;
 	
 	}
-
-
 	a:hover {
 		color: inherit;
+	}
+
+	input,select,textarea {
+		outline: none
 	}
 
 	/* Container Max Width */
