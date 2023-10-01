@@ -8,6 +8,8 @@ export const Main = styled.main`
 		flex-direction: column;
 		gap: 1.25em;
 		text-align: center;
+		padding-top: 5em;
+		padding-bottom: 3.65em;
 		h2 {
 			line-height: normal;
 			.title--colored {
