@@ -1,5 +1,5 @@
 export const hero = {
-	title: "We’d Love to Hear From You, Please Let Us Know",
+	title: "We'd Love to Hear From You, Please Let Us Know",
 	description:
 		"Whether you have questions, feedback, or want to make a reservation, our team is here to assist you. Reach out via the form below, and we'll get back to you promptly.",
 };
