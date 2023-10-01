@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
+import { ease } from "../../utils/animation";
 
 const BTNSolid = ({ children, className = null }) => {
 	return (
@@ -19,6 +20,14 @@ const Button = styled.button`
 	/* typo */
 	font-size: 1em;
 	font-weight: 700;
+	/* animation */
+	transition: opacity 0.35s ${ease["out-expo"]};
+
+	/* states */
+	&:hover,
+	:focus {
+		opacity: 0.7;
+	}
 `;
 
 export default BTNSolid;
