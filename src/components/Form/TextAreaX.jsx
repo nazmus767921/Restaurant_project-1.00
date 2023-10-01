@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TextAreaX = ({
 	name = null,
-	value = null,
+	value,
 	placeholder = "Please, tell us here",
 	label,
 	onChange,
