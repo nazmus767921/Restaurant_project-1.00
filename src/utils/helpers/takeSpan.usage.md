@@ -2,9 +2,9 @@
 
 **Parameters:**
 
-* `dataString`: The string to be processed.
-* `desiredCutPart`: The string to be wrapped in a span element.
-* `spanClassName`: The CSS class name to be added to the span element.
+- `dataString`: The string to be processed.
+- `desiredCutPart`: The string to be wrapped in a span element.
+- `spanClassName`: The CSS class name to be added to the span element.
 
 **Returns:**
 
@@ -42,3 +42,6 @@ const searchResultsWithHighlights = searchResults.map((searchResult) => {
 });
 
 console.log(searchResultsWithHighlights); // Outputs: ["This is the <span class="search-highlight">search</span> result.", "This is the second <span class="search-highlight">search</span> result.", "This is the third <span class="search-highlight">search</span> result."]
+
+```
+*developer*: [`github.com/nazmus767921`](github.com/nazmus767921)
