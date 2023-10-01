@@ -18,3 +18,5 @@ export const takeSpan = (dataString, spanPart, spanClassName) => {
 
 	return ResultJsxElement;
 };
+
+
