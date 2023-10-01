@@ -1,5 +1,5 @@
 import { hero } from "../../constant/en-us/contact_page.constants";
-import { takeSpan } from "../../utils/helpers/takeSpan";
+import  takeSpan  from "take-span";
 import { Main } from "./styles/ContactPage.styles";
 
 const ContactPage = () => {
