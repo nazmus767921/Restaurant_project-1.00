@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../../../utils/colors";
+import { devices } from "../../../../../utils/breakpoints";
 
 export const Card = styled.div`
 	/* layout */
@@ -8,6 +9,9 @@ export const Card = styled.div`
 	flex-direction: ${(props) => (props.$rev ? "row-reverse" : "row")};
 	gap: 1.75em;
 	padding: 1.25em;
+	@media screen and (${devices["2xl"]}) {
+		flex-direction: row;
+	}
 
 	/* elements inside */
 	.image {
