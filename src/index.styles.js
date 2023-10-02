@@ -54,10 +54,13 @@ button.icon {
 	}
 
 	input, textarea {
+		transition: all 0.35s ${ease["out-expo"]};
 		&::placeholder {
 			transition: all 0.35s ${ease["out-expo"]};
 		}
 		&:focus {
+			padding-inline: 0.65em;
+			background-color: ${colors["bg-primary-dark-deep"]};
 			&::placeholder {
 				font-size: 105%;
 			}
