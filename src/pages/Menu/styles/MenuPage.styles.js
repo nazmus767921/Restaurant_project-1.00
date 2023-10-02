@@ -43,4 +43,7 @@ export const Main = styled.main`
 			}
 		}
 	}
+	.menusSection {
+		margin-top: 2.5em;
+	}
 `;
