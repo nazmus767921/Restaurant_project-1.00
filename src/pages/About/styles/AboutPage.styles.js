@@ -23,10 +23,6 @@ export const Main = styled.main`
 			line-height: 4.325rem;
 		}
 	}
-	.description {
-		text-align: center;
-		max-width: 65ch;
-	}
 	.featured_section {
 		/* layout */
 		width: 100%;

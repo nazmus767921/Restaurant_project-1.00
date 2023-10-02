@@ -180,6 +180,11 @@ button.icon {
 		height: 100%;
 	}
 
+	.hero_description {
+		text-align: center;
+		max-width: 65ch;
+	}
+
 	.signature {
 		font-family: "Zeyada", cursive;
 		font-size: 1.3125rem;

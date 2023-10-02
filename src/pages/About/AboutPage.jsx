@@ -15,7 +15,7 @@ const AboutPage = () => {
 					<Tag>{hero.tagline}</Tag>
 					<HeroTitle>{getCursiveStyle(hero.title)}</HeroTitle>
 				</div>
-				<p className="description">{hero.description}</p>
+				<p className="hero_description">{hero.description}</p>
 			</div>
 			<div className="featured_section">
 				{featured.map((content, index) => {
