@@ -6,7 +6,7 @@ import { ease } from "../../../utils/animation";
 export const Main = styled.main`
 	display: flex;
 	flex-direction: column;
-	gap: 1.25em;
+	gap: 1.875em;
 	/* elements inside */
 	.header {
 		width: fit-content;
