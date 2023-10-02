@@ -36,8 +36,8 @@ export const info = {
 	},
 	"open-hours": {
 		title: "Open Hours",
-		opening: { Day: "Monday", Hours: "9:00 AM" },
+		opening: { Day: "Monday", Hours: "10:00 AM" },
 		closing: { Day: "Friday", Hours: "9:00 PM" },
-		contacts: ["+88 01794-799114", "+88 01211-115500"],
+		contacts: ["+88 01794-799 114", "+88 01211-115 500"],
 	},
 };
