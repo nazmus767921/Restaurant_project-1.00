@@ -16,12 +16,11 @@ const Select = ({ name, id, value, onChange, options = [] }) => {
 };
 
 const SelectWrapper = styled.select`
-	display: flex;
-	padding: 0.375em 0.75em;
-	justify-content: center;
-	align-items: center;
-	gap: 0.625em;
+	width: 100%;
+	padding: 0.75em;
 	/* makeup */
+	border: none;
+	appearance: none;
 	border-radius: 0.3125em;
 	background: ${colors["bg-primary-dark-deep"]};
 `;

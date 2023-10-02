@@ -3,7 +3,7 @@ import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
 import Hr from "../../components/UI/Hr";
 import Title from "../../components/UI/Title";
-import { title } from "../../constant/en-us/foodmenu_page.constants";
+import { title, view } from "../../constant/en-us/foodmenu_page.constants";
 import { Main } from "./styles/MenuPage.styles";
 
 const MenuPage = () => {
@@ -16,7 +16,18 @@ const MenuPage = () => {
 			<FoodFilterMenu />
 			<PriceFilter />
 			<Sorter />
+			<ViewChanger />
 		</Main>
+	);
+};
+
+const ViewChanger = () => {
+	return (
+		<div className="viewChanger--wrapper">
+			{view.map((viewIcon) => (
+				<div className="gridView">{viewIcon}</div>
+			))}
+		</div>
 	);
 };
 
