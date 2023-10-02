@@ -2,6 +2,7 @@ import InputRange from "../../components/Form/InputRange";
 import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
 import Hr from "../../components/UI/Hr";
+import MenuItem from "../../components/UI/MenuItem/MenuItem";
 import Title from "../../components/UI/Title";
 import { title, view } from "../../constant/en-us/foodmenu_page.constants";
 import { Main } from "./styles/MenuPage.styles";
@@ -19,9 +20,18 @@ const MenuPage = () => {
 				<ViewChanger />
 				<Sorter />
 			</div>
+			<MenusSection />
 		</Main>
 	);
 };
+
+const MenusSection = () => {
+	return (
+		<div className="menusSection">
+			<MenuItem />
+		</div>
+	)
+}
 
 const ViewChanger = () => {
 	return (
