@@ -1,7 +1,7 @@
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 import { PiListBold } from "react-icons/pi";
 
-export const title = "Our Menu";
+export const title = "Our Menu**#";
 
 export const view = [
 	{
