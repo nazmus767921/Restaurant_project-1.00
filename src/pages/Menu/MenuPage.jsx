@@ -1,4 +1,5 @@
 import InputRange from "../../components/Form/InputRange";
+import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
 import Hr from "../../components/UI/Hr";
 import Title from "../../components/UI/Title";
@@ -14,6 +15,7 @@ const MenuPage = () => {
 			</div>
 			<FoodFilterMenu />
 			<PriceFilter />
+			<Sorter />
 		</Main>
 	);
 };
@@ -24,6 +26,16 @@ const PriceFilter = () => {
 			<InputRange name="price" />
 		</div>
 	);
+};
+
+const Sorter = () => {
+	const options = [
+		{ label: "Price ( Lowest - Highest )", value: "lowest" },
+		{ label: "Price ( Highest - Lowest )", value: "highest" },
+		{ label: "Alphabetically (A - Z)", value: "a" },
+		{ label: "Alphabetically (Z - A)", value: "z" },
+	];
+	return <Select options={options} />;
 };
 
 export default MenuPage;
