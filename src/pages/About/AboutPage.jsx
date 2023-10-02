@@ -20,9 +20,13 @@ const AboutPage = () => {
 			<div className="featured_section">
 				{featured.map((content, index) => {
 					return index % 2 === 0 ? (
-						<FeaturedCard {...content} />
+						<div className="featured_card">
+							<FeaturedCard {...content} />
+						</div>
 					) : (
-						<FeaturedCard {...content} reverse />
+						<div className="featured_card">
+							<FeaturedCard {...content} reverse />
+						</div>
 					);
 				})}
 			</div>

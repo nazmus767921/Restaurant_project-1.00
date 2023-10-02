@@ -1,9 +1,16 @@
 import getCursiveStyle from "../../../../utils/helpers/getCursiveStyle";
 import { Card } from "./styles/FeaturedCard.styles";
 
-const FeaturedCard = ({ reverse, title, description, image, color }) => {
+const FeaturedCard = ({
+	reverse,
+	title,
+	description,
+	image,
+	color,
+	className,
+}) => {
 	return (
-		<Card $rev={reverse} $color={color}>
+		<Card className={className} $rev={reverse} $color={color}>
 			<div className="image">
 				<img src={image} alt={title} />
 			</div>

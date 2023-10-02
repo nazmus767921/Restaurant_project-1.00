@@ -9,13 +9,15 @@ export const Card = styled.div`
 	flex-direction: ${(props) => (props.$rev ? "row-reverse" : "row")};
 	gap: 1.75em;
 	padding: 1.25em;
-	@media screen and (${devices["2xl"]}) {
+	@media screen and (${devices["lg"]}) {
 		flex-direction: row;
 	}
 
 	/* elements inside */
 	.image {
-		width: 30%;
+		/* width: 30%; */
+		width: 5.875em;
+		height: 5.875em;
 		aspect-ratio: 1/1;
 		flex-shrink: 0;
 		background-position: center;
@@ -35,6 +37,11 @@ export const Card = styled.div`
 		align-items: ${(props) => (props.$rev ? "flex-end" : "flex-start")};
 		/* typo */
 		text-align: ${(props) => (props.$rev ? "right" : "left")};
+		/* media queries */
+		@media screen and (${devices["lg"]}) {
+			align-items: flex-start;
+			text-align: left;
+		}
 		/* elements inside */
 		h2 {
 			color: ${(props) => props.$color || colors["text-white"]};

@@ -12,6 +12,11 @@ export const Main = styled.main`
 		gap: 1.825em;
 		justify-content: center;
 		align-items: center;
+		@media screen and (${devices.sm}) {
+			min-height: fit-content;
+			margin-top: 15em;
+			margin-bottom: 3.44em;
+		}
 	}
 	.header {
 		display: flex;
@@ -31,12 +36,18 @@ export const Main = styled.main`
 		gap: 1.25em;
 		margin: 0 auto;
 		/* media queries */
-		@media screen and (${devices.md}) {
+		@media screen and (${devices.sm}) {
 			width: 70%;
 		}
-		@media screen and (${devices["2xl"]}) {
+		@media screen and (${devices.md}) {
 			flex-direction: row;
 			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 3.25em;
+		}
+		@media screen and (${devices["2xl"]}) {
+			margin-bottom: 10em;
 		}
 	}
 `;
