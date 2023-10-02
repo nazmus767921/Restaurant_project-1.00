@@ -2,11 +2,12 @@ import FoodFilterMenu from "../../../../components/UI/Food Filter/FoodFilterMenu
 import Title from "../../../../components/UI/Title";
 import { menu } from "../../../../constant/en-us/home_page.constants";
 import { styled } from "styled-components";
-import MenuShowcase from "./components/MenuShowcase";
+import MenuShowcase from "../../../../components/UI/MenuShowcase/MenuShowcase";
 import { devices } from "../../../../utils/breakpoints";
 import TextBTN from "../../../../components/UI/TextBTN";
 import { Link } from "react-router-dom";
 import { paths } from "../../../../Root.paths";
+import MenuCard from "../../../../components/UI/MenuCard/MenuCard";
 
 const PopularMenu = () => {
 	return (
@@ -15,7 +16,13 @@ const PopularMenu = () => {
 			<div className="foodFilterMenu--wrapper">
 				<FoodFilterMenu />
 			</div>
-			<MenuShowcase />
+			<MenuShowcase>
+				<MenuCard />
+				<MenuCard />
+				<MenuCard />
+				<MenuCard />
+				<MenuCard />
+			</MenuShowcase>
 			<Link to={paths.menu}>
 				<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
 			</Link>
