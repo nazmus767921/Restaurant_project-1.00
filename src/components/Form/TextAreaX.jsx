@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 		/* layout */
 		max-width: 100%;
 		min-width: 100%;
-		min-height: 2.5em;
+		min-height: 5em;
 		max-height: 16em;
 		border: 0;
 		border-bottom: 2px solid ${colors.brand};
