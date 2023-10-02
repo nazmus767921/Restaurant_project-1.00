@@ -1,3 +1,4 @@
+import InputRange from "../../components/Form/InputRange";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
 import Hr from "../../components/UI/Hr";
 import Title from "../../components/UI/Title";
@@ -12,7 +13,16 @@ const MenuPage = () => {
 				<Hr />
 			</div>
 			<FoodFilterMenu />
+			<PriceFilter />
 		</Main>
+	);
+};
+
+const PriceFilter = () => {
+	return (
+		<div className="price_filter--wrapper">
+			<InputRange name="price" />
+		</div>
 	);
 };
 

@@ -13,4 +13,9 @@ export const Main = styled.main`
 			margin-top: 4em;
 		}
 	}
+	.price_filter--wrapper {
+		width: 100%;
+		display: flex;
+		padding: 0.65em 1.25em;
+	}
 `;
