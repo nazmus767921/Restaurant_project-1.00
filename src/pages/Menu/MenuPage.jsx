@@ -15,8 +15,10 @@ const MenuPage = () => {
 			</div>
 			<FoodFilterMenu />
 			<PriceFilter />
-			<Sorter />
-			<ViewChanger />
+			<div className="filter_wrapper--bottom">
+				<ViewChanger />
+				<Sorter />
+			</div>
 		</Main>
 	);
 };
@@ -24,8 +26,10 @@ const MenuPage = () => {
 const ViewChanger = () => {
 	return (
 		<div className="viewChanger--wrapper">
-			{view.map((viewIcon) => (
-				<div className="gridView">{viewIcon}</div>
+			{view.map((view) => (
+				<div key={view.icon} className="view--icon">
+					{view.icon}
+				</div>
 			))}
 		</div>
 	);
@@ -46,7 +50,11 @@ const Sorter = () => {
 		{ label: "Alphabetically (A - Z)", value: "a" },
 		{ label: "Alphabetically (Z - A)", value: "z" },
 	];
-	return <Select options={options} />;
+	return (
+		<div className="select--wrapper">
+			<Select options={options} />
+		</div>
+	);
 };
 
 export default MenuPage;

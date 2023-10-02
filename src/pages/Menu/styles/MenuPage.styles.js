@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
+import { colors } from "../../../utils/colors";
+import { ease } from "../../../utils/animation";
 
 export const Main = styled.main`
 	display: flex;
@@ -17,5 +19,28 @@ export const Main = styled.main`
 		width: 100%;
 		display: flex;
 		padding: 0.65em 1.25em;
+	}
+
+	.filter_wrapper--bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.65em 2.5em;
+	}
+	.viewChanger--wrapper {
+		display: flex;
+		flex-direction: row;
+		gap: 1.25em;
+		/* elements inside */
+		.view--icon {
+			width: 1.25em;
+			height: 1.25em;
+			/* animation */
+			transition: color 0.35s ${ease["out-expo"]};
+			&:hover,
+			:focus {
+				color: ${colors.brand};
+			}
+		}
 	}
 `;
