@@ -16,7 +16,7 @@ export const Card = styled.div`
 		font-family: "Lora", serif;
 		color: ${colors["text-white"]};
 		text-align: center;
-		font-size: 1.35em;
+		font-size: 1em;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
