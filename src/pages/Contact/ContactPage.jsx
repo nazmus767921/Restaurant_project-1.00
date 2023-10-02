@@ -10,8 +10,10 @@ const ContactPage = () => {
 	return (
 		<Main className="page-container">
 			<HeroWrapper />
-			<ContactForm />
-			<InfoSection />
+			<div className="form_wrapper">
+				<ContactForm className="contact_form"/>
+				<InfoSection />
+			</div>
 			<Reservation />
 			<Footer />
 		</Main>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../utils/colors";
+import { devices } from "../../../utils/breakpoints";
 
 export const Main = styled.main`
 	/* elements inside */
@@ -16,6 +17,24 @@ export const Main = styled.main`
 				color: ${colors.brand};
 				display: block;
 			}
+		}
+	}
+	.form_wrapper {
+		display: flex;
+		flex-direction: column;
+		/* devices */
+		@media screen and (${devices.xl}) {
+			width: 100%;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		gap: 6.88em;
+
+		}
+	}
+	.contact_form {
+		@media screen and (${devices.xl}) {
+			width: clamp(40%, 1vw, 45%);
 		}
 	}
 	.infoCard_section {

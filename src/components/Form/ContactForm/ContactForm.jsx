@@ -4,9 +4,9 @@ import TextInput from "../TextInput";
 import TextAreaX from "../TextAreaX";
 import BTNSolid from "../../UI/BTNSolid";
 
-const ContactForm = () => {
+const ContactForm = ({ className }) => {
 	return (
-		<FormWrapper>
+		<FormWrapper className={className}>
 			<Form className="form-control">
 				<TextInput
 					type="text"
