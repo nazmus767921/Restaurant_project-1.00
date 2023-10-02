@@ -14,6 +14,7 @@ export const Main = styled.main`
 			line-height: normal;
 			.title--colored {
 				color: ${colors.brand};
+				display: block;
 			}
 		}
 	}
@@ -22,5 +23,8 @@ export const Main = styled.main`
 		justify-content: center;
 		align-items: center;
 		padding: 6.25em 0;
+	}
+	.hero_description {
+		margin: 0 auto;
 	}
 `;
