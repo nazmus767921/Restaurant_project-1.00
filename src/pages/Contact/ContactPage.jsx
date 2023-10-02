@@ -1,5 +1,7 @@
 import ContactForm from "../../components/Form/ContactForm/ContactForm";
 import { AddressInfoCard } from "../../components/UI/AddressInfoCard";
+import Footer from "../../components/UI/Footer/Footer";
+import Reservation from "../../components/UI/Reservation/Reservation";
 import { hero } from "../../constant/en-us/contact_page.constants";
 import { Main } from "./styles/ContactPage.styles";
 import spanTool from "span-tool";
@@ -10,6 +12,8 @@ const ContactPage = () => {
 			<HeroWrapper />
 			<ContactForm />
 			<InfoSection />
+			<Reservation />
+			<Footer />
 		</Main>
 	);
 };
