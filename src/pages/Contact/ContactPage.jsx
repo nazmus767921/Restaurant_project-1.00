@@ -1,4 +1,5 @@
 import ContactForm from "../../components/Form/ContactForm/ContactForm";
+import { AddressInfoCard } from "../../components/UI/AddressInfoCard";
 import { hero } from "../../constant/en-us/contact_page.constants";
 import { Main } from "./styles/ContactPage.styles";
 import spanTool from "span-tool";
@@ -15,11 +16,11 @@ const ContactPage = () => {
 
 const InfoSection = () => {
 	return (
-		<>
-			
-		</>
-	)
-}
+		<div className="infoCard_section">
+			<AddressInfoCard />
+		</div>
+	);
+};
 
 const HeroWrapper = () => {
 	return (

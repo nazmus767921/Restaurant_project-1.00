@@ -17,4 +17,10 @@ export const Main = styled.main`
 			}
 		}
 	}
+	.infoCard_section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6.25em 0;
+	}
 `;
