@@ -1,1 +1,2 @@
 export const SELECT_CATEGORY = "SELECT_CATEGORY";
+export const SET_MENU_DATA = "SET_MENU_DATA";
