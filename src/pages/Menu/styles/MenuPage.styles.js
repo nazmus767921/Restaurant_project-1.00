@@ -45,5 +45,12 @@ export const Main = styled.main`
 	}
 	.menusSection {
 		margin-top: 2.5em;
+		/* elements inside */
+		.listView--wrapper {
+			width: 100%;
+			@media screen and (${devices.xl}) {
+				width: 70%;
+			}
+		}
 	}
 `;

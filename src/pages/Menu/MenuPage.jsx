@@ -1,3 +1,4 @@
+import { useState } from "react";
 import InputRange from "../../components/Form/InputRange";
 import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
@@ -7,6 +8,7 @@ import MenuShowcase from "../../components/UI/MenuShowcase/MenuShowcase";
 import Title from "../../components/UI/Title";
 import { title, view } from "../../constant/en-us/foodmenu_page.constants";
 import { Main } from "./styles/MenuPage.styles";
+import MenuCard__ListView from "../../components/UI/MenuCard/MenuCard__ListView";
 
 const MenuPage = () => {
 	return (
@@ -27,16 +29,39 @@ const MenuPage = () => {
 };
 
 const MenusSection = () => {
+	const [isGridView, setIsGridView] = useState(false);
+
 	return (
 		<div className="menusSection">
 			<MenuShowcase>
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
+				{isGridView ? (
+					<>
+						<MenuCard__GridView />
+						<MenuCard__GridView />
+						<MenuCard__GridView />
+						<MenuCard__GridView />
+						<MenuCard__GridView />
+						<MenuCard__GridView />
+					</>
+				) : (
+					<>
+						<ListView__MenuCard />
+						<ListView__MenuCard />
+						<ListView__MenuCard />
+						<ListView__MenuCard />
+						<ListView__MenuCard />
+						<ListView__MenuCard />
+					</>
+				)}
 			</MenuShowcase>
+		</div>
+	);
+};
+
+const ListView__MenuCard = () => {
+	return (
+		<div className="listView--wrapper">
+			<MenuCard__ListView />
 		</div>
 	);
 };

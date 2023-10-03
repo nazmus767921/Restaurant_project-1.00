@@ -7,7 +7,7 @@ import { devices } from "../../../../utils/breakpoints";
 import TextBTN from "../../../../components/UI/TextBTN";
 import { Link } from "react-router-dom";
 import { paths } from "../../../../Root.paths";
-import MenuCard from "../../../../components/UI/MenuCard/MenuCard";
+import MenuCard__GridView from "../../../../components/UI/MenuCard/MenuCard__GridView";
 
 const PopularMenu = () => {
 	return (
@@ -17,11 +17,11 @@ const PopularMenu = () => {
 				<FoodFilterMenu />
 			</div>
 			<MenuShowcase>
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
 			</MenuShowcase>
 			<Link to={paths.menu}>
 				<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
