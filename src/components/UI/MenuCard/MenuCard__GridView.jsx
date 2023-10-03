@@ -17,7 +17,7 @@ const MenuItem = ({ menu }) => {
 	return (
 		<div className="menuItem--wrapper">
 			<div className="item_image">
-				<img loading="lazy" src={Shahi_kebab} alt="ItemName" />
+				<img loading="lazy" src={Shahi_kebab} alt={name} />
 			</div>
 			<h3>{name}</h3>
 			<p className="small description">{description}</p>
@@ -57,6 +57,12 @@ const Wrapper = styled.div`
 		text-align: center;
 
 		/* elements inside */
+		h3 {
+			line-height: 1.3;
+			min-height: 4ch;
+			display: flex;
+			align-items: center;
+		}
 		.item_image {
 			/* layout */
 			display: flex;

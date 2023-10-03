@@ -1,19 +1,19 @@
 import styled from "styled-components";
 import { Shahi_kebab } from "../../../assets/images";
 import { colors } from "../../../utils/colors";
+import formatPrice from "../../../utils/helpers/formatPrice";
 
-const MenuCard__ListView = () => {
+const MenuCard__ListView = ({ menu }) => {
+	const { name, description, price, image } = menu;
 	return (
 		<Card>
 			<div className="item_image">
-				<img loading="lazy" src={Shahi_kebab} alt="ItemName" />
+				<img loading="lazy" src={Shahi_kebab} alt={name} />
 			</div>
 			<div className="content--wrapper">
-				<h3>Shahi Kebab</h3>
-				<p className="small description">
-					Best meat you can get between your teeth.
-				</p>
-				<h3 className="item_price">$ 29.99</h3>
+				<h3>{name}</h3>
+				<p className="small description">{description}</p>
+				<h3 className="item_price">{formatPrice(price)}</h3>
 			</div>
 		</Card>
 	);
@@ -42,12 +42,12 @@ const Card = styled.div`
 		align-items: flex-start;
 		gap: 0.5em;
 		flex: 1 0 0;
-    padding: .5em 1.25em 0 0;
+		padding: 0.5em 1.25em 0 0;
 		/* elements inside */
 		.item_price {
 			font-size: 1em;
 			color: ${colors.brand};
-      align-self: flex-end;
+			align-self: flex-end;
 		}
 	}
 `;
