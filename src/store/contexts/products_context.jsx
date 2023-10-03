@@ -1,12 +1,13 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
-import { SELECT_CATEGORY } from "../../actions";
+import { SELECT_CATEGORY, SET_MENU_DATA } from "../../actions";
+import Data from "../../data.json";
 
 const products_context = createContext(null);
 
 const initialState = {
-	menus: {},
-	filteredMenu: {},
+	menus: [],
+	filteredMenu: [],
 	categories: ["breakfast", "lunch", "dinner", "deserts"],
 	selectedCategory: "all",
 };
@@ -24,6 +25,15 @@ export const Products_contextProvider = ({ children }) => {
 	const Actions = {
 		selectCategory,
 	};
+
+	// data fetching
+
+	const fetchMenuItems = () => {
+		dispatch({ type: SET_MENU_DATA, payload: { Data: Data.menuItems } });
+	};
+	useEffect(() => {
+		fetchMenuItems();
+	}, []);
 
 	return (
 		<products_context.Provider value={{ ...state, ...Actions }}>
