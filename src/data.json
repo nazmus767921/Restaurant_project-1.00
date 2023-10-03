@@ -5,70 +5,80 @@
 			"name": "Spaghetti Bolognese",
 			"description": "Delicious pasta with rich meat sauce",
 			"price": 1299,
-			"image": "spaghetti.jpg"
+			"image": "spaghetti.jpg",
+			"featured": true
 		},
 		{
 			"id": 2,
 			"name": "Margherita Pizza",
 			"description": "Classic pizza with tomato, mozzarella, and basil",
 			"price": 1099,
-			"image": "pizza.jpg"
+			"image": "pizza.jpg",
+			"featured": true
 		},
 		{
 			"id": 3,
 			"name": "Caesar Salad",
 			"description": "Crispy romaine lettuce with Caesar dressing and croutons",
 			"price": 849,
-			"image": "caesar-salad.jpg"
+			"image": "caesar-salad.jpg",
+			"featured": false
 		},
 		{
 			"id": 4,
 			"name": "Grilled Chicken Sandwich",
 			"description": "Grilled chicken breast with lettuce, tomato, and mayo",
 			"price": 999,
-			"image": "chicken-sandwich.jpg"
+			"image": "chicken-sandwich.jpg",
+			"featured": true
 		},
 		{
 			"id": 5,
 			"name": "Beef Tacos",
 			"description": "Tasty beef tacos with salsa and guacamole",
 			"price": 1149,
-			"image": "beef-tacos.jpg"
+			"image": "beef-tacos.jpg",
+			"featured": true
 		},
 		{
 			"id": 6,
 			"name": "Veggie Burger",
 			"description": "A vegetarian burger with fresh vegetables and cheese",
 			"price": 899,
-			"image": "veggie-burger.jpg"
+			"image": "veggie-burger.jpg",
+			"featured": false
 		},
 		{
 			"id": 7,
 			"name": "Fried Rice",
 			"description": "Savory fried rice with vegetables and choice of protein",
 			"price": 999,
-			"image": "fried-rice.jpg"
+			"image": "fried-rice.jpg",
+			"featured": true
 		},
 		{
 			"id": 8,
 			"name": "Crispy Wings",
 			"description": "Crispy chicken wings with a variety of dipping sauces",
 			"price": 1099,
-			"image": "wings.jpg"
+			"image": "wings.jpg",
+			"featured": true
 		},
 		{
 			"id": 9,
 			"name": "Chocolate Brownie",
 			"description": "Decadent chocolate brownie with ice cream",
 			"price": 599,
-			"image": "brownie.jpg"
+			"image": "brownie.jpg",
+			"featured": false
 		},
 		{
 			"id": 10,
 			"name": "Fresh Fruit Salad",
 			"description": "A refreshing salad with a mix of seasonal fruits",
 			"price": 649,
-			"image": "fruit-salad.jpg"
+			"image": "fruit-salad.jpg",
+			"featured": true
 		}
 	]
 }
