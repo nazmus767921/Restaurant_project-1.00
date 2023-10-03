@@ -2,8 +2,7 @@ import InputRange from "../../components/Form/InputRange";
 import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";
 import Hr from "../../components/UI/Hr";
-import MenuCard from "../../components/UI/MenuCard/MenuCard";
-import MenuItem from "../../components/UI/MenuItem/MenuItem";
+import MenuCard__GridView from "../../components/UI/MenuCard/MenuCard__GridView";
 import MenuShowcase from "../../components/UI/MenuShowcase/MenuShowcase";
 import Title from "../../components/UI/Title";
 import { title, view } from "../../constant/en-us/foodmenu_page.constants";
@@ -31,12 +30,12 @@ const MenusSection = () => {
 	return (
 		<div className="menusSection">
 			<MenuShowcase>
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
-				<MenuCard />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
+				<MenuCard__GridView />
 			</MenuShowcase>
 		</div>
 	);

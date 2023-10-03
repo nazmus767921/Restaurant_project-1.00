@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
 const MenuItem = lazy(() => import("../MenuItem/MenuItem"));
 
-const MenuCard = () => {
+const MenuCard__GridView = () => {
 	return (
 		<Suspense
 			fallback={
@@ -31,4 +31,4 @@ const Wrapper = styled.div`
 	}
 `;
 
-export default MenuCard;
+export default MenuCard__GridView;
