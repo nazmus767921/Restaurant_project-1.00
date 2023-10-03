@@ -1,25 +1,14 @@
-import { Suspense, lazy } from "react";
-import MenuItemFallback from "../MenuItem/Fallback/MenuItemFallback";
 import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
 import { colors } from "../../../utils/colors";
 import { Shahi_kebab } from "../../../assets/images";
 import formatPrice from "../../../utils/helpers/formatPrice";
-// const MenuItem = lazy(() => import("../MenuItem/MenuItem"));
 
 const MenuCard__GridView = ({ menu }) => {
 	return (
-		<Suspense
-			fallback={
-				<Wrapper>
-					<MenuItemFallback />
-				</Wrapper>
-			}
-		>
-			<Wrapper>
-				<MenuItem menu={menu} />
-			</Wrapper>
-		</Suspense>
+		<Wrapper>
+			<MenuItem menu={menu} />
+		</Wrapper>
 	);
 };
 
