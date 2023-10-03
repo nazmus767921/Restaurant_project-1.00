@@ -8,8 +8,13 @@ import TextBTN from "../../../../components/UI/TextBTN";
 import { Link } from "react-router-dom";
 import { paths } from "../../../../Root.paths";
 import MenuCard__GridView from "../../../../components/UI/MenuCard/MenuCard__GridView";
+import { useProductsContext } from "../../../../store/contexts/products_context";
 
 const PopularMenu = () => {
+	// taking only the featured menu items for homepage
+	const featuredMenus = useProductsContext().menus.filter(
+		(menu) => menu.featured === true
+	);
 	return (
 		<Wrapper>
 			<Title deco>{menu.title}</Title>
@@ -17,11 +22,9 @@ const PopularMenu = () => {
 				<FoodFilterMenu />
 			</div>
 			<MenuShowcase>
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
-				<MenuCard__GridView />
+				{featuredMenus.map((menu) => {
+					return <MenuCard__GridView key={menu.id} menu={menu} />;
+				})}
 			</MenuShowcase>
 			<Link to={paths.menu}>
 				<TextBTN className="Show_full_menu--BTN">{menu.btn}</TextBTN>
