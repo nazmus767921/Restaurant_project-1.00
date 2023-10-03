@@ -4,70 +4,70 @@
 			"id": 1,
 			"name": "Spaghetti Bolognese",
 			"description": "Delicious pasta with rich meat sauce",
-			"price": 12.99,
+			"price": 1299,
 			"image": "spaghetti.jpg"
 		},
 		{
 			"id": 2,
 			"name": "Margherita Pizza",
 			"description": "Classic pizza with tomato, mozzarella, and basil",
-			"price": 10.99,
+			"price": 1099,
 			"image": "pizza.jpg"
 		},
 		{
 			"id": 3,
 			"name": "Caesar Salad",
 			"description": "Crispy romaine lettuce with Caesar dressing and croutons",
-			"price": 8.49,
+			"price": 849,
 			"image": "caesar-salad.jpg"
 		},
 		{
 			"id": 4,
 			"name": "Grilled Chicken Sandwich",
 			"description": "Grilled chicken breast with lettuce, tomato, and mayo",
-			"price": 9.99,
+			"price": 999,
 			"image": "chicken-sandwich.jpg"
 		},
 		{
 			"id": 5,
 			"name": "Beef Tacos",
 			"description": "Tasty beef tacos with salsa and guacamole",
-			"price": 11.49,
+			"price": 1149,
 			"image": "beef-tacos.jpg"
 		},
 		{
 			"id": 6,
 			"name": "Veggie Burger",
 			"description": "A vegetarian burger with fresh vegetables and cheese",
-			"price": 8.99,
+			"price": 899,
 			"image": "veggie-burger.jpg"
 		},
 		{
 			"id": 7,
 			"name": "Fried Rice",
 			"description": "Savory fried rice with vegetables and choice of protein",
-			"price": 9.99,
+			"price": 999,
 			"image": "fried-rice.jpg"
 		},
 		{
 			"id": 8,
 			"name": "Crispy Wings",
 			"description": "Crispy chicken wings with a variety of dipping sauces",
-			"price": 10.99,
+			"price": 1099,
 			"image": "wings.jpg"
 		},
 		{
 			"id": 9,
 			"name": "Chocolate Brownie",
 			"description": "Decadent chocolate brownie with ice cream",
-			"price": 5.99,
+			"price": 599,
 			"image": "brownie.jpg"
 		},
 		{
 			"id": 10,
 			"name": "Fresh Fruit Salad",
 			"description": "A refreshing salad with a mix of seasonal fruits",
-			"price": 6.49,
+			"price": 649,
 			"image": "fruit-salad.jpg"
 		}
 	]
