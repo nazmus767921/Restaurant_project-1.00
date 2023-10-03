@@ -9,6 +9,7 @@ import Title from "../../components/UI/Title";
 import { title, view } from "../../constant/en-us/foodmenu_page.constants";
 import { Main } from "./styles/MenuPage.styles";
 import MenuCard__ListView from "../../components/UI/MenuCard/MenuCard__ListView";
+import Footer from "../../components/UI/Footer/Footer";
 
 const MenuPage = () => {
 	return (
@@ -24,6 +25,7 @@ const MenuPage = () => {
 				<Sorter />
 			</div>
 			<MenusSection />
+			<Footer />
 		</Main>
 	);
 };
