@@ -4,7 +4,12 @@ import { ease } from "../../utils/animation";
 
 const Select = ({ name, id, value, onChange, options = [] }) => {
 	return (
-		<SelectWrapper name={name} id={id || name}>
+		<SelectWrapper
+			name={name}
+			id={id || name}
+			value={value}
+			onChange={onChange}
+		>
 			{options.map((option) => {
 				return (
 					<option key={option} value={option?.value}>
