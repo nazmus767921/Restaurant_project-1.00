@@ -7,6 +7,7 @@ const MenuBTN = ({ children, onClick, selectedCategory }) => {
 	return (
 		<Menu_BTN
 			type="button"
+			name="category"
 			onClick={onClick}
 			className={selectedCategory === children.toLowerCase() ? "active" : null}
 		>
@@ -16,27 +17,24 @@ const MenuBTN = ({ children, onClick, selectedCategory }) => {
 };
 
 const FoodFilterMenu = () => {
-	const { categories, selectCategory, selectedCategory } = useProductsContext();
+	const {
+		categories,
+		update_filters,
+		filters: { category },
+	} = useProductsContext();
 
-	const handleCategorySelect = (e) => {
-		const textContent = e.target.textContent.toLowerCase();
-		selectCategory(textContent);
-	};
 	return (
 		<Wrapper>
 			<div className="filter_menu">
-				<MenuBTN
-					onClick={(e) => handleCategorySelect(e)}
-					selectedCategory={selectedCategory}
-				>
+				<MenuBTN onClick={update_filters} selectedCategory={category}>
 					All
 				</MenuBTN>
 				{categories.map((c) => {
 					return (
 						<MenuBTN
 							key={crypto.randomUUID()}
-							onClick={(e) => handleCategorySelect(e)}
-							selectedCategory={selectedCategory}
+							onClick={update_filters}
+							selectedCategory={category}
 						>
 							{c}
 						</MenuBTN>

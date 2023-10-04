@@ -2,9 +2,10 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
 	CATEGORY_FILTER,
-	SELECT_CATEGORY,
-	SET_FILTERED_MENU_DATA,
+	UPDATE_FILTERS,
+	LOAD_PRODUCTS,
 	SET_MENU_DATA,
+	FILTER_MENUS,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -14,19 +15,32 @@ const initialState = {
 	menus: [],
 	filteredMenu: [],
 	categories: ["breakfast", "lunch", "dinner", "deserts"],
+	grid_view: true,
 	selectedCategory: "all",
+	filters: {
+		category: "all",
+		min_price: 0,
+		max_price: 0,
+		price: 0,
+	},
 };
 
 export const Products_contextProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	// actions
-	const selectCategory = (textContent) => {
-		dispatch({ type: SELECT_CATEGORY, payload: { textContent } });
+	const update_filters = (e) => {
+		let name = e.target.name;
+		let value = e.target.value;
+
+		if (name === "category") {
+			value = e.target.textContent;
+		}
+		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 	};
 
-	const set_filteredMenus = () => {
-		dispatch({ type: SET_FILTERED_MENU_DATA });
+	const load_products = () => {
+		dispatch({ type: LOAD_PRODUCTS });
 	};
 
 	const filter_category_wise = (category) => {
@@ -35,8 +49,8 @@ export const Products_contextProvider = ({ children }) => {
 
 	//all actions
 	const Actions = {
-		selectCategory,
-		set_filteredMenus,
+		update_filters,
+		set_filteredMenus: load_products,
 		filter_category_wise,
 	};
 
