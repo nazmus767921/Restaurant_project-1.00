@@ -13,11 +13,11 @@ export const Main = styled.main`
 			margin-top: 4em;
 		}
 	}
-	
+
 	.filter_wrapper--bottom {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0.65em 2.5em;
+		padding: 0.65em 1.25em;
 	}
 `;

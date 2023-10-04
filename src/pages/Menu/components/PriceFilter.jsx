@@ -23,7 +23,7 @@ const PriceFilter = () => {
 const Wrapper = styled.div`
 	width: 100%;
 	display: flex;
-	padding: 0.65em 1.25em;
+	padding: 0.65em 0;
 `;
 
 export default PriceFilter;
