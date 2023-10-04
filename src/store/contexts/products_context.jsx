@@ -2,12 +2,13 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
 	UPDATE_FILTERS,
-	LOAD_PRODUCTS,
+	LOAD_FILTERED_MENU,
 	FETCH_MENUS,
 	FILTER_MENUS,
 	UPDATE_SORT,
 	UPDATE_GRID_VIEW,
 	UPDATE_LIST_VIEW,
+	GET_CATEGORIES,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -16,7 +17,7 @@ const products_context = createContext(null);
 const initialState = {
 	menus: [],
 	filteredMenu: [],
-	categories: ["breakfast", "lunch", "dinner", "deserts"],
+	categories: [],
 	grid_view: true,
 	sort: "price-low",
 	filters: {
@@ -42,7 +43,7 @@ export const Products_contextProvider = ({ children }) => {
 	};
 
 	const load_products = () => {
-		dispatch({ type: LOAD_PRODUCTS });
+		dispatch({ type: LOAD_FILTERED_MENU });
 	};
 
 	const update_sort = (e) => {
@@ -79,7 +80,12 @@ export const Products_contextProvider = ({ children }) => {
 	};
 	useEffect(() => {
 		fetchMenuItems();
+		dispatch({ type: GET_CATEGORIES });
 	}, []);
+
+	useEffect(() => {
+		dispatch({ type: FILTER_MENUS });
+	}, [state.menus, state.filters, state.sort]);
 
 	return (
 		<products_context.Provider value={{ ...state, ...Actions }}>

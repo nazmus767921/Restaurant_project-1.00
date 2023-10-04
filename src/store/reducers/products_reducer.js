@@ -1,10 +1,12 @@
 import {
 	UPDATE_FILTERS,
-	LOAD_PRODUCTS,
+	LOAD_FILTERED_MENU,
 	FETCH_MENUS,
 	UPDATE_SORT,
 	UPDATE_GRID_VIEW,
 	UPDATE_LIST_VIEW,
+	FILTER_MENUS,
+	GET_CATEGORIES,
 } from "../../actions";
 
 export const products_reducer = (state, action) => {
@@ -18,7 +20,15 @@ export const products_reducer = (state, action) => {
 			filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
 		};
 	}
-	if (action.type === LOAD_PRODUCTS) {
+	if (action.type === GET_CATEGORIES) {
+		const categories = new Set(
+			state.menus.map((menu) => {
+				return menu.category;
+			})
+		);
+		return { ...state, categories: [...categories] };
+	}
+	if (action.type === LOAD_FILTERED_MENU) {
 		return {
 			...state,
 			filteredMenu: [...state.menus],
@@ -41,5 +51,8 @@ export const products_reducer = (state, action) => {
 	}
 	if (action.type === UPDATE_LIST_VIEW) {
 		return { ...state, grid_view: false };
+	}
+	if (action.type === FILTER_MENUS) {
+		return { ...state };
 	}
 };
