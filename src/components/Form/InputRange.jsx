@@ -9,9 +9,9 @@ const InputRange = ({ name, value, min, max, onChange, id }) => {
 				type="range"
 				name={name}
 				id={id || name}
-				min={min}
-				max={max}
-				step={10}
+				// min={min}
+				// max={max}
+				// step={10}
 				// aria-label="My Input Range"
 				value={value}
 				onChange={onChange}
