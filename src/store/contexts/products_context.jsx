@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
 	UPDATE_FILTERS,
-	LOAD_FILTERED_MENU,
 	FETCH_MENUS,
 	FILTER_MENUS,
 	UPDATE_SORT,
@@ -44,7 +43,7 @@ export const Products_contextProvider = ({ children }) => {
 	};
 
 	const load_products = () => {
-		dispatch({ type: LOAD_FILTERED_MENU });
+		dispatch({ type });
 	};
 
 	const update_sort = (e) => {
