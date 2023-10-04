@@ -34,8 +34,8 @@ const Wrapper = styled.div`
 		text-transform: capitalize;
 	}
 	.slider {
-		width: 100%;
-		height: auto;
+		/* width: 100%; */
+		/* height: auto; */
 		-webkit-appearance: none; /* Remove default styling on Webkit browsers */
 		appearance: none; /* Remove default styling on non-Webkit browsers */
 		background: ${colors["text-white"]}; /* Track color */
