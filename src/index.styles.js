@@ -7,14 +7,14 @@ export const GlobalStyles = createGlobalStyle`
 	
 	body {
 		margin: 0;
-	
 		color: ${colors["text-white"]};
+		background-color: ${colors["bg-primary-dark"]};
 		display: flex;
 		min-width: 320px;
 		min-height: 100vh;
 		width: 100%;
 
-		/* overflow-x: hidden; */
+		overflow-x: hidden;
 	}
 
 button {

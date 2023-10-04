@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { reservation } from "../../../constant/en-us/shared.constants";
 import Tag from "../Tag";
 import TextBTNDoubleLines from "../TextBTNDoubleLines";
 import Title from "../Title";
 import { Wrapper } from "./styles/Reservation.styles";
+import { paths } from "../../../Root.paths";
 
 const Reservation = () => {
 	return (
@@ -14,7 +16,9 @@ const Reservation = () => {
 				</div>
 				<div className="content">
 					<p>{reservation.description}</p>
-					<TextBTNDoubleLines>{reservation.btn}</TextBTNDoubleLines>
+					<Link to={paths.reservation}>
+						<TextBTNDoubleLines>{reservation.btn}</TextBTNDoubleLines>
+					</Link>
 				</div>
 			</div>
 		</Wrapper>

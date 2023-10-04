@@ -4,6 +4,7 @@ import getCursiveStyle from "../../../../../utils/helpers/getCursiveStyle";
 import SideBarLink from "./components/SideBarLink";
 import { Main } from "./styles/MobileSideBar.styles";
 import TextBTNDoubleLines from "../../../TextBTNDoubleLines";
+import { paths } from "../../../../../Root.paths";
 
 const MobileSideBar = ({ toggleShowSidebar }) => {
 	const links = nav.links;
@@ -15,11 +16,12 @@ const MobileSideBar = ({ toggleShowSidebar }) => {
 			<div className="links">
 				{links.map((linkobj) => {
 					const { id, link, title } = linkobj;
-					return (
-						<Link to={link} key={id} onClick={toggleShowSidebar}>
-							<SideBarLink>{getCursiveStyle(title)}</SideBarLink>
-						</Link>
-					);
+					if (link !== paths.reservation)
+						return (
+							<Link to={link} key={id} onClick={toggleShowSidebar}>
+								<SideBarLink>{getCursiveStyle(title)}</SideBarLink>
+							</Link>
+						);
 				})}
 			</div>
 			<Link to={nav.btn.link}>

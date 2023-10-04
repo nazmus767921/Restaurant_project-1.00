@@ -30,6 +30,11 @@ export const nav = {
 			title: "Contact us**#",
 			link: paths.contact,
 		},
+		{
+			id: crypto.randomUUID(),
+			title: "Reserve **#",
+			link: paths.reservation,
+		},
 	],
 
 	btn: { link: paths.reservation, title: "Make Reservation" },
