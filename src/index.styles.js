@@ -18,12 +18,16 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 button {
+	/* layout */
 	width: fit-content;
-	cursor: pointer;
-	background-color: inherit;
-	border: 0;
 	margin: 0;
 	padding: 0;
+	cursor: pointer;
+	/* makeup */
+	color: inherit;
+	background-color: inherit;
+	border: 0;
+	/* typo */
 	text-transform: capitalize;
 	font-family: "Libre Franklin", sans-serif;
 
