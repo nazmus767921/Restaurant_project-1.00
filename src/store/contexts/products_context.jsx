@@ -15,6 +15,7 @@ const initialState = {
 	filteredMenu: [],
 	categories: ["breakfast", "lunch", "dinner", "deserts"],
 	grid_view: true,
+	sort: "price-low",
 	filters: {
 		category: "all",
 		min_price: 0,

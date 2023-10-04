@@ -100,15 +100,16 @@ const PriceFilter = () => {
 };
 
 const Sorter = () => {
+	const { sort } = useProductsContext();
 	const options = [
-		{ label: "Price ( Lowest - Highest )", value: "lowest" },
-		{ label: "Price ( Highest - Lowest )", value: "highest" },
-		{ label: "Alphabetically (A - Z)", value: "a" },
-		{ label: "Alphabetically (Z - A)", value: "z" },
+		{ label: "Price ( Lowest - Highest )", value: "price-low" },
+		{ label: "Price ( Highest - Lowest )", value: "price-high" },
+		{ label: "Alphabetically (A - Z)", value: "a-z" },
+		{ label: "Alphabetically (Z - A)", value: "z-a" },
 	];
 	return (
 		<div className="select--wrapper">
-			<Select options={options} />
+			<Select options={options} name="sort" value={sort} />
 		</div>
 	);
 };
