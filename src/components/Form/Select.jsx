@@ -17,6 +17,7 @@ const Select = ({ name, id, value, onChange, options = [] }) => {
 };
 
 const SelectWrapper = styled.select`
+	color: inherit;
 	width: 100%;
 	padding: 0.75em;
 	/* makeup */
