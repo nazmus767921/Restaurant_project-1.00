@@ -1,4 +1,5 @@
 import {
+	CATEGORY_FILTER,
 	SELECT_CATEGORY,
 	SET_FILTERED_MENU_DATA,
 	SET_MENU_DATA,
@@ -13,6 +14,9 @@ export const products_reducer = (state, action) => {
 	}
 	if (action.type === SET_FILTERED_MENU_DATA) {
 		return { ...state, filteredMenu: [...state.menus] };
+	}
+	if (action.type === CATEGORY_FILTER) {
+		return { ...state };
 	}
 	return { ...state };
 };

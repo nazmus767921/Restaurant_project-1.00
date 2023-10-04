@@ -48,14 +48,17 @@ const FoodFilterMenu = () => {
 };
 
 const Menu_BTN = styled.button`
-	font-size: 0.75em;
-	font-weight: 600;
 	text-transform: capitalize;
 	padding: 0.5em 1.25em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* makeup */
 	border-radius: 999px;
+	color: ${colors["text-white"]};
+	/* typo */
+	font-size: 0.75em;
+	font-weight: 600;
 
 	@media screen and (${devices.md}) {
 		font-size: 0.825em;

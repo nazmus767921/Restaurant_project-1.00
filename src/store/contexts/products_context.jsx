@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
+	CATEGORY_FILTER,
 	SELECT_CATEGORY,
 	SET_FILTERED_MENU_DATA,
 	SET_MENU_DATA,
@@ -28,10 +29,15 @@ export const Products_contextProvider = ({ children }) => {
 		dispatch({ type: SET_FILTERED_MENU_DATA });
 	};
 
+	const filter_category_wise = (category) => {
+		dispatch({ type: CATEGORY_FILTER, payload: { category } });
+	};
+
 	//all actions
 	const Actions = {
 		selectCategory,
 		set_filteredMenus,
+		filter_category_wise,
 	};
 
 	// data fetching
