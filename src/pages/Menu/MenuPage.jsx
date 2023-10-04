@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import InputRange from "../../components/Form/InputRange";
 import Select from "../../components/Form/Select";
 import FoodFilterMenu from "../../components/UI/Food Filter/FoodFilterMenu";

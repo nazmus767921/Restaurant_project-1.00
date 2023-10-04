@@ -1,6 +1,5 @@
 import {
 	UPDATE_FILTERS,
-	LOAD_FILTERED_MENU,
 	FETCH_MENUS,
 	UPDATE_SORT,
 	UPDATE_GRID_VIEW,
@@ -29,12 +28,6 @@ export const products_reducer = (state, action) => {
 		);
 		return { ...state, categories: [...categories] };
 	}
-	// if (action.type === LOAD_FILTERED_MENU) {
-	// 	return {
-	// 		...state,
-	// 		filteredMenu: [...state.menus],
-	// 	};
-	// }
 	if (action.type === UPDATE_FILTERS) {
 		return {
 			...state,
