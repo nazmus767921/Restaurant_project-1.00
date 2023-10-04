@@ -15,7 +15,6 @@ const initialState = {
 	filteredMenu: [],
 	categories: ["breakfast", "lunch", "dinner", "deserts"],
 	grid_view: true,
-	selectedCategory: "all",
 	filters: {
 		category: "all",
 		min_price: 0,
@@ -33,7 +32,7 @@ export const Products_contextProvider = ({ children }) => {
 		let value = e.target.value;
 
 		if (name === "category") {
-			value = e.target.textContent;
+			value = e.target.textContent.toLowerCase();
 		}
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 	};
