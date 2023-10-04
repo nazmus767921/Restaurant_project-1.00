@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 	}
 	.slider {
 		width: 100%;
-		height: 2px;
+		height: auto;
 		-webkit-appearance: none; /* Remove default styling on Webkit browsers */
 		appearance: none; /* Remove default styling on non-Webkit browsers */
 		background: ${colors["text-white"]}; /* Track color */
