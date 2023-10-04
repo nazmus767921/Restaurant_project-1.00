@@ -1,10 +1,9 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
-	CATEGORY_FILTER,
 	UPDATE_FILTERS,
 	LOAD_PRODUCTS,
-	SET_MENU_DATA,
+	FETCH_MENUS,
 	FILTER_MENUS,
 } from "../../actions";
 import Data from "../../data.json";
@@ -56,7 +55,7 @@ export const Products_contextProvider = ({ children }) => {
 
 	// data fetching
 	const fetchMenuItems = () => {
-		dispatch({ type: SET_MENU_DATA, payload: { Data: Data.menuItems } });
+		dispatch({ type: FETCH_MENUS, payload: { Data: Data.menuItems } });
 	};
 	useEffect(() => {
 		fetchMenuItems();
