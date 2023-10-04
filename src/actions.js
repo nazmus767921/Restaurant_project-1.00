@@ -1,5 +1,4 @@
 export const UPDATE_FILTERS = "UPDATE_FILTERS";
-export const SET_MENU_DATA = "SET_MENU_DATA";
+export const FETCH_MENUS = "FETCH_MENUS";
 export const LOAD_PRODUCTS = "LOAD_PRODUCTS";
-export const CATEGORY_FILTER = "CATEGORY_FILTER";
 export const FILTER_MENUS = "FILTER_MENUS";
