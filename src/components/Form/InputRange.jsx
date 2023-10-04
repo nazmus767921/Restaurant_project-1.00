@@ -15,7 +15,7 @@ const InputRange = ({ name, value, min, max, onChange, id }) => {
 				// aria-label="My Input Range"
 				value={value}
 				onChange={onChange}
-				className="slider"
+				// className="slider"
 			/>
 		</Wrapper>
 	);
