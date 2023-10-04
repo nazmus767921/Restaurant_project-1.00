@@ -6,6 +6,7 @@
 			"description": "Delicious pasta with rich meat sauce",
 			"price": 1299,
 			"image": "spaghetti.jpg",
+			"category": "lunch",
 			"featured": true
 		},
 		{
@@ -14,6 +15,7 @@
 			"description": "Classic pizza with tomato, mozzarella, and basil",
 			"price": 1099,
 			"image": "pizza.jpg",
+			"category": "fastfood",
 			"featured": true
 		},
 		{
@@ -22,6 +24,7 @@
 			"description": "Crispy romaine lettuce with Caesar dressing and croutons",
 			"price": 849,
 			"image": "caesar-salad.jpg",
+			"category": "breakfast",
 			"featured": false
 		},
 		{
@@ -30,6 +33,7 @@
 			"description": "Grilled chicken breast with lettuce, tomato, and mayo",
 			"price": 999,
 			"image": "chicken-sandwich.jpg",
+			"category": "fastfood",
 			"featured": true
 		},
 		{
@@ -38,6 +42,7 @@
 			"description": "Tasty beef tacos with salsa and guacamole",
 			"price": 1149,
 			"image": "beef-tacos.jpg",
+			"category": "fastfood",
 			"featured": true
 		},
 		{
@@ -46,6 +51,7 @@
 			"description": "A vegetarian burger with fresh vegetables and cheese",
 			"price": 899,
 			"image": "veggie-burger.jpg",
+			"category": "fastfood",
 			"featured": false
 		},
 		{
@@ -54,6 +60,7 @@
 			"description": "Savory fried rice with vegetables and choice of protein",
 			"price": 999,
 			"image": "fried-rice.jpg",
+			"category": "lunch",
 			"featured": true
 		},
 		{
@@ -62,6 +69,7 @@
 			"description": "Crispy chicken wings with a variety of dipping sauces",
 			"price": 1099,
 			"image": "wings.jpg",
+			"category": "desert",
 			"featured": true
 		},
 		{
@@ -70,6 +78,7 @@
 			"description": "Decadent chocolate brownie with ice cream",
 			"price": 599,
 			"image": "brownie.jpg",
+			"category": "desert",
 			"featured": false
 		},
 		{
@@ -78,6 +87,7 @@
 			"description": "A refreshing salad with a mix of seasonal fruits",
 			"price": 649,
 			"image": "fruit-salad.jpg",
+			"category": "desert",
 			"featured": true
 		}
 	]
