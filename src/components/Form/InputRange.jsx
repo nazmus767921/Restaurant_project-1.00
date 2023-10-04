@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 
-const InputRange = ({ name, value, onChange }) => {
+const InputRange = ({ name, value, min, max, onChange, id }) => {
 	return (
 		<Wrapper>
 			<label htmlFor="price">price</label>
 			<input
 				type="range"
 				name={name}
-				id="price"
-				min={0}
-				max={100}
+				id={id || name}
+				min={min}
+				max={max}
 				step={10}
-				aria-label="My Input Range"
-				// value={value}
-				// onChange={handleChange}
+				// aria-label="My Input Range"
+				value={value}
+				onChange={onChange}
 				className="slider"
 			/>
 		</Wrapper>
