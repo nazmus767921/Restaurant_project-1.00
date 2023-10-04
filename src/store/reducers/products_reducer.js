@@ -14,10 +14,18 @@ export const products_reducer = (state, action) => {
 		const maxPrice = state.menus.reduce((max, item) => {
 			return item.price > max ? item.price : max;
 		}, 0);
+		const minPrice = state.menus.reduce((min, item) => {
+			return item.price < min ? item.price : min;
+		}, maxPrice);
 		return {
 			...state,
 			menus: action.payload.Data,
-			filters: { ...state.filters, max_price: maxPrice, price: maxPrice },
+			filters: {
+				...state.filters,
+				max_price: maxPrice,
+				price: maxPrice,
+				min_price: minPrice,
+			},
 		};
 	}
 	if (action.type === GET_CATEGORIES) {

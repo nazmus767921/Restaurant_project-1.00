@@ -9,13 +9,12 @@ const InputRange = ({ name, value, min, max, onChange, id }) => {
 				type="range"
 				name={name}
 				id={id || name}
-				// min={min}
-				// max={max}
-				// step={10}
-				// aria-label="My Input Range"
+				min={min}
+				max={max}
+				step={1}
 				value={value}
 				onChange={onChange}
-				// className="slider"
+				className="slider"
 			/>
 		</Wrapper>
 	);
@@ -46,9 +45,8 @@ const Wrapper = styled.div`
 	.slider::-webkit-slider-thumb {
 		-webkit-appearance: none; /* Remove default thumb styling on Webkit browsers */
 		appearance: none; /* Remove default thumb styling on non-Webkit browsers */
-		width: 0.625em;
+		width: 1em;
 		aspect-ratio: 1/2;
-		height: 20px;
 		background: ${colors.brand}; /* Thumb color */
 		border-radius: 62.4375em; /* Round thumb shape */
 		cursor: pointer;

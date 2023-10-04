@@ -42,9 +42,6 @@ export const Products_contextProvider = ({ children }) => {
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 	};
 
-	const load_products = () => {
-		dispatch({ type });
-	};
 
 	const update_sort = (e) => {
 		let name = e.target.name;
@@ -63,7 +60,6 @@ export const Products_contextProvider = ({ children }) => {
 	//all actions
 	const Actions = {
 		update_filters,
-		set_filteredMenus: load_products,
 		update_sort,
 		update_gridView,
 		update_listView,
