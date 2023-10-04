@@ -5,6 +5,9 @@ import {
 	LOAD_PRODUCTS,
 	FETCH_MENUS,
 	FILTER_MENUS,
+	UPDATE_SORT,
+	UPDATE_GRID_VIEW,
+	UPDATE_LIST_VIEW,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -42,6 +45,20 @@ export const Products_contextProvider = ({ children }) => {
 		dispatch({ type: LOAD_PRODUCTS });
 	};
 
+	const update_sort = (e) => {
+		let name = e.target.name;
+		let value = e.target.value;
+		dispatch({ type: UPDATE_SORT, payload: { name, value } });
+	};
+
+	const update_gridView = () => {
+		dispatch({ type: UPDATE_GRID_VIEW });
+	};
+
+	const update_listView = () => {
+		dispatch({ type: UPDATE_LIST_VIEW });
+	};
+
 	const filter_category_wise = (category) => {
 		dispatch({ type: CATEGORY_FILTER, payload: { category } });
 	};
@@ -51,6 +68,9 @@ export const Products_contextProvider = ({ children }) => {
 		update_filters,
 		set_filteredMenus: load_products,
 		filter_category_wise,
+		update_sort,
+		update_gridView,
+		update_listView,
 	};
 
 	// data fetching

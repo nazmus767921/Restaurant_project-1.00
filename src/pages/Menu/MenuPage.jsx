@@ -6,11 +6,13 @@ import Hr from "../../components/UI/Hr";
 import MenuCard__GridView from "../../components/UI/MenuCard/MenuCard__GridView";
 import MenuShowcase from "../../components/UI/MenuShowcase/MenuShowcase";
 import Title from "../../components/UI/Title";
-import { title, view } from "../../constant/en-us/foodmenu_page.constants";
+import { title } from "../../constant/en-us/foodmenu_page.constants";
 import { Main } from "./styles/MenuPage.styles";
 import MenuCard__ListView from "../../components/UI/MenuCard/MenuCard__ListView";
 import Footer from "../../components/UI/Footer/Footer";
 import { useProductsContext } from "../../store/contexts/products_context";
+import { TfiLayoutGrid2Alt } from "react-icons/tfi";
+import { PiListBold } from "react-icons/pi";
 
 const MenuPage = () => {
 	// sets the filteredMenu when mounted
@@ -37,13 +39,12 @@ const MenuPage = () => {
 };
 
 const MenusSection = () => {
-	const { filteredMenu } = useProductsContext();
-	const [isGridView, setIsGridView] = useState(false);
+	const { filteredMenu, grid_view } = useProductsContext();
 
 	return (
 		<div className="menusSection">
 			<MenuShowcase>
-				{isGridView ? (
+				{grid_view ? (
 					<>
 						{filteredMenu.map((menu) => (
 							<MenuCard__GridView key={menu.id} menu={menu} />
@@ -70,13 +71,15 @@ const ListView__MenuCard = ({ menu }) => {
 };
 
 const ViewChanger = () => {
+	const { update_gridView, update_listView } = useProductsContext();
 	return (
 		<div className="viewChanger--wrapper">
-			{view.map((view) => (
-				<div key={view.icon} className="view--icon">
-					{view.icon}
-				</div>
-			))}
+			<div className="view--icon" onClick={update_gridView}>
+				<TfiLayoutGrid2Alt />
+			</div>
+			<div className="view--icon" onClick={update_listView}>
+				<PiListBold />
+			</div>
 		</div>
 	);
 };
@@ -100,7 +103,7 @@ const PriceFilter = () => {
 };
 
 const Sorter = () => {
-	const { sort } = useProductsContext();
+	const { sort, update_sort } = useProductsContext();
 	const options = [
 		{ label: "Price ( Lowest - Highest )", value: "price-low" },
 		{ label: "Price ( Highest - Lowest )", value: "price-high" },
@@ -109,7 +112,12 @@ const Sorter = () => {
 	];
 	return (
 		<div className="select--wrapper">
-			<Select options={options} name="sort" value={sort} />
+			<Select
+				options={options}
+				name="sort"
+				value={sort}
+				onChange={update_sort}
+			/>
 		</div>
 	);
 };
