@@ -9,6 +9,7 @@ import {
 	UPDATE_GRID_VIEW,
 	UPDATE_LIST_VIEW,
 	GET_CATEGORIES,
+	SORT_MENU,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -59,7 +60,6 @@ export const Products_contextProvider = ({ children }) => {
 	const update_listView = () => {
 		dispatch({ type: UPDATE_LIST_VIEW });
 	};
-;
 
 	//all actions
 	const Actions = {
@@ -81,6 +81,7 @@ export const Products_contextProvider = ({ children }) => {
 
 	useEffect(() => {
 		dispatch({ type: FILTER_MENUS });
+		dispatch({ type: SORT_MENU });
 	}, [state.menus, state.filters, state.sort]);
 
 	return (

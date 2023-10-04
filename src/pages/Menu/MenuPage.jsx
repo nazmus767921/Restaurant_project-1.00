@@ -102,8 +102,8 @@ const Sorter = () => {
 	const options = [
 		{ label: "Price ( Lowest - Highest )", value: "price-low" },
 		{ label: "Price ( Highest - Lowest )", value: "price-high" },
-		{ label: "Alphabetically (A - Z)", value: "a-z" },
-		{ label: "Alphabetically (Z - A)", value: "z-a" },
+		{ label: "Alphabetically (A - Z)", value: "name-a" },
+		{ label: "Alphabetically (Z - A)", value: "name-z" },
 	];
 	return (
 		<div className="select--wrapper">

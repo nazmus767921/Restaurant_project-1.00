@@ -7,6 +7,7 @@ import {
 	UPDATE_LIST_VIEW,
 	FILTER_MENUS,
 	GET_CATEGORIES,
+	SORT_MENU,
 } from "../../actions";
 
 export const products_reducer = (state, action) => {
@@ -54,7 +55,7 @@ export const products_reducer = (state, action) => {
 	}
 	if (action.type === FILTER_MENUS) {
 		const { menus } = state;
-		const {category, price } = state.filters;
+		const { category, price } = state.filters;
 		let tempProducts = [...menus];
 		//=> Filtering <==//
 		if (category !== "all") {
@@ -66,6 +67,24 @@ export const products_reducer = (state, action) => {
 			tempProducts = tempProducts.filter((menu) => {
 				return menu.price <= price;
 			});
+		}
+		return { ...state, filteredMenu: tempProducts };
+	}
+	if (action.type === SORT_MENU) {
+		const { filteredMenu, sort } = state;
+		let tempProducts = [...filteredMenu];
+
+		if (sort === "price-low") {
+			tempProducts = tempProducts.sort((a, b) => a.price - b.price);
+		}
+		if (sort === "price-high") {
+			tempProducts = tempProducts.sort((a, b) => b.price - a.price);
+		}
+		if (sort === "name-a") {
+			tempProducts = tempProducts.sort((a, b) => a.name.localeCompare(b.name));
+		}
+		if (sort === "name-z") {
+			tempProducts = tempProducts.sort((a, b) => b.name.localeCompare(a.name));
 		}
 		return { ...state, filteredMenu: tempProducts };
 	}
