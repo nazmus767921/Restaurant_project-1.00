@@ -7,19 +7,26 @@ import {
 	FILTER_MENUS,
 	GET_CATEGORIES,
 	SORT_MENU,
+	UPDATE_MIN_MAX_PRICES,
 } from "../../actions";
 
 export const products_reducer = (state, action) => {
 	if (action.type === FETCH_MENUS) {
+		return {
+			...state,
+			menus: action.payload.Data,
+		};
+	}
+	if (action.type === UPDATE_MIN_MAX_PRICES) {
 		const maxPrice = state.menus.reduce((max, item) => {
 			return item.price > max ? item.price : max;
 		}, 0);
 		const minPrice = state.menus.reduce((min, item) => {
 			return item.price < min ? item.price : min;
 		}, maxPrice);
+
 		return {
 			...state,
-			menus: action.payload.Data,
 			filters: {
 				...state.filters,
 				max_price: maxPrice,

@@ -9,6 +9,7 @@ import {
 	UPDATE_LIST_VIEW,
 	GET_CATEGORIES,
 	SORT_MENU,
+	UPDATE_MIN_MAX_PRICES,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -41,7 +42,6 @@ export const Products_contextProvider = ({ children }) => {
 		}
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 	};
-
 
 	const update_sort = (e) => {
 		let name = e.target.name;
@@ -78,6 +78,9 @@ export const Products_contextProvider = ({ children }) => {
 		dispatch({ type: FILTER_MENUS });
 		dispatch({ type: SORT_MENU });
 	}, [state.menus, state.filters, state.sort]);
+	useEffect(() => {
+		dispatch({ type: UPDATE_MIN_MAX_PRICES });
+	}, [state.menus]);
 
 	return (
 		<products_context.Provider value={{ ...state, ...Actions }}>

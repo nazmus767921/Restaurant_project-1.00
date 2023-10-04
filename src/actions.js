@@ -6,3 +6,4 @@ export const SORT_MENU = "SORT_MENU"; // sorts the menu item based on the state.
 export const UPDATE_GRID_VIEW = "UPDATE_GRID_VIEW"; // sets the grid view for menu items in menus page.
 export const UPDATE_LIST_VIEW = "UPDATE_LIST_VIEW"; // sets the list view for menu items in menus page.
 export const GET_CATEGORIES = "GET_CATEGORIES"; // get the unique categories from state.menus on initial load.
+export const UPDATE_MIN_MAX_PRICES = "UPDATE_MIN_MAX_PRICES"; // sets min and max prices to the state.filters as defaults.
