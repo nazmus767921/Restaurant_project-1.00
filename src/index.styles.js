@@ -54,6 +54,9 @@ button.icon {
 	}
 
 	input, textarea {
+		/* makeup */
+		caret-color: ${colors.brand};
+	/* animation */
 		transition: all 0.35s ${ease["out-expo"]};
 		&::placeholder {
 			transition: all 0.35s ${ease["out-expo"]};
@@ -68,7 +71,8 @@ button.icon {
 	}
 
 	input,select,textarea {
-		outline: none
+		outline: none;
+		color: inherit;
 	}
 
 	/* Container Max Width */
