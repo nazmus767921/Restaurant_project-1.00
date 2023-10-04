@@ -82,9 +82,19 @@ const ViewChanger = () => {
 };
 
 const PriceFilter = () => {
+	const {
+		update_filters,
+		filters: { price, min_price, max_price },
+	} = useProductsContext();
 	return (
 		<div className="price_filter--wrapper">
-			<InputRange name="price" />
+			<InputRange
+				name="price"
+				min={min_price}
+				max={max_price}
+				value={price}
+				onChange={update_filters}
+			/>
 		</div>
 	);
 };
