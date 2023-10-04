@@ -59,16 +59,12 @@ export const Products_contextProvider = ({ children }) => {
 	const update_listView = () => {
 		dispatch({ type: UPDATE_LIST_VIEW });
 	};
-
-	const filter_category_wise = (category) => {
-		dispatch({ type: CATEGORY_FILTER, payload: { category } });
-	};
+;
 
 	//all actions
 	const Actions = {
 		update_filters,
 		set_filteredMenus: load_products,
-		filter_category_wise,
 		update_sort,
 		update_gridView,
 		update_listView,

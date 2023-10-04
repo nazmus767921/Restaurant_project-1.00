@@ -15,11 +15,6 @@ import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 import { PiListBold } from "react-icons/pi";
 
 const MenuPage = () => {
-	// sets the filteredMenu when mounted
-	const { set_filteredMenus } = useProductsContext();
-	useEffect(() => {
-		set_filteredMenus();
-	}, []);
 	return (
 		<Main className="page-container">
 			<div className="header">

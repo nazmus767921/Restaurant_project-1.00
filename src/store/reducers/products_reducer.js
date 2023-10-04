@@ -28,12 +28,12 @@ export const products_reducer = (state, action) => {
 		);
 		return { ...state, categories: [...categories] };
 	}
-	if (action.type === LOAD_FILTERED_MENU) {
-		return {
-			...state,
-			filteredMenu: [...state.menus],
-		};
-	}
+	// if (action.type === LOAD_FILTERED_MENU) {
+	// 	return {
+	// 		...state,
+	// 		filteredMenu: [...state.menus],
+	// 	};
+	// }
 	if (action.type === UPDATE_FILTERS) {
 		return {
 			...state,
@@ -53,6 +53,20 @@ export const products_reducer = (state, action) => {
 		return { ...state, grid_view: false };
 	}
 	if (action.type === FILTER_MENUS) {
-		return { ...state };
+		const { menus } = state;
+		const {category, price } = state.filters;
+		let tempProducts = [...menus];
+		//=> Filtering <==//
+		if (category !== "all") {
+			tempProducts = tempProducts.filter((menu) => {
+				return menu.category.toLowerCase() === category.toLowerCase();
+			});
+		}
+		if (price) {
+			tempProducts = tempProducts.filter((menu) => {
+				return menu.price <= price;
+			});
+		}
+		return { ...state, filteredMenu: tempProducts };
 	}
 };
