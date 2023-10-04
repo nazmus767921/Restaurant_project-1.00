@@ -40,6 +40,9 @@ export const Products_contextProvider = ({ children }) => {
 		if (name === "category") {
 			value = e.target.textContent.toLowerCase();
 		}
+		if (name === "price") {
+			value = Number(e.target.value);
+		}
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 	};
 

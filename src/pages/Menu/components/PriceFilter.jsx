@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import InputRange from "../../../components/Form/InputRange";
 import { useProductsContext } from "../../../store/contexts/products_context";
+import formatPrice from "../../../utils/helpers/formatPrice";
 
 const PriceFilter = () => {
 	const {
@@ -16,6 +17,7 @@ const PriceFilter = () => {
 				value={price}
 				onChange={update_filters}
 			/>
+			<h2>{formatPrice(price)}</h2>
 		</Wrapper>
 	);
 };
