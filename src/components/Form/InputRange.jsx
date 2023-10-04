@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 
-const InputRange = ({ name, value, min, max, onChange, id }) => {
+const InputRange = ({ name, value, min, max, onChange, id, step}) => {
 	return (
 		<Wrapper>
-			<label htmlFor="price">price</label>
 			<input
 				type="range"
 				name={name}
 				id={id || name}
 				min={min}
 				max={max}
-				step={1}
+				step={step}
 				value={value}
 				onChange={onChange}
 				className="slider"
@@ -26,13 +25,8 @@ const Wrapper = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding-inline: 1.25em;
 	gap: 1.75em;
 	/* elements inside */
-	label {
-		font-size: 0.75em;
-		text-transform: capitalize;
-	}
 	.slider {
 		width: 100%;
 		height: 2px;
