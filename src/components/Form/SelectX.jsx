@@ -6,7 +6,7 @@ import Label from "./Label";
 const SelectX = ({ name, id, label, value, onChange, options = [] }) => {
 	return (
 		<Wrapper>
-			<Label htmlFor={id || name}>{label}</Label>
+			{label ? <Label htmlFor={id || name}>{label}</Label> : null}
 			<ElementContainer>
 				<div className="icon--wrapper">
 					<IoMdArrowDropdown style={{ color: colors.brand }} />
