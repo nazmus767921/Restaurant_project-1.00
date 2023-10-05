@@ -17,13 +17,13 @@ const getCursiveStyle = (data) => {
 				if (word.includes("**#")) {
 					return (
 						<span key={index} className="cursive colored">
-							{word.replace(/\**#/g, "") + " "}
+							{word.replace(/\**#/g, "")}&nbsp;
 						</span>
 					);
 				}
 				return (
 					<span key={index} className="cursive">
-						{word + " "}
+						{word}&nbsp;
 					</span>
 				);
 			}
