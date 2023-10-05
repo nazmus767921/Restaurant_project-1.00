@@ -1,7 +1,7 @@
 import { form as contactForm } from "./contact_page.constants";
 
 export const hero = {
-	title: "Make an online Reservation",
+	title: "*** Make an online**# Reservation",
 	tagline: "we saved you a seat",
 	description:
 		"Your dining experience matters to us, and we can't wait to welcome you to our restaurant. Let's make your visit unforgettable!",
