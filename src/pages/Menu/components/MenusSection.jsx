@@ -7,12 +7,21 @@ import Pagination from "../../../components/Pagination";
 import { usePaginationContext } from "../../../store/contexts/pagination_context";
 
 const MenusSection = () => {
-	const { filteredMenu, grid_view } = useProductsContext();
-	const {displayedData} = usePaginationContext();
+	const { grid_view } = useProductsContext();
+	const { displayedData, totalPages } = usePaginationContext();
+
+	const whatHeightShouldbe = () => {
+		if (totalPages > 1 && displayedData.length > 3) {
+			return { minHeight: "88em" };
+		} else if (totalPages > 1 && displayedData.length <= 3) {
+			return { minHeight: "44em" };
+		}
+		return { minHeight: "fit-content" };
+	};
 
 	return (
 		<Wrapper>
-			<MenuShowcase>
+			<MenuShowcase style={whatHeightShouldbe()}>
 				{grid_view ? (
 					<>
 						{displayedData.map((menu) => (
@@ -27,13 +36,21 @@ const MenusSection = () => {
 					</>
 				)}
 			</MenuShowcase>
-			<Pagination />
+			<div className="pagination--wrapper">
+				<Pagination />
+			</div>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.div`
 	margin-top: 2.5em;
+	.pagination--wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1.25em;
+	}
 `;
 
 export default MenusSection;

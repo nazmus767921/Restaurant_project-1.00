@@ -20,11 +20,11 @@ const AboutPage = () => {
 			<div className="featured_section">
 				{featured.map((content, index) => {
 					return index % 2 === 0 ? (
-						<div className="featured_card">
+						<div key={crypto.randomUUID()} className="featured_card">
 							<FeaturedCard {...content} />
 						</div>
 					) : (
-						<div className="featured_card">
+						<div key={crypto.randomUUID()} className="featured_card">
 							<FeaturedCard {...content} reverse />
 						</div>
 					);

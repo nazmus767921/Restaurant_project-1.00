@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const MenuShowcase = ({ children }) => {
-	return <Wrapper>{children}</Wrapper>;
+const MenuShowcase = ({ children, style }) => {
+	return <Wrapper style={style}>{children}</Wrapper>;
 };
 
 const Wrapper = styled.div`
