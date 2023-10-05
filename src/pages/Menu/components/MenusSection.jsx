@@ -12,16 +12,16 @@ const MenusSection = () => {
 
 	const whatHeightShouldbe = () => {
 		if (totalPages > 1 && displayedData.length > 3) {
-			return { minHeight: "88em" };
+			return "fullHeight";
 		} else if (totalPages > 1 && displayedData.length <= 3) {
-			return { minHeight: "44em" };
+			return "halfHeight";
 		}
-		return { minHeight: "fit-content" };
+		return "autoHeight";
 	};
 
 	return (
 		<Wrapper>
-			<MenuShowcase style={whatHeightShouldbe()}>
+			<MenuShowcase className={whatHeightShouldbe()}>
 				{grid_view ? (
 					<>
 						{displayedData.map((menu) => (

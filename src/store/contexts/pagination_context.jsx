@@ -7,8 +7,7 @@ export const PaginationContextProvider = ({ children }) => {
 	// pulling menus data from the products_context
 	const { filteredMenu } = useProductsContext();
 	const [currentPage, setCurrentPage] = useState(1);
-	const itemsPerPage = 8;
-	// const data = [...menus];
+	const itemsPerPage = 10;
 	const totalPages = Math.ceil(filteredMenu.length / itemsPerPage);
 
   // Calculate the range of data to display based on the current page
