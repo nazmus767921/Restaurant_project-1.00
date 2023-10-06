@@ -40,7 +40,7 @@
 			"id": 5,
 			"name": "Beef Tacos",
 			"description": "Tasty beef tacos with salsa and guacamole",
-			"price": 1149,
+			"price": 149,
 			"image": "kimchi-soup.png",
 			"category": "fastfood",
 			"featured": true
@@ -67,7 +67,7 @@
 			"id": 8,
 			"name": "Crispy Wings",
 			"description": "Crispy chicken wings with a variety of dipping sauces",
-			"price": 1099,
+			"price": 3299,
 			"image": "kimchi-soup.png",
 			"category": "desert",
 			"featured": true
@@ -85,7 +85,97 @@
 			"id": 10,
 			"name": "Fresh Fruit Salad",
 			"description": "A refreshing salad with a mix of seasonal fruits",
-			"price": 649,
+			"price": 1576,
+			"image": "salad.png",
+			"category": "desert",
+			"featured": true
+		},
+		{
+			"id": 11,
+			"name": "Bolognese",
+			"description": "Delicious pasta with rich meat sauce",
+			"price": 1769,
+			"image": "kimchi-soup.png",
+			"category": "lunch",
+			"featured": true
+		},
+		{
+			"id": 12,
+			"name": "Margherita Pizza",
+			"description": "Classic pizza with tomato, mozzarella, and basil",
+			"price": 2499,
+			"image": "sahi_kebab.png",
+			"category": "fastfood",
+			"featured": true
+		},
+		{
+			"id": 13,
+			"name": "Caesar Salad",
+			"description": "Crispy romaine lettuce with Caesar dressing and croutons",
+			"price": 149,
+			"image": "salad.png",
+			"category": "breakfast",
+			"featured": false
+		},
+		{
+			"id": 14,
+			"name": "Grilled Chicken Sandwich",
+			"description": "Grilled chicken breast with lettuce, tomato, and mayo",
+			"price": 1299,
+			"image": "turkey_meat.png",
+			"category": "fastfood",
+			"featured": true
+		},
+		{
+			"id": 15,
+			"name": "Beef Tacos",
+			"description": "Tasty beef tacos with salsa and guacamole",
+			"price": 1949,
+			"image": "kimchi-soup.png",
+			"category": "fastfood",
+			"featured": true
+		},
+		{
+			"id": 16,
+			"name": "Veggie Burger",
+			"description": "A vegetarian burger with fresh vegetables and cheese",
+			"price": 1299,
+			"image": "sahi_kebab.png",
+			"category": "fastfood",
+			"featured": false
+		},
+		{
+			"id": 17,
+			"name": "Fried Rice",
+			"description": "Savory fried rice with vegetables and choice of protein",
+			"price": 699,
+			"image": "salad.png",
+			"category": "lunch",
+			"featured": true
+		},
+		{
+			"id": 18,
+			"name": "Crispy Wings",
+			"description": "Crispy chicken wings with a variety of dipping sauces",
+			"price": 2099,
+			"image": "kimchi-soup.png",
+			"category": "desert",
+			"featured": true
+		},
+		{
+			"id": 19,
+			"name": "Chocolate Brownie",
+			"description": "Decadent chocolate brownie with ice cream",
+			"price": 349,
+			"image": "sahi_kebab.png",
+			"category": "desert",
+			"featured": false
+		},
+		{
+			"id": 20,
+			"name": "Fresh Fruit Salad",
+			"description": "A refreshing salad with a mix of seasonal fruits",
+			"price": 1849,
 			"image": "salad.png",
 			"category": "desert",
 			"featured": true
