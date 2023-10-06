@@ -15,13 +15,13 @@ export const form = {
 			id: crypto.randomUUID(),
 			name: "name",
 			type: "text",
-			placeholder: "Your name, Sir/ Madam?",
+			placeholder: "Your Name, Sir/ Madam?",
 		},
 		{
 			id: crypto.randomUUID(),
 			name: "email",
-			type: "text",
-			placeholder: "Your Phone Number, Sir/ Madam?",
+			type: "email",
+			placeholder: "Your Email Number, Sir/ Madam?",
 		},
 	],
 	messageField: {

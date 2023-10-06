@@ -68,11 +68,11 @@ const ReserveForm = ({ isSubmitting, setIsSubmitting, setIsSubmitted }) => {
 			<TextInput
 				type="text"
 				name="name"
-				placeholder="Your name, Sir/ Madam?"
+				placeholder="Your Name, Sir/ Madam?"
 				required
 			/>
 			<TextInput
-				type="text"
+				type="email"
 				name="email"
 				placeholder="Your Phone Number, Sir/ Madam?"
 				required
