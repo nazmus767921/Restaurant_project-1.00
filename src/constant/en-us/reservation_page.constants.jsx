@@ -7,6 +7,11 @@ export const hero = {
 		"Your dining experience matters to us, and we can't wait to welcome you to our restaurant. Let's make your visit unforgettable!",
 };
 
+export const submissionStatus = {
+	title: "*** We have received**# your request.",
+	body: "We wish to extend our gratitude for choosing Res2Rant for your dining experience. We want to inform you that your reservation request has been successfully received, and our team is diligently	working to secure a seat for you. Rest assured, we will promptly confirm your reservation and notify you accordingly.",
+};
+
 export const form = {
 	peopleSelection: {
 		label: "How many people?",

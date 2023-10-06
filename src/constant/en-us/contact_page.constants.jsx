@@ -4,26 +4,32 @@ export const hero = {
 		"Whether you have questions, feedback, or want to make a reservation, our team is here to assist you. Reach out via the form below, and we'll get back to you promptly.",
 };
 
-export const form = [
-	{
-		id: crypto.randomUUID(),
-		name: "name",
-		type: "text",
-		placeholder: "Your name, Sir/ Madam?",
-	},
-	{
-		id: crypto.randomUUID(),
-		name: "email",
-		type: "text",
-		placeholder: "Your Phone Number, Sir/ Madam?",
-	},
-	{
-		id: crypto.randomUUID(),
+export const submissionStatus = {
+	title: "*** We have received**# your message.",
+	body: "Thank you for contacting us, sir/ madam. We will connect ith you soon.",
+};
+
+export const form = {
+	textField: [
+		{
+			id: crypto.randomUUID(),
+			name: "name",
+			type: "text",
+			placeholder: "Your name, Sir/ Madam?",
+		},
+		{
+			id: crypto.randomUUID(),
+			name: "email",
+			type: "text",
+			placeholder: "Your Phone Number, Sir/ Madam?",
+		},
+	],
+	messageField: {
 		name: "message",
-		type: "textarea",
+		maxCharacters: 500,
 		placeholder: "",
 	},
-];
+};
 
 export const info = {
 	address: {
