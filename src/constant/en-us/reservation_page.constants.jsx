@@ -1,4 +1,3 @@
-import { form as contactForm } from "./contact_page.constants";
 
 export const hero = {
 	title: "*** Make an online**# Reservation",
@@ -36,6 +35,5 @@ export const form = {
 	specialRequests: {
 		label: "Additional Details & Special Requests",
 	},
-	guestDetailsForm: [...contactForm],
 	btn: "Book",
 };
