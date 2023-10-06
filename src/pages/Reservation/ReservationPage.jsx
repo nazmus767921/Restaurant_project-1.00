@@ -1,3 +1,4 @@
+import { useState } from "react";
 import DateField from "../../components/Form/DateField";
 import Label from "../../components/Form/Label";
 import SelectX from "../../components/Form/SelectX";
@@ -9,20 +10,56 @@ import Tag from "../../components/UI/Tag";
 import Title from "../../components/UI/Title";
 import { form, hero } from "../../constant/en-us/reservation_page.constants";
 import { Main, ReserveFormWrapper } from "./styles/ReservationPage.styles";
+import styled from "styled-components";
 
 const ReservationPage = () => {
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [IsSubmitted, setIsSubmitted] = useState(false);
+
+	const props = { isSubmitting, setIsSubmitting, IsSubmitted, setIsSubmitted };
+
 	return (
 		<Main className="page-container">
-			<Hero />
-			<ReserveForm />
+			{!IsSubmitted ? (
+				<>
+					<Hero />
+					<ReserveForm {...props} />
+				</>
+			) : (
+				<SubmissionSuccess>
+					<Title>*** We have received**# your request.</Title>
+					<p>
+						We wish to extend our gratitude for choosing Res2Rant for your
+						dining experience. We want to inform you that your reservation
+						request has been successfully received, and our team is diligently
+						working to secure a seat for you. Rest assured, we will promptly
+						confirm your reservation and notify you accordingly.
+					</p>
+				</SubmissionSuccess>
+			)}
+
 			<Footer />
 		</Main>
 	);
 };
 
-const ReserveForm = () => {
+const ReserveForm = ({
+	isSubmitting,
+	setIsSubmitting,
+	IsSubmitted,
+	setIsSubmitted,
+}) => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setIsSubmitting(true);
+		console.log("starts");
+		setTimeout(() => {
+			setIsSubmitting(false);
+			setIsSubmitted(true);
+		}, 1500);
+	};
 	return (
-		<ReserveFormWrapper>
+		<ReserveFormWrapper onSubmit={handleSubmit}>
 			{/* requirements */}
 			<SelectX
 				name={form.peopleSelection.name}
@@ -47,10 +84,24 @@ const ReserveForm = () => {
 				placeholder="Your Phone Number, Sir/ Madam?"
 				required
 			/>
-			<BTNSolid className="submit--btn">{form.btn}</BTNSolid>
+			<BTNSolid className="submit--btn" isLoading={isSubmitting}>
+				{form.btn}
+			</BTNSolid>
 		</ReserveFormWrapper>
 	);
 };
+
+const SubmissionSuccess = styled.div`
+	width: 100%;
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/* typo */
+	text-align: center;
+`;
 
 const Hero = () => {
 	return (
