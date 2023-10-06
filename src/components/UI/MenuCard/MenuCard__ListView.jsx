@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Shahi_kebab } from "../../../assets/images";
 import { colors } from "../../../utils/colors";
 import formatPrice from "../../../utils/helpers/formatPrice";
 

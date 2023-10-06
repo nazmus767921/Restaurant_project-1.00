@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
 import { colors } from "../../../utils/colors";
-import { Shahi_kebab } from "../../../assets/images";
 import formatPrice from "../../../utils/helpers/formatPrice";
 
 const MenuCard__GridView = ({ menu }) => {
@@ -50,13 +49,6 @@ const Wrapper = styled.div`
 		justify-content: center;
 		gap: 0.625rem;
 		border-radius: 0.625rem;
-
-		/* event */
-		&:hover,
-		:focus {
-			/* makeup */
-			box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.09);
-		}
 		/* typo */
 		text-align: center;
 
