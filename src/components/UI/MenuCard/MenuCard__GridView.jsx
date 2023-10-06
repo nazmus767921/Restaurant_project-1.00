@@ -17,7 +17,11 @@ const MenuItem = ({ menu }) => {
 	return (
 		<div className="menuItem--wrapper">
 			<div className="item_image">
-				<img loading="lazy" src={Shahi_kebab} alt={name} />
+				<img
+					loading="lazy"
+					src={`./${image}`}
+					alt={name}
+				/>
 			</div>
 			<h3>{name}</h3>
 			<p className="small description">{description}</p>

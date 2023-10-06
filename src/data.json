@@ -5,7 +5,7 @@
 			"name": "Spaghetti Bolognese",
 			"description": "Delicious pasta with rich meat sauce",
 			"price": 1299,
-			"image": "spaghetti.jpg",
+			"image": "kimchi-soup.png",
 			"category": "lunch",
 			"featured": true
 		},
@@ -14,7 +14,7 @@
 			"name": "Margherita Pizza",
 			"description": "Classic pizza with tomato, mozzarella, and basil",
 			"price": 1099,
-			"image": "pizza.jpg",
+			"image": "sahi_kebab.png",
 			"category": "fastfood",
 			"featured": true
 		},
@@ -23,7 +23,7 @@
 			"name": "Caesar Salad",
 			"description": "Crispy romaine lettuce with Caesar dressing and croutons",
 			"price": 849,
-			"image": "caesar-salad.jpg",
+			"image": "salad.png",
 			"category": "breakfast",
 			"featured": false
 		},
@@ -32,7 +32,7 @@
 			"name": "Grilled Chicken Sandwich",
 			"description": "Grilled chicken breast with lettuce, tomato, and mayo",
 			"price": 999,
-			"image": "chicken-sandwich.jpg",
+			"image": "turkey_meat.png",
 			"category": "fastfood",
 			"featured": true
 		},
@@ -41,7 +41,7 @@
 			"name": "Beef Tacos",
 			"description": "Tasty beef tacos with salsa and guacamole",
 			"price": 1149,
-			"image": "beef-tacos.jpg",
+			"image": "kimchi-soup.png",
 			"category": "fastfood",
 			"featured": true
 		},
@@ -50,7 +50,7 @@
 			"name": "Veggie Burger",
 			"description": "A vegetarian burger with fresh vegetables and cheese",
 			"price": 899,
-			"image": "veggie-burger.jpg",
+			"image": "sahi_kebab.png",
 			"category": "fastfood",
 			"featured": false
 		},
@@ -59,7 +59,7 @@
 			"name": "Fried Rice",
 			"description": "Savory fried rice with vegetables and choice of protein",
 			"price": 999,
-			"image": "fried-rice.jpg",
+			"image": "salad.png",
 			"category": "lunch",
 			"featured": true
 		},
@@ -68,7 +68,7 @@
 			"name": "Crispy Wings",
 			"description": "Crispy chicken wings with a variety of dipping sauces",
 			"price": 1099,
-			"image": "wings.jpg",
+			"image": "kimchi-soup.png",
 			"category": "desert",
 			"featured": true
 		},
@@ -77,7 +77,7 @@
 			"name": "Chocolate Brownie",
 			"description": "Decadent chocolate brownie with ice cream",
 			"price": 599,
-			"image": "brownie.jpg",
+			"image": "sahi_kebab.png",
 			"category": "desert",
 			"featured": false
 		},
@@ -86,7 +86,7 @@
 			"name": "Fresh Fruit Salad",
 			"description": "A refreshing salad with a mix of seasonal fruits",
 			"price": 649,
-			"image": "fruit-salad.jpg",
+			"image": "salad.png",
 			"category": "desert",
 			"featured": true
 		}

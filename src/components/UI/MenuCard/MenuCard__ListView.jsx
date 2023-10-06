@@ -8,7 +8,7 @@ const MenuCard__ListView = ({ menu }) => {
 	return (
 		<Card>
 			<div className="item_image">
-				<img loading="lazy" src={Shahi_kebab} alt={name} />
+				<img loading="lazy" src={`./${image}`} alt={name} />
 			</div>
 			<div className="content--wrapper">
 				<h3>{name}</h3>
