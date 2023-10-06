@@ -10,9 +10,9 @@ import { useProductsContext } from "../../../../store/contexts/products_context"
 
 const PopularMenu = () => {
 	// taking only the featured menu items for homepage
-	const featuredMenus = useProductsContext().menus.filter(
-		(menu) => menu.featured === true
-	);
+	const featuredMenus = useProductsContext()
+		.menus.filter((menu) => menu.featured === true)
+		.slice(0, 7);
 	return (
 		<Wrapper>
 			<Title deco>{menu.title}</Title>

@@ -34,7 +34,7 @@
 			"price": 999,
 			"image": "turkey_meat.png",
 			"category": "fastfood",
-			"featured": true
+			"featured": false
 		},
 		{
 			"id": 5,
@@ -43,7 +43,7 @@
 			"price": 149,
 			"image": "kimchi-soup.png",
 			"category": "fastfood",
-			"featured": true
+			"featured": false
 		},
 		{
 			"id": 6,
@@ -70,7 +70,7 @@
 			"price": 3299,
 			"image": "kimchi-soup.png",
 			"category": "desert",
-			"featured": true
+			"featured": false
 		},
 		{
 			"id": 9,
