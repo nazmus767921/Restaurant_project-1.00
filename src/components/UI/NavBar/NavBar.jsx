@@ -44,7 +44,6 @@ const NavBar = () => {
 					<NavLinks />
 				</div>
 				<div className="menu_controls">
-					<button className="icon control_btn">{nav.icons.search}</button>
 					<button
 						className="icon control_btn hamburger"
 						onClick={toggleShowSidebar}
