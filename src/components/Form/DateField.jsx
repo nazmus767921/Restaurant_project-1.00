@@ -15,6 +15,9 @@ const DatePicker = styled.input`
 	width: 100%;
 	/* makeup */
 	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position: relative;
 `;
 
 const formatDate = (date) => {

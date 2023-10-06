@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { colors } from "../../../utils/colors";
 
-export const ReserveFormWrapper = styled.div`
+export const ReserveFormWrapper = styled.form`
 	display: flex;
 	flex-direction: column;
 	gap: 2.5em;
+	/* elements inside */
+	.submit--btn {
+		margin: 0 auto;
+	}
 `;
 
 export const Main = styled.main`

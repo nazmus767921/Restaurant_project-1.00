@@ -7,7 +7,8 @@ const TextAreaX = ({
 	placeholder = "Please, tell us here",
 	label,
 	onChange,
-	maxLength = null,
+	maxLength = 500,
+	id,
 }) => {
 	const handleInputChange = (e) => {
 		// onChange();
@@ -17,13 +18,16 @@ const TextAreaX = ({
 
 	return (
 		<Wrapper>
-			<label htmlFor={name} className="cursive">
-				{label || name}
-			</label>
+			{label ? (
+				<label htmlFor={id || name} className="cursive">
+					{label}
+				</label>
+			) : null}
+
 			<textarea
 				maxLength={maxLength}
 				rows="1"
-				id={name}
+				id={id || name}
 				name={name}
 				placeholder={placeholder}
 				value={value}
