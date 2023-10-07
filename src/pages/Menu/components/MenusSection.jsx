@@ -6,7 +6,7 @@ import ListView__MenuCard from "./ListView__MenuCard";
 import Pagination from "../../../components/Pagination";
 import { usePaginationContext } from "../../../store/contexts/pagination_context";
 import { useMemo } from "react";
-import { colors } from "../../../utils/colors";
+import { lightTheme } from "../../../theme";
 
 const MenusSection = () => {
 	const { grid_view, isFiltering } = useProductsContext();
@@ -32,7 +32,7 @@ const MenusSection = () => {
 		};
 		return (
 			<h1 className="cursive" style={loading_style}>
-				Loading<span style={{ color: colors.brand }}>...</span>
+				Loading<span style={{ color: lightTheme.brand }}>...</span>
 			</h1>
 		);
 	}

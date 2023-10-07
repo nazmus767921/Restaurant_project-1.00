@@ -8,7 +8,6 @@ const NavLink = ({ children }) => {
 			<NavLinkWrapper className="nav_link_wrapper">
 				<button className="nav_link">{children}</button>
 				<Hr className="selector" />
-				{/* <div className="selector"></div> */}
 			</NavLinkWrapper>
 		</>
 	);

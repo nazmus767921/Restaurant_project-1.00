@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Label from "./Label";
+import { lightTheme } from "../../theme";
 
 const SelectX = ({ name, id, label, value, onChange, options = [] }) => {
 	return (
@@ -9,7 +9,7 @@ const SelectX = ({ name, id, label, value, onChange, options = [] }) => {
 			{label ? <Label htmlFor={id || name}>{label}</Label> : null}
 			<ElementContainer>
 				<div className="icon--wrapper">
-					<IoMdArrowDropdown style={{ color: colors.brand }} />
+					<IoMdArrowDropdown style={{ color: lightTheme.brand }} />
 				</div>
 				<SelectWrapper
 					name={name}

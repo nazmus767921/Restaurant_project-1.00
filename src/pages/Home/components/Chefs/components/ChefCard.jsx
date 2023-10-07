@@ -1,13 +1,22 @@
 import styled from "styled-components";
 import { devices } from "../../../../../utils/breakpoints";
+import { useThemeContext } from "../../../../../store/contexts/ThemeContext";
+import { darkTheme } from "../../../../../theme";
 
 const ChefImage = ({ image, alt }) => {
+	const { theme } = useThemeContext();
+	const gradientOverlay = {
+		background: `linear-gradient(0deg, ${darkTheme["bg-primary"]} 18.39%,	rgba(25, 25, 25, 0) 55.81%)`,
+	};
 	return (
 		<OverFlowHidden>
 			<ChefProfileImageWrapper>
 				<img src={image} alt={alt} />
 			</ChefProfileImageWrapper>
-			<div className="gradientOverlay" />
+			<div
+				className="gradientOverlay"
+				style={theme === "dark" ? gradientOverlay : null}
+			/>
 		</OverFlowHidden>
 	);
 };
@@ -66,11 +75,6 @@ const OverFlowHidden = styled.div`
 		/* for touch devices */
 		pointer-events: none;
 		/* makeup */
-		background: linear-gradient(
-			0deg,
-			#191919 18.39%,
-			rgba(25, 25, 25, 0) 55.81%
-		);
 
 		/* media queries */
 		@media screen and (${devices["2xl"]}) {

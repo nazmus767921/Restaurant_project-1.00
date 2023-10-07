@@ -51,9 +51,9 @@ const NavBar = () => {
 					<NavLinks />
 				</div>
 				<div className="menu_controls">
-					<button className="icon control_btn hamburger" onClick={toggleTheme}>
-						{theme === "light" ? <HiOutlineSun /> : <PiMoonStarsDuotone />}
-					</button>
+				<button className="icon control_btn" onClick={toggleTheme}>
+					{theme === "light" ? <HiOutlineSun /> : <PiMoonStarsDuotone />}
+				</button>
 					<button
 						className="icon control_btn hamburger"
 						onClick={toggleShowSidebar}
