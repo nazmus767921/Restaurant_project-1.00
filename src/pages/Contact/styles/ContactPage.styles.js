@@ -15,7 +15,7 @@ export const Main = styled.main`
 			line-height: normal;
 			.title--colored {
 				font-size: 1.5em;
-				color: ${colors.brand};
+				color: ${(props) => props.theme["brand"]};
 				display: block;
 			}
 		}
@@ -29,8 +29,7 @@ export const Main = styled.main`
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-		gap: 6.88em;
-
+			gap: 6.88em;
 		}
 	}
 	.contact_form {

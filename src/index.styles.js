@@ -1,14 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import { devices } from "./utils/breakpoints";
-import { colors } from "./utils/colors";
 import { ease } from "./utils/animation";
 
 export const GlobalStyles = createGlobalStyle`
 	
 	body {
 		margin: 0;
-		color: ${colors["text-white"]};
-		background-color: ${colors["bg-primary-dark"]};
+		color: ${(props) => props.theme["text"]};
+		background-color: ${(props) => props.theme["bg-primary"]};
 		display: flex;
 		min-width: 320px;
 		min-height: 100vh;
@@ -59,7 +58,7 @@ button.icon {
 
 	input, textarea {
 		/* makeup */
-		caret-color: ${colors.brand};
+		caret-color: ${(props) => props.theme["brand"]};
 	/* animation */
 		transition: all 0.35s ${ease["out-expo"]};
 		&::placeholder {
@@ -67,7 +66,7 @@ button.icon {
 		}
 		&:focus {
 			padding-inline: 0.65em;
-			background-color: ${colors["bg-primary-dark-deep"]};
+			background-color: ${(props) => props.theme["input"]};
 			&::placeholder {
 				font-size: 105%;
 			}
@@ -126,7 +125,7 @@ button.icon {
 		font-weight: normal;
 	}
 	.cursive.colored {
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 	}
 
 	h1 {

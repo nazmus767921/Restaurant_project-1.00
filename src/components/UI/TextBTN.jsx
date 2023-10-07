@@ -31,7 +31,7 @@ const Button = styled.button`
 	display: flex;
 	flex-direction: column;
 	gap: 0.65em;
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 
 	.underline {
 		transition: all 0.35s ${ease["out-expo"]};

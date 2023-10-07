@@ -5,14 +5,7 @@ export const Wrapper = styled.div`
 	width: 100vw;
 	margin: 0 calc(-50vw + 50%);
 	/* makeup */
-	background: var(--Pitch_black, #000);
-	box-shadow: 0px -8px 17px 0px rgba(0, 0, 0, 0.83),
-		0px -30px 30px 0px rgba(0, 0, 0, 0.72),
-		0px -68px 41px 0px rgba(0, 0, 0, 0.43),
-		0px -121px 48px 0px rgba(0, 0, 0, 0.13),
-		0px -188px 53px 0px rgba(0, 0, 0, 0.02),
-		0px 8px 17px 0px rgba(0, 0, 0, 0.83), 0px 30px 30px 0px rgba(0, 0, 0, 0.72),
-		0px 68px 41px 0px rgba(0, 0, 0, 0.43);
+	background: ${(props) => props.theme["reservation"]};
 
 	/* elements inside */
 	.Reservation_content--wrapper {

@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 
 	/* styling class */
 	.active {
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 	}
 	/* elements inside */
 	.view--icon {
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 			opacity: 0.5;
 		}
 		&:focus {
-			color: ${colors.brand};
+			color: ${(props) => props.theme["brand"]};
 		}
 	}
 `;

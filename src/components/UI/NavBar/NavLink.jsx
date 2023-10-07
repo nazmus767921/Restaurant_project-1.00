@@ -21,7 +21,7 @@ const NavLinkWrapper = styled.div`
 	.nav_link {
 		font-size: 1em;
 		padding: 0.5em 0;
-		color: ${colors["text-white"]};
+		color: ${(props) => props.theme["text"]};
 		transition: all 0.35s ${ease["out-expo"]};
 	}
 	.selector {

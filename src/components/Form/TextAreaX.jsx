@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 	/* element inside */
 	label {
 		font-size: 1.85em;
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 		text-transform: capitalize;
 	}
 	textarea {
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 		min-height: 5em;
 		max-height: 16em;
 		border: 0;
-		border-bottom: 2px solid ${colors.brand};
+		border-bottom: 2px solid ${(props) => props.theme["brand"]};
 		background-color: transparent;
 		/* typo */
 		font-size: 1em;

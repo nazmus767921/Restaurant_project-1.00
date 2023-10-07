@@ -8,7 +8,7 @@ const Tag = ({ children }) => {
 
 const TagWrapper = styled.div`
 	font-family: "Lora", serif;
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 	text-align: center;
 	font-size: 0.75em;
 	line-height: normal;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../../../../utils/colors";
 import { ease } from "../../../../../../utils/animation";
 
 export const Dark_overlay = styled.div`
@@ -10,7 +9,7 @@ export const Dark_overlay = styled.div`
 	right: 0;
 	left: 0;
 	z-index: 98;
-	background-color: ${colors["bg-primary-dark-deep"]};
+	background-color: ${(props) => props.theme["bg-primary-deep"]};
 	/* animation */
 	@keyframes Fading {
 		0% {
@@ -53,7 +52,7 @@ export const Main = styled.main`
 	animation: OpenSideBar 0.5s ${ease["out-expo"]} forwards;
 
 	/* makeup */
-	background-color: ${colors["bg-primary-dark-deep"]};
+	background-color: ${(props) => props.theme["mobileSidebar"]};
 
 	/* elements inside */
 
@@ -93,6 +92,6 @@ export const Main = styled.main`
 		align-self: flex-end;
 		margin-bottom: 3em;
 		/* makeup */
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 	}
 `;

@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
 	min-width: 100vw;
 	margin: 0 calc(-50vw + 50%);
 
+	background-color: ${props => props.theme["hero"]};
+
 	display: grid;
 	min-height: 100vh;
 	grid-template-columns: 1fr;

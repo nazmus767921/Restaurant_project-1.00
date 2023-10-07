@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 	/* elements inside */
 	.divider {
 		height: 1px;
-		background-color: ${colors["text-white"]};
+		background-color: ${(props) => props.theme["text"]};
 		opacity: 0.3;
 	}
 

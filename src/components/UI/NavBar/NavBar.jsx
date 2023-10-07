@@ -6,6 +6,9 @@ import NavLink from "./NavLink";
 import { Link } from "react-router-dom";
 import { paths } from "../../../Root.paths";
 import MobileSideBar from "./components/MobileSideBar/MobileSideBar";
+import { HiOutlineSun } from "react-icons/hi";
+import { PiMoonStarsDuotone } from "react-icons/pi";
+import { useThemeContext } from "../../../store/contexts/ThemeContext";
 
 const NavLinks = React.memo(() => {
 	return (
@@ -28,6 +31,8 @@ NavLinks.displayName = "NavLinks";
 const NavBar = () => {
 	const [showSideBar, setShowSideBar] = useState(false);
 
+	const { theme, toggleTheme } = useThemeContext();
+
 	// actions
 	const toggleShowSidebar = () => {
 		setShowSideBar((prev) => !prev);
@@ -46,6 +51,9 @@ const NavBar = () => {
 					<NavLinks />
 				</div>
 				<div className="menu_controls">
+					<button className="icon control_btn hamburger" onClick={toggleTheme}>
+						{theme === "light" ? <HiOutlineSun /> : <PiMoonStarsDuotone />}
+					</button>
 					<button
 						className="icon control_btn hamburger"
 						onClick={toggleShowSidebar}

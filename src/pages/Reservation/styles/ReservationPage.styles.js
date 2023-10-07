@@ -16,7 +16,7 @@ export const Main = styled.main`
 		text-align: center;
 		padding-block: 4em;
 		h2 {
-			color: ${colors["text-white"]};
+			color: ${(props) => props.theme["text"]};
 			text-align: center;
 			font-family: Zeyada;
 			font-size: 3rem;

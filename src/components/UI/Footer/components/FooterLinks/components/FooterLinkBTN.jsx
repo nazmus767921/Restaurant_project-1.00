@@ -12,8 +12,8 @@ const FooterLinkBTN = ({ children, className = null }) => {
 
 const BTN = styled.button`
 	/* makeup */
-	color: ${colors["text-white"]};
-	opacity: .5;
+	color: ${(props) => props.theme["text"]};
+	opacity: 0.5;
 	/* animation */
 	transition: all 0.35s ${ease["out-expo"]};
 	/* typo */

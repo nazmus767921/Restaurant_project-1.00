@@ -91,7 +91,7 @@ const Wrapper = styled.div`
 	text-align: center;
 
 	h3 {
-		color: ${colors["text-white"]};
+		color: ${(props) => props.theme["text"]};
 		font-size: 1.525em;
 
 		@media screen and (${devices.md}) {
@@ -103,13 +103,13 @@ const Wrapper = styled.div`
 	}
 
 	h5 {
-		font-size: .9em;
+		font-size: 0.9em;
 		@media screen and (${devices.md}) {
 			font-size: 1em;
 		}
 	}
 	.chef_post {
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 		opacity: 0.7;
 		margin-top: -0.35em;
 	}

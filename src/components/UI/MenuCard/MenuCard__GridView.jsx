@@ -16,11 +16,7 @@ const MenuItem = ({ menu }) => {
 	return (
 		<div className="menuItem--wrapper">
 			<div className="item_image">
-				<img
-					loading="lazy"
-					src={`./${image}`}
-					alt={name}
-				/>
+				<img loading="lazy" src={`./${image}`} alt={name} />
 			</div>
 			<h3>{name}</h3>
 			<p className="small description">{description}</p>
@@ -72,7 +68,7 @@ const Wrapper = styled.div`
 			opacity: 0.7;
 		}
 		.item_price {
-			color: ${colors.brand};
+			color: ${(props) => props.theme["brand"]};
 		}
 	}
 `;

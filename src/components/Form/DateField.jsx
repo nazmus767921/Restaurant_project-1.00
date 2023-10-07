@@ -5,8 +5,8 @@ import { colors } from "../../utils/colors";
 const DatePicker = styled.input`
 	/* layout */
 	border: 0;
-	border-bottom: 2px solid ${colors.brand};
-	background-color: ${colors["bg-primary-dark"]};
+	border-bottom: 2px solid ${(props) => props.theme["brand"]};
+	background-color: ${(props) => props.theme["bg-primary"]};
 	/* typo */
 	font-size: 1em;
 	line-height: 2em;

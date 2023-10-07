@@ -10,11 +10,11 @@ export const Card = styled.div`
 	padding: 1.25rem;
 	/* makeup */
 	border-radius: 0.625rem;
-	border: 1px solid ${colors.brand};
+	border: 1px solid ${(props) => props.theme["brand"]};
 	/* elements inside */
 	.title {
 		font-family: "Lora", serif;
-		color: ${colors["text-white"]};
+		color: ${(props) => props.theme["text"]};
 		text-align: center;
 		font-size: 1.25em;
 		font-style: normal;

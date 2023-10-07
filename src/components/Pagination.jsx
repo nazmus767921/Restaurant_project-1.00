@@ -126,15 +126,15 @@ const Wrapper = styled.div`
 		width: 2em;
 		aspect-ratio: 1/1;
 		/* makeup */
-		color: ${colors["text-white"]};
+		color: ${(props) => props.theme["text"]};
 		border-radius: 999px;
 	}
 	button.page_numbers {
 		font-size: 0.75em;
 	}
 	button.active {
-		background-color: ${colors.brand};
-		color: ${colors["bg-primary-dark-deep"]};
+		background-color: ${(props) => props.theme["brand"]};
+		color: ${(props) => props.theme["bg-primary-deep"]};
 		font-weight: 700;
 		font-size: 110%;
 	}

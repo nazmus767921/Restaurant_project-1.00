@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 	display: flex;
 	gap: 2.75em;
 	flex-direction: column;
-	padding-block-end: 6em;
+	padding-block: 6em;
 
 	/* elements inside */
 	.Show_full_menu--BTN {

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../../utils/colors";
 import { devices } from "../../../../utils/breakpoints";
 
 export const Wrapper = styled.div`
@@ -8,7 +7,7 @@ export const Wrapper = styled.div`
 	width: 100vw;
 	margin: 0 calc(-50vw + 50%);
 	padding: 0 1.25em;
-	background: ${colors["bg-primary-dark"]};
+	background: ${(props) => props.theme["bg-primary"]};
 
 	@media screen and (${devices.xl}) {
 		padding: 0 12em;
@@ -33,12 +32,12 @@ export const Wrapper = styled.div`
 			/* elements inside */
 			.control_btn {
 				width: 2em;
-				color: ${colors.brand};
-				opacity: 0.3;
+				color: ${(props) => props.theme["brand"]};
+				opacity: 1;
 				/* events */
 				&:hover,
 				:focus {
-					opacity: 1;
+					opacity: 0.7;
 				}
 			}
 			.hamburger {

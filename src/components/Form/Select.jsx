@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
 import { ease } from "../../utils/animation";
 
 const Select = ({ name, id, value, onChange, options = [] }) => {
@@ -29,7 +28,7 @@ const SelectWrapper = styled.select`
 	border: none;
 	appearance: none;
 	border-radius: 0.3125em;
-	background: ${colors["bg-primary-dark-deep"]};
+	background: ${(props) => props.theme["select"]};
 	/* animation */
 	transition: opacity 0.35s ${ease["out-expo"]};
 	&:hover,

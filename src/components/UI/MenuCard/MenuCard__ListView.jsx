@@ -45,7 +45,7 @@ const Card = styled.div`
 		/* elements inside */
 		.item_price {
 			font-size: 1em;
-			color: ${colors.brand};
+			color: ${(props) => props.theme["brand"]};
 			align-self: flex-end;
 		}
 	}

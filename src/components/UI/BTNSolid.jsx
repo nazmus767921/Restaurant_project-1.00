@@ -4,9 +4,7 @@ import { ease } from "../../utils/animation";
 
 const BTNSolid = ({ children, className = null, isLoading = false }) => {
 	return (
-		<Button
-			className={`${className} ${isLoading === true ? "loading" : ""}`}
-		>
+		<Button className={`${className} ${isLoading === true ? "loading" : ""}`}>
 			<span className="spinner"></span>
 			<span className="text">{children}</span>
 		</Button>
@@ -18,8 +16,8 @@ const Button = styled.button`
 	position: relative;
 	padding: 0.5em 1.25em;
 	/* makeup */
-	background-color: ${colors.brand};
-	color: ${colors["text-white"]};
+	background-color: ${(props) => props.theme["brand"]};
+	color: ${(props) => props.theme["text"]};
 	border-radius: 0.325em;
 	/* typo */
 	font-size: 1em;
@@ -44,7 +42,7 @@ const Button = styled.button`
 	/* Style the loading spinner */
 	.spinner {
 		border: 4px solid rgba(255, 255, 255, 0.3);
-		border-top: 4px solid ${colors["text-white"]};
+		border-top: 4px solid ${(props) => props.theme["text"]};
 		border-radius: 50%;
 		width: 20px;
 		height: 20px;

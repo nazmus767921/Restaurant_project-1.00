@@ -21,7 +21,7 @@ const BTN = styled.button`
 	gap: 0.25em;
 	/* text styles */
 	font-family: "Lora", serif;
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 	text-align: center;
 	font-size: 1.25em;
 	font-style: normal;

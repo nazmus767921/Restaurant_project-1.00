@@ -18,9 +18,9 @@ const LogoWrapper = styled.div`
 	}
 	font-weight: 700;
 	line-height: normal;
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 	span {
-		color: ${colors.brand};
+		color: ${(props) => props.theme["brand"]};
 	}
 `;
 export default Logo;

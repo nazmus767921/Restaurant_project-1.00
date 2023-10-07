@@ -11,7 +11,7 @@ const A = styled.a`
 	min-width: max-content;
 
 	/* makeup */
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 	opacity: 0.7;
 	/* animation */
 	transition: all 0.35s ${ease["out-expo"]};

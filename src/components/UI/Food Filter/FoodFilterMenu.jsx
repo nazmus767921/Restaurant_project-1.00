@@ -53,7 +53,7 @@ const Menu_BTN = styled.button`
 	align-items: center;
 	/* makeup */
 	border-radius: 999px;
-	color: ${colors["text-white"]};
+	color: ${(props) => props.theme["text"]};
 	/* typo */
 	font-size: 0.75em;
 	font-weight: 600;
@@ -77,7 +77,7 @@ const Wrapper = styled.div`
 
 		/* elements inside */
 		.active {
-			background-color: ${colors.brand};
+			background-color: ${(props) => props.theme["brand"]};
 		}
 
 		@media screen and (${devices.md}) {
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
 		overflow: hidden;
 
 		border-radius: 999px;
-		background: ${colors["bg-primary-dark"]};
+		background: ${(props) => props.theme["bg-primary"]};
 		filter: drop-shadow(0px 1px 2px rgba(255, 107, 0, 0.05))
 			drop-shadow(0px 4px 4px rgba(255, 107, 0, 0.04))
 			drop-shadow(0px 8px 5px rgba(255, 107, 0, 0.03))
@@ -99,8 +99,8 @@ const Wrapper = styled.div`
 	}
 
 	.active {
-		background-color: ${colors.brand};
-		color: ${colors["bg-primary-dark"]};
+		background-color: ${(props) => props.theme["brand"]};
+		color: ${(props) => props.theme["bg-primary"]};
 	}
 `;
 

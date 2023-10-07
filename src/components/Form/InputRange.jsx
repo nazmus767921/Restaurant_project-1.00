@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 
-const InputRange = ({ name, value, min, max, onChange, id, step}) => {
+const InputRange = ({ name, value, min, max, onChange, id, step }) => {
 	return (
 		<Wrapper>
 			<input
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 		height: 2px;
 		-webkit-appearance: none; /* Remove default styling on Webkit browsers */
 		appearance: none; /* Remove default styling on non-Webkit browsers */
-		background: ${colors["text-white"]}; /* Track color */
+		background: ${(props) => props.theme["text"]}; /* Track color */
 		border-radius: 2em;
 	}
 
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 		appearance: none; /* Remove default thumb styling on non-Webkit browsers */
 		width: 1em;
 		aspect-ratio: 1/2;
-		background: ${colors.brand}; /* Thumb color */
+		background: ${(props) => props.theme["brand"]}; /* Thumb color */
 		border-radius: 62.4375em; /* Round thumb shape */
 		cursor: pointer;
 	}
