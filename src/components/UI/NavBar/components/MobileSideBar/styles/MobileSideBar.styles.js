@@ -9,6 +9,8 @@ export const Dark_overlay = styled.div`
 	right: 0;
 	left: 0;
 	z-index: 98;
+	min-height: 120vh;
+	min-height: 120dvh;
 	background-color: ${(props) => props.theme["bg-primary-deep"]};
 	/* animation */
 	@keyframes Fading {
