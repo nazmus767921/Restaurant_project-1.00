@@ -10,6 +10,8 @@ import {
 	GET_CATEGORIES,
 	SORT_MENU,
 	UPDATE_MIN_MAX_PRICES,
+	START_FILTERING,
+	END_FILTERING,
 } from "../../actions";
 import Data from "../../data.json";
 
@@ -21,6 +23,7 @@ const initialState = {
 	categories: [],
 	grid_view: true,
 	sort: "price-low",
+	isFiltering: false,
 	filters: {
 		category: "all",
 		min_price: 0,
@@ -33,7 +36,10 @@ export const Products_contextProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	// actions
+
 	const update_filters = (e) => {
+		dispatch({ type: START_FILTERING });
+
 		let name = e.target.name;
 		let value = e.target.value;
 
@@ -44,6 +50,11 @@ export const Products_contextProvider = ({ children }) => {
 			value = Number(e.target.value);
 		}
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
+
+		setTimeout(() => {
+			dispatch({ type: END_FILTERING });
+		}, 500);
+		
 	};
 
 	const update_sort = (e) => {

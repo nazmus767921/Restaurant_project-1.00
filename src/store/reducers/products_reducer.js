@@ -8,6 +8,8 @@ import {
 	GET_CATEGORIES,
 	SORT_MENU,
 	UPDATE_MIN_MAX_PRICES,
+	START_FILTERING,
+	END_FILTERING,
 } from "../../actions";
 
 export const products_reducer = (state, action) => {
@@ -42,6 +44,12 @@ export const products_reducer = (state, action) => {
 			})
 		);
 		return { ...state, categories: [...categories] };
+	}
+	if (action.type === START_FILTERING) {
+		return { ...state, isFiltering: true };
+	}
+	if (action.type === END_FILTERING) {
+		return { ...state, isFiltering: false };
 	}
 	if (action.type === UPDATE_FILTERS) {
 		return {

@@ -6,9 +6,10 @@ import ListView__MenuCard from "./ListView__MenuCard";
 import Pagination from "../../../components/Pagination";
 import { usePaginationContext } from "../../../store/contexts/pagination_context";
 import { useMemo } from "react";
+import { colors } from "../../../utils/colors";
 
 const MenusSection = () => {
-	const { grid_view } = useProductsContext();
+	const { grid_view, isFiltering } = useProductsContext();
 	const { displayedData, totalPages } = usePaginationContext();
 
 	const whatHeightShouldbe = useMemo(() => {
@@ -20,6 +21,21 @@ const MenusSection = () => {
 		return "autoHeight";
 	}, [totalPages, displayedData]);
 
+	if (isFiltering) {
+		const loading_style = {
+			minHeight: "50vh",
+			width: "100%",
+			textAlign: "center",
+			display: "flex",
+			justifyContent: "center",
+			alignItems: "center",
+		};
+		return (
+			<h1 className="cursive" style={loading_style}>
+				Loading<span style={{ color: colors.brand }}>...</span>
+			</h1>
+		);
+	}
 	return (
 		<Wrapper>
 			<MenuShowcase className={whatHeightShouldbe}>
