@@ -1,6 +1,27 @@
 import styled from "styled-components";
 import { colors } from "../../../../../../utils/colors";
+import { ease } from "../../../../../../utils/animation";
 
+export const Dark_overlay = styled.div`
+	/* layout */
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 98;
+	background-color: ${colors["bg-primary-dark-deep"]};
+	/* animation */
+	@keyframes Fading {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0.8;
+		}
+	}
+	animation: Fading 0.5s ${ease["out-expo"]} forwards;
+`;
 export const Main = styled.main`
 	/* layout */
 	margin-top: 0;
@@ -18,8 +39,18 @@ export const Main = styled.main`
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	right: 0;
+	right: -100%;
 	z-index: 99;
+
+	@keyframes OpenSideBar {
+		0% {
+			right: -100%;
+		}
+		100% {
+			right: 0%;
+		}
+	}
+	animation: OpenSideBar 0.5s ${ease["out-expo"]} forwards;
 
 	/* makeup */
 	background-color: ${colors["bg-primary-dark-deep"]};
