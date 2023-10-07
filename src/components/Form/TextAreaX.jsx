@@ -1,4 +1,3 @@
-import { colors } from "../../utils/colors";
 import styled from "styled-components";
 
 const TextAreaX = ({

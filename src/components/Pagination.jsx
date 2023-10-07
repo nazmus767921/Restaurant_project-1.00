@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { usePaginationContext } from "../store/contexts/pagination_context";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-import { colors } from "../utils/colors";
 
 const Pagination = () => {
 	const { currentPage, totalPages, nextPage, prevPage, goToPage } =

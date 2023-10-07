@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Hr from "./Hr";
 import { ease } from "../../utils/animation";
-import { colors } from "../../utils/colors";
 import { devices } from "../../utils/breakpoints";
 
 const TextBTN = ({ children, className }) => {

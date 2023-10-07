@@ -2,7 +2,6 @@ import styled from "styled-components";
 import FooterLinkBTN from "./components/FooterLinkBTN";
 import { footer } from "../../../../../constant/en-us/shared.constants";
 import Hr from "../../../Hr";
-import { colors } from "../../../../../utils/colors";
 import { devices } from "../../../../../utils/breakpoints";
 import { Link } from "react-router-dom";
 

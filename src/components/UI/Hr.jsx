@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
 
 const Hr = ({ className }) => {
 	return <Line className={className}></Line>;

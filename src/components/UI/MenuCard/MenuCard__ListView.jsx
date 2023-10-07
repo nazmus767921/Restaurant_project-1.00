@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../utils/colors";
 import formatPrice from "../../../utils/helpers/formatPrice";
 
 const MenuCard__ListView = ({ menu }) => {

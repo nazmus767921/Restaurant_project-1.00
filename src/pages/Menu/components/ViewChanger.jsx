@@ -2,7 +2,6 @@ import { PiListBold } from "react-icons/pi";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 import { useProductsContext } from "../../../store/contexts/products_context";
 import styled from "styled-components";
-import { colors } from "../../../utils/colors";
 import { ease } from "../../../utils/animation";
 import React from "react";
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../utils/colors";
 
 export const ReserveFormWrapper = styled.form`
 	display: flex;

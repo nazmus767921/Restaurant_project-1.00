@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ease } from "../../../utils/animation";
-import { colors } from "../../../utils/colors";
 import Hr from "../Hr";
 
 const NavLink = ({ children }) => {

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
 import { ease } from "../../utils/animation";
 
 const BTNSolid = ({ children, className = null, isLoading = false }) => {

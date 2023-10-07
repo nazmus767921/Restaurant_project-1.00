@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../utils/colors";
 import { devices } from "../../utils/breakpoints";
 
 const Tag = ({ children }) => {

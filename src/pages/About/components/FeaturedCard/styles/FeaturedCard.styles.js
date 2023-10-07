@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../../../utils/colors";
 import { devices } from "../../../../../utils/breakpoints";
 
 export const Card = styled.div`
@@ -44,7 +43,7 @@ export const Card = styled.div`
 		}
 		/* elements inside */
 		h2 {
-			color: ${(props) => props.$color || colors["text-white"]};
+			color: ${(props) => props.$color || props.theme["text"]};
 		}
 		p {
 			max-width: 20ch;
