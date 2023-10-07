@@ -4,6 +4,7 @@ import { devices } from "../../../utils/breakpoints";
 export const Main = styled.main`
 	/* elements inside */
 	.hero_wrapper {
+		position: relative;
 		/* layout */
 		min-height: 100vh;
 		min-height: 100dvh;
@@ -23,6 +24,8 @@ export const Main = styled.main`
 		flex-direction: column;
 		gap: 0.625em;
 		/* elements inside */
+		position: relative;
+		z-index: 100;
 		h1 {
 			font-size: 3em;
 			line-height: 4.325rem;

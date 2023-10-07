@@ -1,4 +1,5 @@
 import Footer from "../../components/UI/Footer/Footer";
+import HeroImage from "../../components/UI/HeroImage";
 import HeroTitle from "../../components/UI/HeroTitle";
 import Reservation from "../../components/UI/Reservation/Reservation";
 import Tag from "../../components/UI/Tag";
@@ -11,6 +12,9 @@ const AboutPage = () => {
 	return (
 		<Main className="page-container">
 			<div className="hero_wrapper">
+				<div style={{opacity: 0.3}}>
+				<HeroImage />
+				</div>
 				<div className="header">
 					<Tag>{hero.tagline}</Tag>
 					<HeroTitle>{getCursiveStyle(hero.title)}</HeroTitle>

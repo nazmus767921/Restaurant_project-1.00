@@ -22,16 +22,4 @@ export const Wrapper = styled.div`
 		gap: 1.75rem;
 		padding: 0 2em;
 	}
-	.hero_image--wrapper {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-
-		/* places the bg-image absolutely in the center */
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		/* layout */
-		width: 100%;
-	}
 `;

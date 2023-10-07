@@ -14,6 +14,7 @@ export const Main = styled.main`
 		h2 {
 			line-height: normal;
 			.title--colored {
+				font-size: 1.5em;
 				color: ${colors.brand};
 				display: block;
 			}

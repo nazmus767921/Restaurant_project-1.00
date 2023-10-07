@@ -31,7 +31,7 @@ const InfoSection = () => {
 const HeroWrapper = () => {
 	return (
 		<div className="hero_wrapper">
-			<h2>{spanTool(hero.title, "Please Let Us Know", "title--colored")}</h2>
+			<h2>{spanTool(hero.title, "Please Let Us Know", "title--colored cursive")}</h2>
 			<p className="hero_description">{hero.description}</p>
 		</div>
 	);
