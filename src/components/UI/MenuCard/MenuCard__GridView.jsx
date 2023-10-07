@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
 import formatPrice from "../../../utils/helpers/formatPrice";
+import React from "react";
 
-const MenuCard__GridView = ({ menu }) => {
+const MenuCard__GridView = React.memo(({ menu }) => {
 	return (
 		<Wrapper>
 			<MenuItem menu={menu} />
 		</Wrapper>
 	);
-};
+});
+
+MenuCard__GridView.displayName = "MenuCard__GridView";
 
 const MenuItem = ({ menu }) => {
 	const { description, name, price, image } = menu;
@@ -62,6 +65,11 @@ const Wrapper = styled.div`
 			padding-inline: 0.65em;
 			margin-block-end: 0.65em;
 			overflow: hidden;
+			filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2))
+				drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.17))
+				drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.1))
+				drop-shadow(11px 12px 6px rgba(0, 0, 0, 0.03))
+				drop-shadow(17px 18px 7px rgba(0, 0, 0, 0));
 		}
 		.description {
 			opacity: 0.7;
