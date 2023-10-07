@@ -5,23 +5,24 @@ import { useProductsContext } from "../../../store/contexts/products_context";
 import ListView__MenuCard from "./ListView__MenuCard";
 import Pagination from "../../../components/Pagination";
 import { usePaginationContext } from "../../../store/contexts/pagination_context";
+import { useMemo } from "react";
 
 const MenusSection = () => {
 	const { grid_view } = useProductsContext();
 	const { displayedData, totalPages } = usePaginationContext();
 
-	const whatHeightShouldbe = () => {
+	const whatHeightShouldbe = useMemo(() => {
 		if (totalPages > 1 && displayedData.length > 3) {
 			return "fullHeight";
 		} else if (totalPages > 1 && displayedData.length <= 3) {
 			return "halfHeight";
 		}
 		return "autoHeight";
-	};
+	}, [totalPages, displayedData]);
 
 	return (
 		<Wrapper>
-			<MenuShowcase className={whatHeightShouldbe()}>
+			<MenuShowcase className={whatHeightShouldbe}>
 				{grid_view ? (
 					<>
 						{displayedData.map((menu) => (

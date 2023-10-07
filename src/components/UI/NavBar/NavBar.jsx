@@ -1,13 +1,13 @@
 import Logo from "../Logo";
 import { nav } from "../../../constant/en-us/shared.constants";
 import { Wrapper } from "./styles/NavBar.styles";
-import { useState } from "react";
+import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Link } from "react-router-dom";
 import { paths } from "../../../Root.paths";
 import MobileSideBar from "./components/MobileSideBar/MobileSideBar";
 
-const NavLinks = () => {
+const NavLinks = React.memo(() => {
 	return (
 		<>
 			{nav.links.map((linkobj) => (
@@ -21,7 +21,9 @@ const NavLinks = () => {
 			))}
 		</>
 	);
-};
+});
+
+NavLinks.displayName = "NavLinks";
 
 const NavBar = () => {
 	const [showSideBar, setShowSideBar] = useState(false);

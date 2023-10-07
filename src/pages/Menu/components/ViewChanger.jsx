@@ -4,8 +4,9 @@ import { useProductsContext } from "../../../store/contexts/products_context";
 import styled from "styled-components";
 import { colors } from "../../../utils/colors";
 import { ease } from "../../../utils/animation";
+import React from "react";
 
-const ViewChanger = () => {
+const ViewChanger = React.memo(() => {
 	const { update_gridView, update_listView, grid_view } = useProductsContext();
 	return (
 		<Wrapper className="viewChanger--wrapper">
@@ -23,13 +24,15 @@ const ViewChanger = () => {
 			</div>
 		</Wrapper>
 	);
-};
+});
+
+ViewChanger.displayName = "ViewChanger";
 
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	gap: 1.25em;
-	
+
 	/* styling class */
 	.active {
 		color: ${colors.brand};
