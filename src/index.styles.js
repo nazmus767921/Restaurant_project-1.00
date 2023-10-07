@@ -16,6 +16,12 @@ export const GlobalStyles = createGlobalStyle`
 		overflow-x: hidden;
 	}
 
+&::selection {
+  background-color: ${(props) =>
+		props.theme["brand"]}; /* set the background color */
+  color: ${(props) => props.theme["text"]}; /* set the text color */
+}
+
 button {
 	/* layout */
 	width: fit-content;
