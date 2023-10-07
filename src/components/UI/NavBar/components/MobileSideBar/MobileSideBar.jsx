@@ -10,7 +10,7 @@ const MobileSideBar = ({ toggleShowSidebar }) => {
 	const links = nav.links;
 	return (
 		<>
-			<Dark_overlay />
+			<Dark_overlay onClick={toggleShowSidebar} />
 			<Main>
 				<button type="button" className="icon" onClick={toggleShowSidebar}>
 					{nav.icons.cross}
