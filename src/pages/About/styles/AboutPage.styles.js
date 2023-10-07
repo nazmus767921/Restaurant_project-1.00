@@ -5,6 +5,7 @@ export const Main = styled.main`
 	/* elements inside */
 	.hero_wrapper {
 		position: relative;
+		max-width: 100vw;
 		/* layout */
 		min-height: 100vh;
 		min-height: 100dvh;

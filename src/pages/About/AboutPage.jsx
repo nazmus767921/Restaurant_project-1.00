@@ -12,9 +12,7 @@ const AboutPage = () => {
 	return (
 		<Main className="page-container">
 			<div className="hero_wrapper">
-				<div style={{opacity: 0.3}}>
 				<HeroImage />
-				</div>
 				<div className="header">
 					<Tag>{hero.tagline}</Tag>
 					<HeroTitle>{getCursiveStyle(hero.title)}</HeroTitle>
