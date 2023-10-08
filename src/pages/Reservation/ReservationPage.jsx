@@ -59,7 +59,13 @@ const ReserveForm = ({ isSubmitting, setIsSubmitting, setIsSubmitted }) => {
 				options={form.peopleSelection.options}
 				label={form.peopleSelection.label}
 			/>
-			<Label htmlFor="reservation_date">{form.date.label}</Label>
+			<div>
+				<Label htmlFor="reservation_date">{form.date.label}</Label>
+				<p className="small">
+					We are delighted to accept reservation requests for our restaurant
+					tables with a lead time of up to two months in advance.
+				</p>
+			</div>
 			<DateField id={"reservation_date"} />
 			<Label>{form.specialRequests.label}</Label>
 			<TextAreaX name={"special-requests"} label={null} />
