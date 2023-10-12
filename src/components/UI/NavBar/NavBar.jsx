@@ -40,9 +40,7 @@ const NavBar = () => {
 
 	return (
 		<Wrapper>
-			{showSideBar ? (
-				<MobileSideBar toggleShowSidebar={toggleShowSidebar} />
-			) : null}
+			{showSideBar ? <MobileSideBar toggleShowSidebar={toggleShowSidebar} /> : null}
 			<nav className="container">
 				<Link to={paths.home}>
 					<Logo />
@@ -51,13 +49,10 @@ const NavBar = () => {
 					<NavLinks />
 				</div>
 				<div className="menu_controls">
-				<button className="icon control_btn" onClick={toggleTheme}>
-					{theme === "light" ? <HiOutlineSun /> : <PiMoonStarsDuotone />}
-				</button>
-					<button
-						className="icon control_btn hamburger"
-						onClick={toggleShowSidebar}
-					>
+					<button className="icon control_btn" onClick={toggleTheme}>
+						{theme === "light" ? <HiOutlineSun /> : <PiMoonStarsDuotone />}
+					</button>
+					<button className="icon control_btn hamburger" onClick={toggleShowSidebar}>
 						{nav.icons.hamburger.open}
 					</button>
 				</div>
@@ -65,5 +60,7 @@ const NavBar = () => {
 		</Wrapper>
 	);
 };
+
+React.memo(NavBar, () => true);
 
 export default NavBar;

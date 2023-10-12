@@ -1,8 +1,7 @@
+import { memo } from "react";
 import Select from "../../../components/Form/Select";
-import { useProductsContext } from "../../../store/contexts/products_context";
 
-const Sorter = () => {
-	const { sort, update_sort } = useProductsContext();
+const Sorter = memo(({ sort, update_sort }) => {
 	const options = [
 		{ label: "Price ( Lowest - Highest )", value: "price-low" },
 		{ label: "Price ( Highest - Lowest )", value: "price-high" },
@@ -11,14 +10,11 @@ const Sorter = () => {
 	];
 	return (
 		<div>
-			<Select
-				options={options}
-				name="sort"
-				value={sort}
-				onChange={update_sort}
-			/>
+			<Select options={options} name="sort" value={sort} onChange={update_sort} />
 		</div>
 	);
-};
+});
+
+Sorter.displayName = "Sorter";
 
 export default Sorter;

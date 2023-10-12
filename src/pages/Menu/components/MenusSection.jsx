@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import MenuCard__GridView from "../../../components/UI/MenuCard/MenuCard__GridView";
 import MenuShowcase from "../../../components/UI/MenuShowcase/MenuShowcase";
-import { useProductsContext } from "../../../store/contexts/products_context";
 import ListView__MenuCard from "./ListView__MenuCard";
 import Pagination from "../../../components/Pagination";
 import { usePaginationContext } from "../../../store/contexts/pagination_context";
-import { useMemo } from "react";
+import { memo, useMemo } from "react";
 import { lightTheme } from "../../../theme";
 
-const MenusSection = () => {
-	const { grid_view, isFiltering } = useProductsContext();
+const MenusSection = memo(({ grid_view, isFiltering }) => {
 	const { displayedData, totalPages } = usePaginationContext();
 
 	const whatHeightShouldbe = useMemo(() => {
@@ -58,7 +56,9 @@ const MenusSection = () => {
 			</div>
 		</Wrapper>
 	);
-};
+});
+
+MenusSection.displayName = "MenusSection";
 
 const Wrapper = styled.div`
 	margin-top: 2.5em;

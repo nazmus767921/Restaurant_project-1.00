@@ -27,6 +27,12 @@ Header.displayName = "Header";
 
 const MenuPage = () => {
 	const {
+		sort,
+		update_sort,
+		update_gridView,
+		update_listView,
+		grid_view,
+		isFiltering,
 		categories,
 		update_filters,
 		filters: { category, price, min_price, max_price },
@@ -49,10 +55,14 @@ const MenuPage = () => {
 				max_price={max_price}
 			/>
 			<div className="filter_wrapper--bottom">
-				<ViewChanger />
-				<Sorter />
+				<ViewChanger
+					update_gridView={update_gridView}
+					update_listView={update_listView}
+					grid_view={grid_view}
+				/>
+				<Sorter sort={sort} update_sort={update_sort} />
 			</div>
-			<MenusSection />
+			<MenusSection grid_view={grid_view} isFiltering={isFiltering} />
 			<Footer />
 		</Main>
 	);
