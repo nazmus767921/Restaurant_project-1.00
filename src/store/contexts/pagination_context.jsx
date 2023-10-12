@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useProductsContext } from "./products_context";
 
 const pagination_context = createContext(null);
@@ -39,20 +39,29 @@ export const PaginationContextProvider = ({ children }) => {
 		setCurrentPage(Math.min(Math.max(page, 1), totalPages));
 	};
 
-	const values = {
-		currentPage,
-		itemsPerPage,
-		displayedData,
-		totalPages,
-		nextPage,
-		prevPage,
-		goToPage,
-	};
-	return (
-		<pagination_context.Provider value={values}>
-			{children}
-		</pagination_context.Provider>
+	const values = useMemo(
+		() => ({
+			currentPage,
+			itemsPerPage,
+			displayedData,
+			totalPages,
+			nextPage,
+			prevPage,
+			goToPage,
+		}),
+		[currentPage, displayedData, totalPages]
 	);
+
+	// const values = {
+	// 	currentPage,
+	// 	itemsPerPage,
+	// 	displayedData,
+	// 	totalPages,
+	// 	nextPage,
+	// 	prevPage,
+	// 	goToPage,
+	// };
+	return <pagination_context.Provider value={values}>{children}</pagination_context.Provider>;
 };
 
 export const usePaginationContext = () => {
