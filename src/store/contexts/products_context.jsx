@@ -37,8 +37,21 @@ export const Products_contextProvider = ({ children }) => {
 
 	// actions
 
-	const update_filters = (e) => {
+	const start_filtering = () => {
 		dispatch({ type: START_FILTERING });
+	};
+
+	const end_filtering = (timeout = 0) => {
+		const cleanup = setTimeout(() => {
+			dispatch({ type: END_FILTERING });
+		}, timeout);
+		return () => {
+			clearTimeout(cleanup);
+		};
+	};
+
+	const update_filters = (e) => {
+		start_filtering();
 
 		let name = e.target.name;
 		let value = e.target.value;
@@ -51,9 +64,7 @@ export const Products_contextProvider = ({ children }) => {
 		}
 		dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
 
-		setTimeout(() => {
-			dispatch({ type: END_FILTERING });
-		}, 500);
+		end_filtering(500);
 	};
 
 	const update_sort = (e) => {
@@ -77,6 +88,8 @@ export const Products_contextProvider = ({ children }) => {
 			update_sort,
 			update_gridView,
 			update_listView,
+			start_filtering,
+			end_filtering,
 		}),
 		[]
 	);

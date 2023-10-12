@@ -5,7 +5,7 @@ const pagination_context = createContext(null);
 
 export const PaginationContextProvider = ({ children }) => {
 	// pulling menus data from the products_context
-	const { filteredMenu } = useProductsContext();
+	const { filteredMenu, start_filtering, end_filtering } = useProductsContext();
 	const [currentPage, setCurrentPage] = useState(1);
 	const itemsPerPage = 10;
 	const totalPages = Math.ceil(filteredMenu.length / itemsPerPage);
@@ -27,16 +27,37 @@ export const PaginationContextProvider = ({ children }) => {
 		}
 	}, [filteredMenu, currentPage, totalPages]);
 
+	// navBar height
+
+	const scrollToMenuSection = () => {
+		const section = document.getElementById("MenuShowcase");
+		const navbarHeight = document.querySelector("nav").offsetHeight;
+		const sectionTop = section.offsetTop - navbarHeight;
+		window.scrollTo({
+			top: sectionTop,
+			behavior: "smooth",
+		});
+	};
+	//Page Actions
 	const nextPage = () => {
+		start_filtering();
+		scrollToMenuSection();
 		setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+		end_filtering(0);
 	};
 
 	const prevPage = () => {
+		start_filtering();
+		scrollToMenuSection();
 		setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+		end_filtering(0);
 	};
 
 	const goToPage = (page) => {
+		start_filtering();
+		scrollToMenuSection();
 		setCurrentPage(Math.min(Math.max(page, 1), totalPages));
+		end_filtering(0);
 	};
 
 	const values = useMemo(
@@ -51,16 +72,6 @@ export const PaginationContextProvider = ({ children }) => {
 		}),
 		[currentPage, displayedData, totalPages]
 	);
-
-	// const values = {
-	// 	currentPage,
-	// 	itemsPerPage,
-	// 	displayedData,
-	// 	totalPages,
-	// 	nextPage,
-	// 	prevPage,
-	// 	goToPage,
-	// };
 	return <pagination_context.Provider value={values}>{children}</pagination_context.Provider>;
 };
 

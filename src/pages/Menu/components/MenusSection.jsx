@@ -35,7 +35,7 @@ const MenusSection = memo(({ grid_view, isFiltering }) => {
 		);
 	}
 	return (
-		<Wrapper>
+		<Wrapper id="MenuShowcase">
 			<MenuShowcase className={whatHeightShouldbe}>
 				{grid_view ? (
 					<>
