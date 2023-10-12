@@ -69,7 +69,7 @@
 			"description": "Crispy chicken wings with a variety of dipping sauces",
 			"price": 3299,
 			"image": "kimchi-soup.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": false
 		},
 		{
@@ -78,7 +78,7 @@
 			"description": "Decadent chocolate brownie with ice cream",
 			"price": 599,
 			"image": "sahi_kebab.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": false
 		},
 		{
@@ -87,7 +87,7 @@
 			"description": "A refreshing salad with a mix of seasonal fruits",
 			"price": 1576,
 			"image": "salad.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": true
 		},
 		{
@@ -159,7 +159,7 @@
 			"description": "Crispy chicken wings with a variety of dipping sauces",
 			"price": 2099,
 			"image": "kimchi-soup.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": true
 		},
 		{
@@ -168,7 +168,7 @@
 			"description": "Decadent chocolate brownie with ice cream",
 			"price": 349,
 			"image": "sahi_kebab.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": false
 		},
 		{
@@ -177,7 +177,7 @@
 			"description": "A refreshing salad with a mix of seasonal fruits",
 			"price": 1849,
 			"image": "salad.png",
-			"category": "desert",
+			"category": "dessert",
 			"featured": true
 		}
 	]
