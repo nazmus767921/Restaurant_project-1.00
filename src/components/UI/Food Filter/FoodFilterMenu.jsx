@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../../utils/breakpoints";
-import { useProductsContext } from "../../../store/contexts/products_context";
+import React from "react";
 
 const MenuBTN = ({ children, onClick, selectedCategory }) => {
 	return (
@@ -15,34 +15,33 @@ const MenuBTN = ({ children, onClick, selectedCategory }) => {
 	);
 };
 
-const FoodFilterMenu = () => {
-	const {
-		categories,
-		update_filters,
-		filters: { category },
-	} = useProductsContext();
+const FoodFilterMenu = React.memo(
+	({ categories, update_filters, category }) => {
+		return (
+			<Wrapper>
+				<div className="filter_menu">
+					<MenuBTN onClick={update_filters} selectedCategory={category}>
+						All
+					</MenuBTN>
+					{categories.map((c, index) => {
+						return (
+							<MenuBTN key={index} onClick={update_filters} selectedCategory={category}>
+								{c}
+							</MenuBTN>
+						);
+					})}
+				</div>
+			</Wrapper>
+		);
+	},
+	(prevProps, nextProps) => {
+		return (
+			prevProps.category === nextProps.category && prevProps.categories === nextProps.categories
+		);
+	}
+);
 
-	return (
-		<Wrapper>
-			<div className="filter_menu">
-				<MenuBTN onClick={update_filters} selectedCategory={category}>
-					All
-				</MenuBTN>
-				{categories.map((c) => {
-					return (
-						<MenuBTN
-							key={crypto.randomUUID()}
-							onClick={update_filters}
-							selectedCategory={category}
-						>
-							{c}
-						</MenuBTN>
-					);
-				})}
-			</div>
-		</Wrapper>
-	);
-};
+FoodFilterMenu.displayName = "FoodFilterMenu";
 
 const Menu_BTN = styled.button`
 	text-transform: capitalize;

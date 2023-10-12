@@ -1,3 +1,4 @@
+import React from "react";
 import FooterExtras from "./components/FooterExtras";
 import FooterHeader from "./components/FooterHeader";
 import FooterLinks from "./components/FooterLinks/FooterLinks";
@@ -12,5 +13,7 @@ const Footer = () => {
 		</Wrapper>
 	);
 };
+
+React.memo(Footer, () => true);
 
 export default Footer;

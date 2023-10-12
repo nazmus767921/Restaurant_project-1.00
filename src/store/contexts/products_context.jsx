@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useReducer } from "react";
 import { products_reducer as reducer } from "../reducers/products_reducer";
 import {
 	UPDATE_FILTERS,
@@ -54,7 +54,6 @@ export const Products_contextProvider = ({ children }) => {
 		setTimeout(() => {
 			dispatch({ type: END_FILTERING });
 		}, 500);
-		
 	};
 
 	const update_sort = (e) => {
@@ -72,17 +71,20 @@ export const Products_contextProvider = ({ children }) => {
 	};
 
 	//all actions
-	const Actions = {
-		update_filters,
-		update_sort,
-		update_gridView,
-		update_listView,
-	};
+	const Actions = useMemo(
+		() => ({
+			update_filters,
+			update_sort,
+			update_gridView,
+			update_listView,
+		}),
+		[]
+	);
 
-	// data fetching
-	const fetchMenuItems = () => {
+	const fetchMenuItems = useCallback(() => {
 		dispatch({ type: FETCH_MENUS, payload: { Data: Data.menuItems } });
-	};
+	}, []);
+
 	useEffect(() => {
 		fetchMenuItems();
 		dispatch({ type: GET_CATEGORIES });
@@ -96,11 +98,9 @@ export const Products_contextProvider = ({ children }) => {
 		dispatch({ type: UPDATE_MIN_MAX_PRICES });
 	}, [state.menus]);
 
-	return (
-		<products_context.Provider value={{ ...state, ...Actions }}>
-			{children}
-		</products_context.Provider>
-	);
+	const value = useMemo(() => ({ ...state, ...Actions }), [state, Actions]);
+
+	return <products_context.Provider value={value}>{children}</products_context.Provider>;
 };
 
 export const useProductsContext = () => {

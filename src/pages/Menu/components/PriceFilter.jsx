@@ -1,29 +1,32 @@
+import React from "react";
 import styled from "styled-components";
 import InputRange from "../../../components/Form/InputRange";
-import { useProductsContext } from "../../../store/contexts/products_context";
 import formatPrice from "../../../utils/helpers/formatPrice";
 import { devices } from "../../../utils/breakpoints";
 
-const PriceFilter = () => {
-	const {
-		update_filters,
-		filters: { price, min_price, max_price },
-	} = useProductsContext();
-	return (
-		<Wrapper className="price_filter--wrapper">
-			<label htmlFor="price">price</label>
-			<InputRange
-				name="price"
-				min={min_price}
-				max={max_price}
-				step={100}
-				value={price}
-				onChange={update_filters}
-			/>
-			<h2 className="price">{formatPrice(price)}</h2>
-		</Wrapper>
-	);
-};
+const PriceFilter = React.memo(
+	({ price, min_price, max_price, update_filters }) => {
+		return (
+			<Wrapper className="price_filter--wrapper">
+				<label htmlFor="price">price</label>
+				<InputRange
+					name="price"
+					min={min_price}
+					max={max_price}
+					step={100}
+					value={price}
+					onChange={update_filters}
+				/>
+				<h2 className="price">{formatPrice(price)}</h2>
+			</Wrapper>
+		);
+	},
+	(prevProps, nextProps) => {
+		return prevProps.price === nextProps.price;
+	}
+);
+
+PriceFilter.displayName = "PriceFilter";
 
 const Wrapper = styled.div`
 	width: 100%;
