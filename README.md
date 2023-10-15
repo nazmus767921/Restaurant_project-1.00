@@ -11,7 +11,7 @@ _To View Live Website:_ [Click Here](https://res2rant.netlify.app)
 ### Social Links
 
 1. Github : [nazmus767921](#)
-2. LinkedIn : [nazmus767921](www.linkedin.com/in/nazmus767921)
+2. LinkedIn : [nazmus767921](https://www.linkedin.com/in/nazmus767921)
 3. Gmail: nazmus767921@gmail.com
 
 ### Important Code insights
