@@ -1,6 +1,7 @@
 # Restaurant Front-end Development Project
 
 _for Logitech Web Developer contest powered by Weero._
+_To View Live Website:_ [Click Here](https://res2rant.netlify.app)
 
 ### Developer
 
@@ -10,7 +11,7 @@ _for Logitech Web Developer contest powered by Weero._
 ### Social Links
 
 1. Github : [nazmus767921](#)
-2. LinkedIn : [nazmus767921](#)
+2. LinkedIn : [nazmus767921](www.linkedin.com/in/nazmus767921)
 3. Gmail: nazmus767921@gmail.com
 
 ### Important Code insights
